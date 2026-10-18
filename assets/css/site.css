@@ -402,9 +402,13 @@ a[href^="#"]:not(.btn):not(.skip):not(.scroll-cue):hover{color:#3D3D3D!important
 .pain-card:hover .pain-q,.pain-card:focus-visible .pain-q{color:#3D3D3D!important}
 .footer a[href^="#"]{color:#5E7A65!important}
 .footer a[href^="#"]:hover{color:#3D3D3D!important}
+.footer a[href^="/#"]{color:#5E7A65!important}
+.footer a[href^="/#"]:hover{color:#3D3D3D!important}
 /* Treatment page links */
 a[href^="services/"]{color:#5E7A65!important}
 a[href^="services/"]:hover{color:#3D3D3D!important}
+.footer a[href^="/services/"]{color:#5E7A65!important}
+.footer a[href^="/services/"]:hover{color:#3D3D3D!important}
 /* Services CTA row: button and call link share one height and line up */
 .svc-cta{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:16px;margin-top:48px}
 .svc-cta-btn,.svc-cta-link{height:52px;min-height:52px;box-sizing:border-box;margin:0;border-radius:999px;font-size:16px;font-weight:600}
@@ -500,8 +504,8 @@ section{padding-top:64px!important;padding-bottom:64px!important}
 .header-phone:hover{color:#3D5A46!important;text-decoration:underline}
 }
 @media (max-width:1100px){
-.header-tel-icon{display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;order:2;width:44px;height:44px;margin-left:auto;margin-right:10px;border:0;border-radius:50%;background:#E6EDE5;color:#5E7A65;box-sizing:border-box}
-.header-tel-icon:hover,.header-tel-icon:focus-visible{background:#D8E3D6}
+.header-tel-icon{display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;order:2;width:48px;height:48px;margin-left:auto;margin-right:10px;border:1.5px solid #5E7A65;border-radius:12px;color:#5E7A65;box-sizing:border-box}
+.header-tel-icon:hover,.header-tel-icon:focus-visible{background:#F3F6F2}
 .header-tel-icon:focus-visible{outline:3px solid #3D3D3D;outline-offset:3px}
 }
 @media (max-width:400px){.header-tel-icon{width:44px;height:44px;margin-right:8px}}
@@ -515,12 +519,11 @@ section{padding-top:64px!important;padding-bottom:64px!important}
 @media (min-width:1101px){.header-cta{display:flex;align-items:center;gap:18px;flex:0 0 auto;margin-left:auto}.header-phone{margin-right:0!important}}
 @media (max-width:600px){#nav-toggle:checked~.nav-links a.nav-book{display:flex!important;justify-content:center;background:#5E7A65!important;color:#FFFFFF!important;border-radius:999px;margin:14px 0 4px;min-height:52px;border-bottom:none;font-weight:600}#nav-toggle:checked~.nav-links a.nav-book:hover{background:#3D3D3D!important;color:#FFFFFF!important}}
 @media (min-width:601px) and (max-width:1100px){.header-tel-icon{margin-left:0!important}.header-book{margin-left:auto!important;margin-right:0}.header-inner>.nav-links{margin-right:28px}}
-@media (min-width:761px) and (max-width:1100px){.header-tel-icon{margin-left:12px!important}}
 @media (min-width:601px){.header-inner>.nav-links{flex:1 1 auto;justify-content:center;margin-left:16px;margin-right:16px}}
 @media (min-width:601px) and (max-width:1100px){.header-inner>.nav-links{margin-right:16px}}
 @media (min-width:901px){.header-inner{position:relative}.header-inner>.nav-links{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);flex:none;margin:0!important;justify-content:center}}
 @media (min-width:601px) and (max-width:1100px){.header-book{flex:0 0 auto!important;min-width:max-content!important;white-space:nowrap!important;padding:0 16px!important}}
-@media (min-width:601px) and (max-width:760px){.header-book{padding:0 12px!important;font-size:14px!important}.header-inner{column-gap:12px}.header-tel-icon{margin-right:0}}
+@media (min-width:601px) and (max-width:760px){.header-book{padding:0 12px!important;font-size:14px!important}.header-inner{column-gap:10px}.header-tel-icon{margin-right:0}}
 @media (min-width:901px){#site-nav .nav-drop>summary::after{width:4px;height:4px;border-right-width:1.5px;border-bottom-width:1.5px;margin-top:-3px}#site-nav .nav-drop[open]>summary::after{margin-top:1px}}
 @media (max-width:900px){#site-nav .nav-drop>summary::after{width:6px;height:6px;border-right-width:1.5px;border-bottom-width:1.5px}}
 @media (max-width:900px){#site-nav .nav-drop>summary::after,#site-nav .nav-drop-wrap .nav-drop>summary::after{width:4px!important;height:4px!important;border-right-width:1.5px!important;border-bottom-width:1.5px!important;margin-top:-2px}}
