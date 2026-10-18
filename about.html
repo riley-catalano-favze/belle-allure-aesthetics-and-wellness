@@ -1,0 +1,8 @@
+<div id="site-footer"></div>
+<script>
+  fetch('/partials/footer.html')
+    .then(function (r) { return r.text(); })
+    .then(function (html) {
+      document.getElementById('site-footer').innerHTML = html;
+    });
+</script>
