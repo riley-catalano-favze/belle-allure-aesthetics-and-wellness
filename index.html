@@ -181,7 +181,30 @@ header.split-head{position:static!important;top:auto!important;z-index:auto!impo
 /* Final mobile menu and bottom bar rules */
 @media (max-width:900px){
   header #nav-toggle:checked~#site-nav,header #nav-toggle:checked~.nav-links{overflow-y:auto!important;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;max-height:calc(100vh - 84px)!important;max-height:calc(100dvh - 84px)!important;height:auto!important;padding-bottom:28px!important}
-  .mobile-book,.sb-mobile-book{min-height:0!important;height:auto!important;padding:11px 16px 0 16px!important;padding-bottom:env(safe-area-inset-bottom)!important;font-size:15px!important;line-height:1.2!important;box-sizing:border-box!important}
+  .mobile-book,.sb-mobile-book{min-height:0!important;height:auto!important;padding:16px 16px 0 16px!important;padding-bottom:env(safe-area-inset-bottom)!important;font-size:15px!important;line-height:1.2!important;box-sizing:border-box!important}
+}
+/* Book buttons stay green on tap, hover and focus */
+html body .nav-book:hover,html body .nav-book:focus,html body .nav-book:active,html body .nav-book:focus-visible,
+html body header #nav-toggle:checked~.nav-links a.nav-book:hover,html body header #nav-toggle:checked~.nav-links a.nav-book:focus,html body header #nav-toggle:checked~.nav-links a.nav-book:active,
+html body header #nav-toggle:checked~#site-nav a.nav-book:hover,html body header #nav-toggle:checked~#site-nav a.nav-book:focus,html body header #nav-toggle:checked~#site-nav a.nav-book:active,
+html body .mobile-book:hover,html body .mobile-book:focus,html body .mobile-book:active,
+html body .sb-mobile-book:hover,html body .sb-mobile-book:focus,html body .sb-mobile-book:active{background:#5E7A65!important;color:#FFFFFF!important;text-decoration:none!important}
+/* Mobile: photo pairs keep matching labels, buttons stay on one readable line, footer button sized for phones */
+@media (max-width:600px){
+  .cmp-tag{top:8px!important;left:8px!important;width:auto!important;height:auto!important;min-height:24px!important;padding:0 8px!important;font-size:11px!important;letter-spacing:.06em!important;white-space:nowrap!important}
+  .cmp-tag-r{left:auto!important;right:8px!important}
+  .pair figcaption{overflow-wrap:anywhere;line-height:1.3}
+  .btn,.svc-cta-btn,.svc-card-btn{max-width:100%!important;box-sizing:border-box!important;white-space:normal!important;text-align:center!important;justify-content:center!important;overflow-wrap:anywhere}
+  .footer .footer-book,.footer a.footer-book,a.footer-book{font-size:15px!important;padding:12px 22px!important;min-height:0!important;height:auto!important;width:auto!important;max-width:100%!important;display:inline-flex!important;line-height:1.2!important;border-radius:999px!important}
+}
+/* Katherine photo fan: keeps the swipe stack inside the phone width */
+@media (max-width:600px){
+  .kc-wrap{max-width:300px!important;margin:0 auto 32px!important}
+  .kc-wrap .kc-stack{overflow:visible}
+}
+/* Space for the fixed Book appointment bar so the last content clears it on phones and tablets */
+@media (max-width:900px){
+  body{padding-bottom:calc(40px + env(safe-area-inset-bottom))!important}
 }
 html.menu-open .mobile-book,html.menu-open .sb-mobile-book,body:has(#nav-toggle:checked) .mobile-book,body:has(#nav-toggle:checked) .sb-mobile-book{display:none!important}
 </style>
