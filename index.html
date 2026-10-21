@@ -177,6 +177,19 @@ header.split-head{position:static!important;top:auto!important;z-index:auto!impo
 /* Pause the scrolling banner while the cursor, a finger or keyboard focus is on it, so it can be read */
 .marquee:hover .marquee-track,.marquee:focus-within .marquee-track,.marquee:active .marquee-track,.marquee.is-held .marquee-track{animation-play-state:paused!important}
 </style>
+<style id="menu-final">
+/* Final mobile menu and bottom bar rules */
+@media (max-width:900px){
+  header #nav-toggle:checked~#site-nav,header #nav-toggle:checked~.nav-links{overflow-y:auto!important;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;max-height:calc(100vh - 84px)!important;max-height:calc(100dvh - 84px)!important;height:auto!important;padding-bottom:28px!important}
+  .mobile-book,.sb-mobile-book{min-height:0!important;height:auto!important;padding:11px 16px 0 16px!important;padding-bottom:env(safe-area-inset-bottom)!important;font-size:15px!important;line-height:1.2!important;box-sizing:border-box!important}
+}
+html.menu-open .mobile-book,html.menu-open .sb-mobile-book,body:has(#nav-toggle:checked) .mobile-book,body:has(#nav-toggle:checked) .sb-mobile-book{display:none!important}
+</style>
+<style id="pain-contrast">
+/* Pain cards: black headlines for contrast (WCAG), darker sage link text */
+.pain-card .pain-q,.pain-card:hover .pain-q,.pain-card:focus-visible .pain-q{color:#000000!important}
+.pain-card .pain-a{color:#4F6754!important}
+</style>
 </head>
 <body>
 
@@ -1813,5 +1826,6 @@ new MutationObserver(function(ms){ms.forEach(function(m){sync(m.target);});}).ob
   });
 })();
 </script>
+<script id="menu-final-js">(function(){var t=document.getElementById('nav-toggle');if(!t)return;function s(){document.documentElement.classList.toggle('menu-open',t.checked);}t.addEventListener('change',s);s();})();</script>
 </body>
 </html>
