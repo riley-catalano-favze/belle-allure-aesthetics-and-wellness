@@ -206,6 +206,21 @@ html body .sb-mobile-book:hover,html body .sb-mobile-book:focus,html body .sb-mo
 @media (max-width:900px){
   body{padding-bottom:calc(40px + env(safe-area-inset-bottom))!important}
 }
+/* Mobile menu: the whole menu scrolls with one finger movement; the Services list grows with it */
+@media (max-width:900px){
+  header #nav-toggle:checked~#site-nav,header #nav-toggle:checked~.nav-links{max-height:calc(100vh - 80px)!important;max-height:calc(100dvh - 80px)!important;height:auto!important;overflow-y:auto!important;-webkit-overflow-scrolling:touch!important;overscroll-behavior:contain!important;padding-bottom:28px!important}
+  header #nav-toggle:checked~#site-nav .nav-drop[open]>.nav-drop-menu,header #nav-toggle:checked~.nav-links .nav-drop[open]>.nav-drop-menu{max-height:none!important;overflow:visible!important;padding:6px 0 10px!important}
+}
+/* Mobile menu, final: Services expands in normal flow so nothing overlaps; the whole menu scrolls on every phone */
+@media (max-width:900px){
+  html body header #nav-toggle:checked~#site-nav,html body header #nav-toggle:checked~.nav-links{display:flex!important;flex-direction:column!important;max-height:calc(100dvh - 80px)!important;height:auto!important;overflow-y:auto!important;-webkit-overflow-scrolling:touch!important;overscroll-behavior:contain!important;padding-bottom:28px!important}
+  html body header #nav-toggle:checked~#site-nav>*,html body header #nav-toggle:checked~.nav-links>*{flex:0 0 auto!important;flex-shrink:0!important}
+  html body header #nav-toggle:checked~#site-nav .nav-drop-wrap,html body header #nav-toggle:checked~.nav-links .nav-drop-wrap{display:block!important;position:relative!important;height:auto!important;min-height:0!important;max-height:none!important;overflow:visible!important;width:100%!important;background:#FFFFFF!important;margin:0!important}
+  html body header #nav-toggle:checked~#site-nav .nav-drop,html body header #nav-toggle:checked~.nav-links .nav-drop{display:block!important;position:static!important;height:auto!important;max-height:none!important;overflow:visible!important;width:100%!important;margin:0!important}
+  html body header #nav-toggle:checked~#site-nav .nav-drop>.nav-drop-menu,html body header #nav-toggle:checked~.nav-links .nav-drop>.nav-drop-menu{display:flex!important;flex-direction:column!important;position:static!important;height:auto!important;max-height:none!important;overflow:visible!important;width:100%!important;box-sizing:border-box!important;background:#FFFFFF!important;padding:4px 0 14px 0!important;margin:0!important;border:none!important;box-shadow:none!important}
+  html body header #nav-toggle:checked~#site-nav .nav-drop>.nav-drop-menu a,html body header #nav-toggle:checked~.nav-links .nav-drop>.nav-drop-menu a{background:#FFFFFF!important;height:auto!important;min-height:44px!important;padding:10px 16px 10px 36px!important;margin:0!important;display:flex!important;align-items:center!important;white-space:normal!important}
+  html body header #nav-toggle:checked~#site-nav .nav-drop>.nav-drop-menu a:hover,html body header #nav-toggle:checked~#site-nav .nav-drop>.nav-drop-menu a:focus-visible{background:#F3F6F2!important}
+}
 html.menu-open .mobile-book,html.menu-open .sb-mobile-book,body:has(#nav-toggle:checked) .mobile-book,body:has(#nav-toggle:checked) .sb-mobile-book{display:none!important}
 </style>
 <style id="pain-contrast">
