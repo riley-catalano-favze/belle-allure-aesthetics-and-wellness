@@ -252,6 +252,10 @@ html.menu-open .mobile-book,html.menu-open .sb-mobile-book,body:has(#nav-toggle:
 .pain-card .pain-q,.pain-card:hover .pain-q,.pain-card:focus-visible .pain-q{color:#000000!important}
 .pain-card .pain-a{color:#4F6754!important}
 </style>
+<style id="kc-phone-stack">
+/* Phone: photo cards keep 4:5 so the stack shows all three photos (same as home page) */
+@media (max-width:600px){.kc-card{aspect-ratio:4/5!important;height:auto!important;width:82%!important}.kc-card img{height:100%!important;width:100%!important;object-fit:cover!important}}
+</style>
 <style id="kc-touch-fix">
 /* Photo swipe on phones: arrows sit above the photos, are easy to tap, and swiping the photos works too */
 .kc-ctrl{position:relative!important;z-index:20!important;display:flex!important;justify-content:center!important;align-items:center!important;gap:18px!important;margin-top:22px!important;touch-action:manipulation!important}
