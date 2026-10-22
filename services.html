@@ -1429,6 +1429,46 @@ html body .sb-close>p:not(.sb-stars){margin-bottom:0!important}
 html body .sb-close .row{margin-top:40px!important}
 @media (max-width:600px){html body .sb-close .row{flex-direction:column!important;margin-top:32px!important}html body .sb-close .row>.btn{width:100%!important;max-width:320px!important;box-sizing:border-box!important}}
 </style>
+<style id="services-from">
+/* Starting price tag under a service heading */
+html body .svc-from{display:inline-block!important;margin:12px 0 0!important;padding:7px 16px!important;border-radius:999px!important;background:#F8E1D1!important;color:#3D3D3D!important;font:600 15px/1.2 'Figtree',system-ui,sans-serif!important}
+</style>
+<style id="team-actions-centered">
+/* Care team section: Book appointment and Call sit together, centered, at every size */
+html body .sb-team .sb-actions{display:flex!important;justify-content:center!important;align-items:center!important;flex-wrap:wrap!important;gap:16px 24px!important;margin:40px auto 0!important;width:100%!important}
+html body .sb-team .sb-actions>.sb-cta{margin:0!important;width:auto!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;min-height:56px!important;padding:0 28px!important;box-sizing:border-box!important;line-height:1.2!important}
+@media (max-width:600px){html body .sb-team .sb-actions{flex-direction:column!important}html body .sb-team .sb-actions>.sb-cta{width:100%!important;max-width:320px!important;box-sizing:border-box!important;text-align:center!important}}
+</style>
+<style id="follow-cta">
+/* Closing social call to action: soft blush card, gold hairline, centered buttons with icons */
+html body .follow-cta{background:#FBF7F1!important;padding:72px 20px 96px!important;text-align:center!important}
+html body .follow-card{max-width:760px!important;margin:0 auto!important;padding:56px 32px 44px!important;border-radius:32px!important;background:linear-gradient(160deg,#F8E1D1 0%,#FBF7F1 70%)!important;border:1.5px solid #E5B400!important;box-shadow:0 24px 48px rgba(79,103,84,.10)!important;box-sizing:border-box!important}
+html body .follow-eyebrow{margin:0 0 12px!important;font:600 13px/1 'Figtree',system-ui,sans-serif!important;letter-spacing:.2em!important;text-transform:uppercase!important;color:#4F6754!important}
+html body .follow-title{margin:0 auto!important;max-width:560px!important;font-family:'Cormorant Garamond',Georgia,serif!important;font-weight:600!important;font-size:44px!important;line-height:1.12!important;color:#3D3D3D!important}
+html body .follow-title em{font-style:italic!important;color:#5E7A65!important}
+html body .follow-sub{margin:18px auto 0!important;max-width:520px!important;color:#3D3D3D!important;font-size:17px!important;line-height:1.6!important}
+html body .follow-actions{display:flex!important;justify-content:center!important;align-items:center!important;flex-wrap:wrap!important;gap:14px!important;margin-top:32px!important}
+html body .follow-btn{display:inline-flex!important;align-items:center!important;justify-content:center!important;gap:10px!important;min-height:52px!important;padding:0 26px!important;border-radius:999px!important;font:600 16px/1 'Figtree',system-ui,sans-serif!important;text-decoration:none!important;margin:0!important;box-sizing:border-box!important;transition:transform .2s ease,background .2s ease}
+html body .follow-btn-ig{background:#5E7A65!important;color:#FFFFFF!important;border:1.5px solid #5E7A65!important}
+html body .follow-btn-fb{background:#FFFFFF!important;color:#4F6754!important;border:1.5px solid #5E7A65!important}
+html body .follow-btn:hover{transform:translateY(-2px)!important}
+html body .follow-btn-ig:hover{background:#4F6754!important}
+html body .follow-btn-fb:hover{background:#F3F6F2!important}
+html body .follow-handle{margin:26px 0 0!important;font:600 14px/1.4 'Figtree',system-ui,sans-serif!important;color:#4F6754!important;letter-spacing:.04em!important}
+@media (max-width:600px){
+  html body .follow-card{padding:44px 22px 36px!important;border-radius:26px!important}
+  html body .follow-title{font-size:36px!important}
+  html body .follow-actions{flex-direction:column!important;width:100%!important}
+  html body .follow-btn{width:100%!important;max-width:320px!important}
+}
+</style>
+<style id="follow-btn-colors">
+/* Card buttons: white text and icon on the filled Instagram button, sage text and icon on the outline Facebook button */
+html body section#follow .follow-btn-ig,html body section#follow-social .follow-btn-ig,html body section#follow .follow-btn-ig:hover,html body section#follow-social .follow-btn-ig:hover,html body section#follow .follow-btn-ig:focus-visible,html body section#follow-social .follow-btn-ig:focus-visible,html body section#follow .follow-btn-ig:visited,html body section#follow-social .follow-btn-ig:visited{color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF!important}
+html body .follow-btn-ig svg{color:#FFFFFF!important;stroke:#FFFFFF!important}
+html body section#follow .follow-btn-fb,html body section#follow-social .follow-btn-fb,html body section#follow .follow-btn-fb:visited,html body section#follow-social .follow-btn-fb:visited{color:#4F6754!important;-webkit-text-fill-color:#4F6754!important}
+html body .follow-btn-fb svg{color:#4F6754!important;fill:#4F6754!important}
+</style>
 </head>
 <body>
 <nav class="svc-side-nav" aria-label="Services on this page"><p class="svc-side-title">Services</p><ul><li><a href="#svc-wrinkles">Wrinkle treatments</a></li><li><a href="#svc-fillers">Dermal fillers</a></li><li><a href="#svc-prf">PRF Therapy</a></li><li><a href="#svc-prf-micro">PRF Facial Microneedling</a></li><li><a href="#svc-prf-eye">PRF Under Eye Repair</a></li><li><a href="#svc-prp-hair">PRP hair restoration</a></li><li><a href="#svc-tmj">TMJ Therapy</a></li><li><a href="#svc-headache">Headache treatment</a></li><li><a href="#svc-iv">IV therapy</a></li><li><a href="#svc-hyperhidrosis">Hyperhidrosis Treatment</a></li><li><a href="#svc-wellness">Wellness injections and weight medications</a></li><li><a href="#svc-acne">Acne medication</a></li></ul></nav>
@@ -1586,6 +1626,7 @@ html body .sb-close .row{margin-top:40px!important}
           <div>
             <span class="sb-label">Injectables</span>
             <h2 id="wrinkle-treatments" id="svc-wrinkles-h">Wrinkle treatments in Elkhart</h2>
+<p class="svc-from">Starting at $10 per unit</p>
             <p class="sb-problem">Good fit if you want smoother skin that still looks like you.</p>
             <p class="sb-guidance">Katherine reviews your goals first, then plans where and how much to treat so your results look natural.</p>
             
@@ -1655,6 +1696,7 @@ html body .sb-close .row{margin-top:40px!important}
           <div>
             <span class="sb-label">Regenerative</span>
             <h2 id="prf-facial-microneedling" id="svc-prf-micro-h">PRF Facial Microneedling in Elkhart</h2>
+<p class="svc-from">Starting at $350</p>
             <p class="sb-problem">Good fit if you want a refreshed-looking complexion.</p>
             <p class="sb-guidance">Katherine explains what a microneedling facial with a growth-factor serum can do for your skin.</p>
             
@@ -1678,6 +1720,7 @@ html body .sb-close .row{margin-top:40px!important}
           <div>
             <span class="sb-label">Regenerative</span>
             <h2 id="prf-under-eye-repair" id="svc-prf-eye-h">PRF Under Eye Repair in Elkhart</h2>
+<p class="svc-from">Starting at $250</p>
             <p class="sb-problem">Good fit if you want the area under your eyes to look refreshed.</p>
             <p class="sb-guidance">Katherine explains how PRF under-eye repair works, and why it starts with your own blood.</p>
             
@@ -1724,6 +1767,7 @@ html body .sb-close .row{margin-top:40px!important}
           <div>
             <span class="sb-label">Jaw relief</span>
             <h2 id="tmj-therapy" id="svc-tmj-h">TMJ Therapy in Elkhart</h2>
+<p class="svc-from">Starting at $300</p>
             <p class="sb-problem">Good fit if you want a more relaxed jaw and a more comfortable day.</p>
             <p class="sb-guidance">Katherine recommends the approach that matches your symptoms, from massage to masseter treatment.</p>
             <p class="sb-hsa">HSA cards are accepted for this treatment.</p>
@@ -1770,6 +1814,8 @@ html body .sb-close .row{margin-top:40px!important}
           <div>
             <span class="sb-label">Wellness</span>
             <h2 id="iv-therapy" id="svc-iv-h">IV therapy in Elkhart, Indiana</h2>
+<p class="svc-from">Starting at $140</p>
+<p class="svc-from">Vitamin shots starting at $25</p>
             <p class="sb-problem">Good fit if you want more energy and a boost that fits your week.</p>
             <p class="sb-guidance">Katherine helps you choose the blend that matches how you feel and what you want to support.</p>
             <p class="sb-hsa">HSA cards are accepted when your provider prescribes IV therapy for a medical condition.</p>
@@ -1816,6 +1862,7 @@ html body .sb-close .row{margin-top:40px!important}
           <div>
             <span class="sb-label">Wellness</span>
             <h2 id="wellness-injections" id="svc-wellness-h">Wellness injections and GLP-1 weight medications in Elkhart</h2>
+<p class="svc-from">Starting at $45 per week</p>
             <p class="sb-problem">Good fit if you want steady support toward a weight and wellness goal.</p>
             <p class="sb-guidance">Katherine guides every option with a medical evaluation and ongoing check-ins.</p>
             
@@ -1907,7 +1954,24 @@ html body .sb-close .row{margin-top:40px!important}
               </div>
     </section>
 
-    <section class="sb-close">
+      <section id="follow-social" class="follow-cta" aria-labelledby="follow-social-h">
+    <div class="follow-card">
+      <p class="follow-eyebrow">Stay connected</p>
+      <h2 id="follow-social-h" class="follow-title">Come along for the <em>everyday</em> moments</h2>
+      <p class="follow-sub">Behind-the-scenes looks at the practice, treatment education, and updates from Katherine Clark, RN and the Belle Allure team.</p>
+      <div class="follow-actions">
+        <a class="follow-btn follow-btn-ig" href="https://www.instagram.com/katiebelleallureaesthetics/" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          Follow on Instagram
+        </a>
+        <a class="follow-btn follow-btn-fb" href="https://www.facebook.com/p/Belle-Allure-Aesthetics-and-Wellness-61578410480099/" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.6 1.6-1.6h1.7V4.4c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.4H7.3V14h2.8v8z"/></svg>
+          Follow on Facebook
+        </a>
+      </div>
+    </div>
+  </section>
+<section class="sb-close">
       <p class="eyebrow" style="color:#FFFFFF">Your next step</p>
       <h2>Book an appointment and take the first step toward your goal</h2>
       <p class="sb-stars" style="margin:22px auto 8px;width:fit-content;display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;color:#3D3D3D;font-weight:600"><span role="img" aria-label="5 out of 5 stars" style="color:#E5B400;font-size:22px;letter-spacing:.12em;text-shadow:0 0 6px rgba(229,180,0,.35)">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 14 five-star reviews on Google</p>
