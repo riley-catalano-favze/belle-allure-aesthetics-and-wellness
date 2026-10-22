@@ -263,6 +263,29 @@ html.menu-open .mobile-book,html.menu-open .sb-mobile-book,body:has(#nav-toggle:
 <link rel="apple-touch-icon" sizes="180x180" href="https://belleallureaestheticsandwellness.com/apple-touch-icon.png">
 <style>@media (max-width:900px){html body .kc-ctrl{margin-bottom:0!important}html body .kc-wrap{padding-bottom:110px!important}}
 </style>
+<style id="follow-cta">
+/* Closing social call to action: soft blush card, gold hairline, centered buttons with icons */
+html body .follow-cta{background:#FBF7F1!important;padding:72px 20px 96px!important;text-align:center!important}
+html body .follow-card{max-width:760px!important;margin:0 auto!important;padding:56px 32px 44px!important;border-radius:32px!important;background:linear-gradient(160deg,#F8E1D1 0%,#FBF7F1 70%)!important;border:1.5px solid #E5B400!important;box-shadow:0 24px 48px rgba(79,103,84,.10)!important;box-sizing:border-box!important}
+html body .follow-eyebrow{margin:0 0 12px!important;font:600 13px/1 'Figtree',system-ui,sans-serif!important;letter-spacing:.2em!important;text-transform:uppercase!important;color:#4F6754!important}
+html body .follow-title{margin:0 auto!important;max-width:560px!important;font-family:'Cormorant Garamond',Georgia,serif!important;font-weight:600!important;font-size:44px!important;line-height:1.12!important;color:#3D3D3D!important}
+html body .follow-title em{font-style:italic!important;color:#5E7A65!important}
+html body .follow-sub{margin:18px auto 0!important;max-width:520px!important;color:#3D3D3D!important;font-size:17px!important;line-height:1.6!important}
+html body .follow-actions{display:flex!important;justify-content:center!important;align-items:center!important;flex-wrap:wrap!important;gap:14px!important;margin-top:32px!important}
+html body .follow-btn{display:inline-flex!important;align-items:center!important;justify-content:center!important;gap:10px!important;min-height:52px!important;padding:0 26px!important;border-radius:999px!important;font:600 16px/1 'Figtree',system-ui,sans-serif!important;text-decoration:none!important;margin:0!important;box-sizing:border-box!important;transition:transform .2s ease,background .2s ease}
+html body .follow-btn-ig{background:#5E7A65!important;color:#FFFFFF!important;border:1.5px solid #5E7A65!important}
+html body .follow-btn-fb{background:#FFFFFF!important;color:#4F6754!important;border:1.5px solid #5E7A65!important}
+html body .follow-btn:hover{transform:translateY(-2px)!important}
+html body .follow-btn-ig:hover{background:#4F6754!important}
+html body .follow-btn-fb:hover{background:#F3F6F2!important}
+html body .follow-handle{margin:26px 0 0!important;font:600 14px/1.4 'Figtree',system-ui,sans-serif!important;color:#4F6754!important;letter-spacing:.04em!important}
+@media (max-width:600px){
+  html body .follow-card{padding:44px 22px 36px!important;border-radius:26px!important}
+  html body .follow-title{font-size:36px!important}
+  html body .follow-actions{flex-direction:column!important;width:100%!important}
+  html body .follow-btn{width:100%!important;max-width:320px!important}
+}
+</style>
 </head>
 <body>
 
@@ -1506,6 +1529,23 @@ body main a.pain-card,body main a.pain-card *{text-decoration:none!important}bod
   </div>
   <p style="margin-top:20px;color:#555555;font-size:15px">Turkeys, herons and more visit the grounds throughout the year.</p>
 </section>
+  <section id="follow" class="follow-cta" aria-labelledby="follow-h">
+    <div class="follow-card">
+      <p class="follow-eyebrow">Stay connected</p>
+      <h2 id="follow-h" class="follow-title">Come along for the <em>everyday</em> moments</h2>
+      <p class="follow-sub">Behind-the-scenes looks at the practice, treatment education, and updates from Katherine Clark, RN and the Belle Allure team.</p>
+      <div class="follow-actions">
+        <a class="follow-btn follow-btn-ig" href="https://www.instagram.com/katiebelleallureaesthetics/" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          Follow on Instagram
+        </a>
+        <a class="follow-btn follow-btn-fb" href="https://www.facebook.com/p/Belle-Allure-Aesthetics-and-Wellness-61578410480099/" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.6 1.6-1.6h1.7V4.4c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.4H7.3V14h2.8v8z"/></svg>
+          Follow on Facebook
+        </a>
+      </div>
+    </div>
+  </section>
 <footer class="footer" style="background:#3D3D3D;color:#FBF7F1">
     <div class="wrap footer-grid" style="padding:48px 24px 32px">
       <div>
