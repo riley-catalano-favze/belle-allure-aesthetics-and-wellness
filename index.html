@@ -257,6 +257,62 @@ html.menu-open .mobile-book,html.menu-open .sb-mobile-book,body:has(#nav-toggle:
 }
 @media (max-width:900px){html body .kc-ctrl{margin-bottom:0!important}html body .kc-wrap{padding-bottom:110px!important}}
 </style>
+<style id="home-reviews-centered">
+/* Home reviews: the cards start in the centered column, the arrows sit centered under them, and the two buttons sit centered under the arrows. The hero stays left-aligned. */
+html body #reviews .review-row{padding-left:max(24px,calc(50% - 560px))!important;padding-right:24px!important;scroll-padding-left:max(24px,calc(50% - 560px))}
+html body #reviews .review-foot{display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;gap:22px!important;text-align:center!important;width:100%!important;margin:0 auto!important}
+html body #reviews .review-foot .rn-wrap{display:flex!important;justify-content:center!important;width:100%!important;margin:0!important}
+html body #reviews .review-foot .row-nav{justify-content:center!important;padding:0!important;margin:0 auto!important}
+html body #reviews .review-cta{display:flex!important;flex-wrap:wrap!important;justify-content:center!important;align-items:center!important;gap:16px 32px!important;width:100%!important;margin:0 auto!important;text-align:center!important}
+html body #reviews .review-cta>a{margin:0!important}
+html body #reviews .review-foot .rn-wrap{order:1!important}
+html body #reviews .review-foot .review-cta{order:2!important}
+</style>
+<style id="home-hero-buttons-left-centered">
+/* Home hero buttons sit centered within the left text column on every width */
+html body section.hero .hero-btns{display:flex!important;justify-content:center!important;align-items:center!important;text-align:center!important;width:100%!important}
+</style>
+<style id="home-hero-gutter">
+/* Home hero keeps side space on every width, so the text never touches the screen edge */
+html body section.hero.wrap{padding-left:clamp(24px,4vw,40px)!important;padding-right:clamp(24px,4vw,40px)!important}
+</style>
+<style id="footer-bottom-aligned">
+/* Footer bottom row: copyright, credential line and legal link sit on one centered line on desktop, and stack centered on phones */
+div.wrap[style*="border-top:1px solid #5E7A65"]{align-items:center!important}
+div.wrap[style*="border-top:1px solid #5E7A65"]>p{margin:0!important;line-height:1.5!important}
+@media (min-width:701px){
+  div.wrap[style*="border-top:1px solid #5E7A65"]{display:grid!important;grid-template-columns:1fr minmax(0,560px) 1fr!important;gap:16px 24px!important;justify-content:stretch!important}
+  div.wrap[style*="border-top:1px solid #5E7A65"]>p:first-child{text-align:left!important}
+  div.wrap[style*="border-top:1px solid #5E7A65"]>p:nth-child(2){text-align:center!important}
+  div.wrap[style*="border-top:1px solid #5E7A65"]>p:last-child{text-align:right!important}
+}
+@media (max-width:700px){
+  div.wrap[style*="border-top:1px solid #5E7A65"]{flex-direction:column!important;align-items:center!important;justify-content:center!important;text-align:center!important}
+}
+</style>
+<style id="follow-cta">
+/* Closing social call to action: soft blush card, gold hairline, centered buttons with icons */
+html body .follow-cta{background:#FBF7F1!important;padding:72px 20px 96px!important;text-align:center!important}
+html body .follow-card{max-width:760px!important;margin:0 auto!important;padding:56px 32px 44px!important;border-radius:32px!important;background:linear-gradient(160deg,#F8E1D1 0%,#FBF7F1 70%)!important;border:1.5px solid #E5B400!important;box-shadow:0 24px 48px rgba(79,103,84,.10)!important;box-sizing:border-box!important}
+html body .follow-eyebrow{margin:0 0 12px!important;font:600 13px/1 'Figtree',system-ui,sans-serif!important;letter-spacing:.2em!important;text-transform:uppercase!important;color:#4F6754!important}
+html body .follow-title{margin:0 auto!important;max-width:560px!important;font-family:'Cormorant Garamond',Georgia,serif!important;font-weight:600!important;font-size:44px!important;line-height:1.12!important;color:#3D3D3D!important}
+html body .follow-title em{font-style:italic!important;color:#5E7A65!important}
+html body .follow-sub{margin:18px auto 0!important;max-width:520px!important;color:#3D3D3D!important;font-size:17px!important;line-height:1.6!important}
+html body .follow-actions{display:flex!important;justify-content:center!important;align-items:center!important;flex-wrap:wrap!important;gap:14px!important;margin-top:32px!important}
+html body .follow-btn{display:inline-flex!important;align-items:center!important;justify-content:center!important;gap:10px!important;min-height:52px!important;padding:0 26px!important;border-radius:999px!important;font:600 16px/1 'Figtree',system-ui,sans-serif!important;text-decoration:none!important;margin:0!important;box-sizing:border-box!important;transition:transform .2s ease,background .2s ease}
+html body .follow-btn-ig{background:#5E7A65!important;color:#FFFFFF!important;border:1.5px solid #5E7A65!important}
+html body .follow-btn-fb{background:#FFFFFF!important;color:#4F6754!important;border:1.5px solid #5E7A65!important}
+html body .follow-btn:hover{transform:translateY(-2px)!important}
+html body .follow-btn-ig:hover{background:#4F6754!important}
+html body .follow-btn-fb:hover{background:#F3F6F2!important}
+html body .follow-handle{margin:26px 0 0!important;font:600 14px/1.4 'Figtree',system-ui,sans-serif!important;color:#4F6754!important;letter-spacing:.04em!important}
+@media (max-width:600px){
+  html body .follow-card{padding:44px 22px 36px!important;border-radius:26px!important}
+  html body .follow-title{font-size:36px!important}
+  html body .follow-actions{flex-direction:column!important;width:100%!important}
+  html body .follow-btn{width:100%!important;max-width:320px!important}
+}
+</style>
 </head>
 <body>
 
@@ -1075,7 +1131,7 @@ body main a.pain-card,body main a.pain-card *{text-decoration:none!important}bod
       <div>
         <p class="eyebrow">Injectables, regenerative, and wellness care</p>
         <h1 class="hero-title" style="font-size:64px;margin-top:18px">Find the treatment that fits your goals, <em style="font-style:italic;color:#5E7A65">explained clearly</em>.</h1>
-        <p style="margin-top:24px;font-size:19px;max-width:520px;color:#555555">Katherine Clark, RN, a Registered Nurse with 20+ years of medical experience and oversight from Dr. Raza Khan, MD, guides you through <a href="https://belleallureaestheticsandwellness.com/services#svc-wrinkles" style="color:#5E7A65;text-decoration:underline;text-underline-offset:3px">wrinkle treatments</a>, <a href="https://belleallureaestheticsandwellness.com/services#svc-fillers" style="color:#5E7A65;text-decoration:underline;text-underline-offset:3px">dermal fillers</a>, <a href="https://belleallureaestheticsandwellness.com/services#svc-prf-micro" style="color:#5E7A65;text-decoration:underline;text-underline-offset:3px">PRF facial microneedling</a> and <a href="https://belleallureaestheticsandwellness.com/services#svc-prf-eye" style="color:#5E7A65;text-decoration:underline;text-underline-offset:3px">PRF under eye repair</a> treatments, <a href="https://belleallureaestheticsandwellness.com/services#svc-acne" style="color:#5E7A65;text-decoration:underline;text-underline-offset:3px">acne medication</a>, <a href="https://belleallureaestheticsandwellness.com/services#svc-iv" style="color:#5E7A65;text-decoration:underline;text-underline-offset:3px">IV therapy</a>, and more. Every plan starts with a one-on-one consultation in Elkhart, and all consultations are free.</p>
+        <p style="margin-top:24px;font-size:19px;max-width:520px;color:#555555">Katherine Clark, RN, a Registered Nurse with 20+ years of medical experience and oversight from an MD, guides you through <a href="https://belleallureaestheticsandwellness.com/services#svc-wrinkles" style="color:#5E7A65;text-decoration:underline;text-underline-offset:3px">wrinkle treatments</a>, <a href="https://belleallureaestheticsandwellness.com/services#svc-fillers" style="color:#5E7A65;text-decoration:underline;text-underline-offset:3px">dermal fillers</a>, <a href="https://belleallureaestheticsandwellness.com/services#svc-prf-micro" style="color:#5E7A65;text-decoration:underline;text-underline-offset:3px">PRF facial microneedling</a> and <a href="https://belleallureaestheticsandwellness.com/services#svc-prf-eye" style="color:#5E7A65;text-decoration:underline;text-underline-offset:3px">PRF under eye repair</a> treatments, <a href="https://belleallureaestheticsandwellness.com/services#svc-acne" style="color:#5E7A65;text-decoration:underline;text-underline-offset:3px">acne medication</a>, <a href="https://belleallureaestheticsandwellness.com/services#svc-iv" style="color:#5E7A65;text-decoration:underline;text-underline-offset:3px">IV therapy</a>, and more. Every plan starts with a one-on-one consultation in Elkhart, and all consultations are free.</p>
         <div class="hero-btns" style="display:flex;gap:14px;flex-wrap:wrap;margin-top:36px">
           <a class="btn" href="https://belleallurefacialaesthetics.myaestheticrecord.com/online-booking/book-appointment" style="background:#5E7A65;color:#FFFFFF">Book appointment</a>
           <a class="btn btn-ghost" href="#services">Explore services</a>
@@ -1635,6 +1691,23 @@ body main a.pain-card,body main a.pain-card *{text-decoration:none!important}bod
         <a class="btn" href="tel:+15747351528" style="margin-top:28px;background:#5E7A65;color:#FFFFFF;padding:0 32px">Call 574-735-1528 to refer a friend</a>
       </div>
     </section>
+  <section id="follow" class="follow-cta" aria-labelledby="follow-h">
+    <div class="follow-card">
+      <p class="follow-eyebrow">Stay connected</p>
+      <h2 id="follow-h" class="follow-title">Come along for the <em>everyday</em> moments</h2>
+      <p class="follow-sub">Behind-the-scenes looks at the practice, treatment education, and updates from Katherine Clark, RN and the Belle Allure team.</p>
+      <div class="follow-actions">
+        <a class="follow-btn follow-btn-ig" href="https://www.instagram.com/katiebelleallureaesthetics/" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          Follow on Instagram
+        </a>
+        <a class="follow-btn follow-btn-fb" href="https://www.facebook.com/p/Belle-Allure-Aesthetics-and-Wellness-61578410480099/" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.6 1.6-1.6h1.7V4.4c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.4H7.3V14h2.8v8z"/></svg>
+          Follow on Facebook
+        </a>
+      </div>
+    </div>
+  </section>
   </main>
 
   <footer class="footer" style="background:#3D3D3D;color:#FBF7F1">
@@ -1690,7 +1763,7 @@ body main a.pain-card,body main a.pain-card *{text-decoration:none!important}bod
     
     <div class="wrap" style="border-top:1px solid #5E7A65;padding:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:14px;color:#F8E1D1">
       <p>&copy; 2026 <a class="bl-home" href="https://belleallureaestheticsandwellness.com/">Belle Allure, LLC</a></p>
-      <p style="font-size:14px;max-width:560px">Katherine Clark, RN, Certified Aesthetic Nurse Injector, is overseen by Dr. Raza Khan, MD, Medical Director.</p>
+      <p style="font-size:14px;max-width:560px">Katherine Clark, RN, Certified Aesthetic Nurse Injector, is overseen by an MD.</p>
       <p><a href="https://belleallureaestheticsandwellness.com/legal" style="font-size:14px">Legal notices</a></p>
     </div>
   </footer>

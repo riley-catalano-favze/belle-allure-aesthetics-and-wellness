@@ -1469,6 +1469,20 @@ html body .follow-btn-ig svg{color:#FFFFFF!important;stroke:#FFFFFF!important}
 html body section#follow .follow-btn-fb,html body section#follow-social .follow-btn-fb,html body section#follow .follow-btn-fb:visited,html body section#follow-social .follow-btn-fb:visited{color:#4F6754!important;-webkit-text-fill-color:#4F6754!important}
 html body .follow-btn-fb svg{color:#4F6754!important;fill:#4F6754!important}
 </style>
+<style id="footer-bottom-aligned">
+/* Footer bottom row: copyright, credential line and legal link sit on one centered line on desktop, and stack centered on phones */
+div.wrap[style*="border-top:1px solid #5E7A65"]{align-items:center!important}
+div.wrap[style*="border-top:1px solid #5E7A65"]>p{margin:0!important;line-height:1.5!important}
+@media (min-width:701px){
+  div.wrap[style*="border-top:1px solid #5E7A65"]{display:grid!important;grid-template-columns:1fr minmax(0,560px) 1fr!important;gap:16px 24px!important;justify-content:stretch!important}
+  div.wrap[style*="border-top:1px solid #5E7A65"]>p:first-child{text-align:left!important}
+  div.wrap[style*="border-top:1px solid #5E7A65"]>p:nth-child(2){text-align:center!important}
+  div.wrap[style*="border-top:1px solid #5E7A65"]>p:last-child{text-align:right!important}
+}
+@media (max-width:700px){
+  div.wrap[style*="border-top:1px solid #5E7A65"]{flex-direction:column!important;align-items:center!important;justify-content:center!important;text-align:center!important}
+}
+</style>
 </head>
 <body>
 <nav class="svc-side-nav" aria-label="Services on this page"><p class="svc-side-title">Services</p><ul><li><a href="#svc-wrinkles">Wrinkle treatments</a></li><li><a href="#svc-fillers">Dermal fillers</a></li><li><a href="#svc-prf">PRF Therapy</a></li><li><a href="#svc-prf-micro">PRF Facial Microneedling</a></li><li><a href="#svc-prf-eye">PRF Under Eye Repair</a></li><li><a href="#svc-prp-hair">PRP hair restoration</a></li><li><a href="#svc-tmj">TMJ Therapy</a></li><li><a href="#svc-headache">Headache treatment</a></li><li><a href="#svc-iv">IV therapy</a></li><li><a href="#svc-hyperhidrosis">Hyperhidrosis Treatment</a></li><li><a href="#svc-wellness">Wellness injections and weight medications</a></li><li><a href="#svc-acne">Acne medication</a></li></ul></nav>
@@ -2037,7 +2051,7 @@ html body .follow-btn-fb svg{color:#4F6754!important;fill:#4F6754!important}
     
     <div class="wrap" style="border-top:1px solid #5E7A65;padding:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:14px;color:#F8E1D1">
       <p>&copy; 2026 <a href="https://belleallureaestheticsandwellness.com/" style="color:inherit;text-decoration:underline">Belle Allure, LLC</a></p>
-      <p style="font-size:14px;max-width:560px">Katherine Clark, RN, Certified Aesthetic Nurse Injector, is overseen by Dr. Raza Khan, MD, Medical Director.</p>
+      <p style="font-size:14px;max-width:560px">Katherine Clark, RN, Certified Aesthetic Nurse Injector, is overseen by an MD.</p>
       <p><a href="https://belleallureaestheticsandwellness.com/legal" style="font-size:14px">Legal notices</a></p>
     </div>
   </footer>

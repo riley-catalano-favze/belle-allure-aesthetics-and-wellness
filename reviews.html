@@ -1757,6 +1757,20 @@ html body .svc-foot>.svc-nav{display:flex!important;justify-content:center!impor
 html body .svc-foot>.btn{margin:0 auto!important;width:auto!important}
 html body .svc-foot>.svc-nav{order:-1!important}
 </style>
+<style id="footer-bottom-aligned">
+/* Footer bottom row: copyright, credential line and legal link sit on one centered line on desktop, and stack centered on phones */
+div.wrap[style*="border-top:1px solid #5E7A65"]{align-items:center!important}
+div.wrap[style*="border-top:1px solid #5E7A65"]>p{margin:0!important;line-height:1.5!important}
+@media (min-width:701px){
+  div.wrap[style*="border-top:1px solid #5E7A65"]{display:grid!important;grid-template-columns:1fr minmax(0,560px) 1fr!important;gap:16px 24px!important;justify-content:stretch!important}
+  div.wrap[style*="border-top:1px solid #5E7A65"]>p:first-child{text-align:left!important}
+  div.wrap[style*="border-top:1px solid #5E7A65"]>p:nth-child(2){text-align:center!important}
+  div.wrap[style*="border-top:1px solid #5E7A65"]>p:last-child{text-align:right!important}
+}
+@media (max-width:700px){
+  div.wrap[style*="border-top:1px solid #5E7A65"]{flex-direction:column!important;align-items:center!important;justify-content:center!important;text-align:center!important}
+}
+</style>
 </head>
 <body id="top">
 <a class="skip" href="#main">Skip to main content</a>
@@ -2188,7 +2202,7 @@ html body .svc-foot>.svc-nav{order:-1!important}
     
     <div class="wrap" style="border-top:1px solid #5E7A65;padding:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:14px;color:#F8E1D1">
       <p>&copy; 2026 <a href="https://belleallureaestheticsandwellness.com/" style="color:inherit;text-decoration:underline">Belle Allure, LLC</a></p>
-      <p style="font-size:14px;max-width:560px"><a class="bl-home" href="https://belleallureaestheticsandwellness.com/about">Katherine Clark, RN</a>, Certified Aesthetic Nurse Injector, is overseen by Dr. Raza Khan, MD, Medical Director.</p>
+      <p style="font-size:14px;max-width:560px"><a class="bl-home" href="https://belleallureaestheticsandwellness.com/about">Katherine Clark, RN</a>, Certified Aesthetic Nurse Injector, is overseen by an MD.</p>
       <p><a href="https://belleallureaestheticsandwellness.com/legal" style="font-size:14px">Legal notices</a></p>
     </div>
   </footer>
