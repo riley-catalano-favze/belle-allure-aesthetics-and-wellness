@@ -335,6 +335,21 @@ html body .social-corner .sc-links a:hover,html body .social-corner .sc-links a:
 html body .social-corner .sc-links a svg{flex:0 0 auto!important}
 @media (min-width:1101px) and (hover:hover) and (pointer:fine){html body .social-corner{display:block!important}html body .social-corner[hidden]{display:none!important}}
 </style>
+<style id="kc-phone-match-home">
+/* Phone photos match the home page: 280px column, 4:5 stack, cards layered and offset */
+@media (max-width:600px){
+  #about .kc-wrap{max-width:none!important;width:100%!important;flex:1 1 100%!important;margin:0 auto!important;padding-bottom:0!important}
+  #about .kc-stack{position:relative!important;aspect-ratio:9/10!important;width:100%!important;display:block!important;flex-direction:initial!important;gap:0!important;overflow:visible!important}
+  #about .kc-card{position:absolute!important;top:0!important;left:0!important;right:0!important;margin-left:auto!important;margin-right:auto!important;bottom:auto!important;width:82%!important;height:auto!important;aspect-ratio:4/5!important;padding-bottom:0!important;transition:transform .6s cubic-bezier(.2,.8,.2,1),opacity .6s ease!important;align-self:auto!important}
+  #about .kc-card img{position:static!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:center top!important;display:block!important}
+  #about .kc-card[data-slot="0"]{z-index:3;transform:none}
+  #about .kc-card[data-slot="1"]{z-index:2;transform:translate(22px,14px) rotate(5deg) scale(.95)}
+  #about .kc-card[data-slot="2"]{z-index:1;transform:translate(-22px,22px) rotate(-5deg) scale(.9)}
+  #about .kc-card[data-slot="3"]{z-index:0;transform:translate(0,30px) scale(.85);opacity:0;pointer-events:none}
+  #about .kc-ctrl{display:flex!important;margin-top:18px!important;margin-bottom:0!important}
+}
+@media (max-width:600px){html body section#about .kc-wrap{margin-bottom:0!important}html body section#about.about-cta{padding-bottom:32px!important}}
+</style>
 </head>
 <body>
 
@@ -1864,6 +1879,11 @@ new MutationObserver(function(ms){ms.forEach(function(m){sync(m.target);});}).ob
   function update(){
     t=false;
     var hide = end ? end.getBoundingClientRect().bottom < window.innerHeight : false;
+    var ctrl = document.querySelector('.kc-ctrl');
+    if(!hide && ctrl){
+      var a=c.getBoundingClientRect(), b=ctrl.getBoundingClientRect();
+      if(a.left < b.right && a.right > b.left && a.top < b.bottom && a.bottom > b.top){ hide=true; }
+    }
     c.hidden=hide;
   }
   function req(){ if(!t){ t=true; requestAnimationFrame(update); } }
