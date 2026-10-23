@@ -1489,6 +1489,21 @@ html body section#follow .follow-btn-ig,html body section#follow-social .follow-
 html body section#follow .follow-btn-ig *,html body section#follow-social .follow-btn-ig *{color:#FFFFFF!important;stroke:#FFFFFF!important}
 html body section#follow .follow-btn-ig:hover,html body section#follow-social .follow-btn-ig:hover{background:#4F6754!important;color:#FFFFFF!important}
 </style>
+<style id="social-corner-pop">
+/* Bottom-corner follow card. No close button. Hidden when the side navigation stops (FAQ) or the footer is in view. */
+html body .social-corner{display:none!important;position:fixed;right:20px;bottom:20px;width:260px;box-sizing:border-box;background:linear-gradient(180deg,#FFFFFF 0%,#F7F9F6 100%);border:1px solid #DCE5DB;border-radius:20px;box-shadow:0 18px 40px rgba(61,61,61,.16),0 2px 6px rgba(61,61,61,.06);padding:18px 18px 16px;z-index:45;font-family:inherit}
+html body .social-corner[hidden]{display:none!important}
+html body .social-corner .sc-head{display:flex!important;align-items:center!important;gap:8px!important;margin:0 0 6px!important}
+html body .social-corner .sc-dot{width:8px!important;height:8px!important;border-radius:50%!important;background:#5E7A65!important;flex:0 0 auto!important}
+html body .social-corner .sc-title{margin:0!important;font-size:12px!important;font-weight:700!important;letter-spacing:.12em!important;text-transform:uppercase!important;color:#4F6754!important;line-height:1.2!important}
+html body .social-corner .sc-text{margin:0 0 14px!important;font-size:13px!important;line-height:1.45!important;color:#5A5A5A!important;font-weight:400!important}
+html body .social-corner .sc-links{display:flex!important;gap:8px!important}
+html body .social-corner .sc-links a{flex:1 1 0!important;min-height:44px!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;gap:6px!important;padding:0 10px!important;border-radius:999px!important;font-size:14px!important;font-weight:600!important;line-height:1!important;text-decoration:none!important;background:#5E7A65!important;color:#FFFFFF!important;border:1.5px solid #5E7A65!important;box-sizing:border-box!important;transition:background .2s ease,color .2s ease}
+html body .social-corner .sc-links a:nth-child(2){background:#FFFFFF!important;color:#4F6754!important;border-color:#5E7A65!important}
+html body .social-corner .sc-links a:hover,html body .social-corner .sc-links a:focus-visible{background:#4F6754!important;color:#FFFFFF!important;border-color:#4F6754!important}
+html body .social-corner .sc-links a svg{flex:0 0 auto!important}
+@media (min-width:1101px) and (hover:hover) and (pointer:fine){html body .social-corner{display:block!important}html body .social-corner[hidden]{display:none!important}}
+</style>
 </head>
 <body>
 <nav class="svc-side-nav" aria-label="Services on this page"><p class="svc-side-title">Services</p><ul><li><a href="#svc-wrinkles">Wrinkle treatments</a></li><li><a href="#svc-fillers">Dermal fillers</a></li><li><a href="#svc-prf">PRF Therapy</a></li><li><a href="#svc-prf-micro">PRF Facial Microneedling</a></li><li><a href="#svc-prf-eye">PRF Under Eye Repair</a></li><li><a href="#svc-prp-hair">PRP hair restoration</a></li><li><a href="#svc-tmj">TMJ Therapy</a></li><li><a href="#svc-headache">Headache treatment</a></li><li><a href="#svc-iv">IV therapy</a></li><li><a href="#svc-hyperhidrosis">Hyperhidrosis Treatment</a></li><li><a href="#svc-wellness">Wellness injections and weight medications</a></li><li><a href="#svc-acne">Acne medication</a></li></ul></nav>
@@ -2201,6 +2216,21 @@ new MutationObserver(function(ms){ms.forEach(function(m){sync(m.target);});}).ob
   }
   function req(){ if(!ticking){ ticking=true; requestAnimationFrame(update); } }
   window.addEventListener('scroll',req,{passive:true}); window.addEventListener('resize',req);
+  update();
+})();</script>
+<div class="social-corner" id="social-corner" aria-label="Follow Belle Allure"><div class="sc-head"><span class="sc-dot" aria-hidden="true"></span><p class="sc-title">Follow Belle Allure</p></div><p class="sc-text">Giveaways, education, real results, updates and more.</p><div class="sc-links"><a href="https://www.instagram.com/katiebelleallureaesthetics/" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg><span>Instagram</span></a><a href="https://www.facebook.com/p/Belle-Allure-Aesthetics-and-Wellness-61578410480099/" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.9c0-.9.3-1.6 1.6-1.6h1.7V4.4c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.4H7.3V14h2.8v8z"/></svg><span>Facebook</span></a></div></div>
+<script id="social-corner-sync">(function(){
+  var c=document.getElementById('social-corner'); if(!c) return;
+  var end=document.querySelector('section.sb-faq');
+  var t=false;
+  function update(){
+    t=false;
+    var hide = end ? end.getBoundingClientRect().bottom < window.innerHeight : false;
+    c.hidden=hide;
+  }
+  function req(){ if(!t){ t=true; requestAnimationFrame(update); } }
+  window.addEventListener('scroll',req,{passive:true});
+  window.addEventListener('resize',req);
   update();
 })();</script>
 </body>
