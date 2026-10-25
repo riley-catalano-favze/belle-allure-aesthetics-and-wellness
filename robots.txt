@@ -1,0 +1,27 @@
+# Search engines and general visitors: allowed everywhere
+User-agent: *
+Allow: /
+
+# Known aggressive SEO and data-scraping crawlers: blocked site-wide
+User-agent: Bytespider
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: serpstatbot
+Disallow: /
+
+Sitemap: https://belleallureaestheticsandwellness.com/sitemap.xml
