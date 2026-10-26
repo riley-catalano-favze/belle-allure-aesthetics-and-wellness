@@ -11,26 +11,26 @@
 
 ## Provider
 
-- Katherine Clark, RN: Registered Nurse with 20 years of clinical experience and Certified Aesthetic Nurse Injector credential
+- Katherine Clark, RN: Registered Nurse with 20+ years of medical experience and Certified Aesthetic Nurse Injector credential
 - Works under the oversight of a licensed medical doctor
 - Offers free consultations to help clients choose a treatment plan that fits their goals
 
 ## Services
 
-Details for each service are on the services page: https://belleallureaestheticsandwellness.com/services
+Each service has its own page, and all services are listed on the services page: https://belleallureaestheticsandwellness.com/services
 
-- Wrinkle treatments: softer lines that still look like you
-- Dermal fillers: fuller contours and a balanced look
-- PRF therapy: platelet-rich fibrin, prepared from a small sample of the client's own blood
-- PRF facial microneedling: starting at $350; smoother texture and a more even tone
-- PRF under eye repair: starting at $250; refreshed skin beneath the eyes
-- TMJ therapy: support for a relaxed jaw and a comfortable day
-- Headache treatment: relief from tension headaches
-- Hyperhidrosis treatment: less sweating and more confidence
-- Hair restoration: fuller-looking hair from the client's own platelets
-- IV therapy: a boost that fits the client's week
-- Wellness injections and weight medications: steady support toward a weight goal
-- Acne medication: clearer skin with a plan built for the client
+- [Wrinkle treatments](https://belleallureaestheticsandwellness.com/services/wrinkles-treatment): softer lines that still look like you
+- [Dermal fillers](https://belleallureaestheticsandwellness.com/services/fillers): fuller contours and a balanced look
+- [PRF therapy](https://belleallureaestheticsandwellness.com/services/prf-therapy): platelet-rich fibrin, prepared from a small sample of the client's own blood
+- [PRF facial microneedling](https://belleallureaestheticsandwellness.com/services/microneedling): starting at $350; smoother texture and a more even tone
+- [PRF under eye repair](https://belleallureaestheticsandwellness.com/services/prf-under-eye-repair): starting at $250; refreshed skin beneath the eyes
+- [TMJ therapy](https://belleallureaestheticsandwellness.com/services/tmj-therapy): support for a relaxed jaw and a comfortable day
+- [Headache treatment](https://belleallureaestheticsandwellness.com/services/headache-treatment): relief from tension headaches
+- [Hyperhidrosis treatment](https://belleallureaestheticsandwellness.com/services/hyperhidrosis-treatment): less sweating and more confidence
+- [Hair restoration](https://belleallureaestheticsandwellness.com/services/hair-restoration): fuller-looking hair from the client's own platelets
+- [IV therapy](https://belleallureaestheticsandwellness.com/services/iv-therapy): a boost that fits the client's week
+- [Wellness injections and weight medications](https://belleallureaestheticsandwellness.com/services/weight-loss-treatment): steady support toward a weight goal
+- [Acne medication](https://belleallureaestheticsandwellness.com/services/acne-medication): clearer skin with a plan built for the client
 
 Final prices are confirmed during the consultation.
 
