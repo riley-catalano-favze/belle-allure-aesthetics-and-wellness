@@ -173,3 +173,23 @@ new MutationObserver(function(ms){ms.forEach(function(m){sync(m.target);});}).ob
     if(next) next.addEventListener('click',function(){ strip.scrollBy({left:step(),behavior:'smooth'}); });
   });
 })();
+;
+/* Side navigation: show after the hero, hide once Important information has passed */
+(function(){
+  var nav=document.querySelector('.svc-side-nav'); if(!nav) return;
+  var hero=document.getElementById('top');
+  var imp=document.getElementById('important');
+  var impSec=imp?imp.closest('section'):null;
+  var ticking=false;
+  function update(){
+    ticking=false;
+    var vh=window.innerHeight;
+    var pastHero=hero?hero.getBoundingClientRect().bottom<=120:true;
+    var pastImportant=impSec?impSec.getBoundingClientRect().bottom<vh*0.5:false;
+    nav.classList.toggle('is-on',pastHero&&!pastImportant);
+  }
+  function req(){ if(!ticking){ ticking=true; requestAnimationFrame(update); } }
+  window.addEventListener('scroll',req,{passive:true});
+  window.addEventListener('resize',req);
+  update();
+})();

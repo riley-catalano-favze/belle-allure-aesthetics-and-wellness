@@ -1658,3 +1658,21 @@ html body header a.header-phone{min-height:44px!important;display:inline-flex!im
 .sp-trust::-webkit-scrollbar{display:none}
 .sp-trust li{flex:0 0 auto;white-space:nowrap;scroll-snap-align:start;background:#FBF7F1;border:1px solid #E3E8E0;border-radius:999px;padding:8px 16px;font-size:14px;color:#3D3D3D}
 @media (max-width:600px){.sp-trust{padding:14px 16px}}
+
+/* Side navigation: appears after the hero, ends after Important information */
+@media (min-width:1101px){
+html body .svc-side-nav{opacity:0!important;visibility:hidden!important;transition:opacity .25s ease,visibility .25s ease!important}
+html body .svc-side-nav.is-on{opacity:1!important;visibility:visible!important}
+}
+html body section[id],html body h2[id]{scroll-margin-top:120px}
+
+/* Service pages: scrolling highlights band under each hero (matches homepage marquee) */
+.sp-trust-bar{background:#F3F6F2;border-bottom:1px solid #E3E8E0}
+.sp-marquee{overflow:hidden;white-space:nowrap;padding:22px 0}
+.sp-marquee .marquee-track{display:inline-flex;gap:56px;padding-right:56px;font-weight:600;font-size:18px;color:#4F6754;animation:spMarquee 45s linear infinite}
+.sp-marquee .marquee-track span{display:inline-block}
+@keyframes spMarquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.sp-marquee:hover .marquee-track,.sp-marquee:focus-within .marquee-track{animation-play-state:paused}
+body:has(#pause-motion:checked) .sp-marquee .marquee-track{animation-play-state:paused!important}
+@media (prefers-reduced-motion:reduce){.sp-marquee .marquee-track{animation:none}}
+@media (max-width:600px){.sp-marquee{padding:14px 0}.sp-marquee .marquee-track{font-size:14px;gap:36px;padding-right:36px}}
