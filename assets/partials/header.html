@@ -1,44 +1,1038 @@
-Here's the header code again. Name the file `assets/partials/header.html` on GitHub and paste this in:
+<header> elements too; they must not stick to the top like the site header */
+header.split-head{position:static!important;top:auto!important;z-index:auto!important;background:transparent!important;border:0!important;box-shadow:none!important;min-height:0!important;display:block!important;padding:0!important}
+</style>
+<style id="refer-mobile">
+/* Refer card: fits the phone gutter, tighter type and padding */
+@media (max-width:600px){
+#refer .refer-box{padding:28px 18px!important;border-radius:20px!important;margin-left:16px!important;margin-right:16px!important;max-width:calc(100% - 32px)!important;box-sizing:border-box!important;overflow:hidden!important}
+#refer .refer-box h2{font-size:28px!important;line-height:1.2!important}
+#refer .refer-copy{font-size:16px!important;line-height:1.5!important;font-weight:600!important}
+#refer .refer-box .btn{font-size:16px!important;padding:14px 16px!important}
+}
+</style>
+<style id="marquee-pause">
+/* Pause the scrolling banner while the cursor, a finger or keyboard focus is on it, so it can be read */
+.marquee:hover .marquee-track,.marquee:focus-within .marquee-track,.marquee:active .marquee-track,.marquee.is-held .marquee-track{animation-play-state:paused!important}
+</style>
+<style id="menu-final">
+/* Final mobile menu and bottom bar rules */
+@media (max-width:900px){
+  header #nav-toggle:checked~#site-nav,header #nav-toggle:checked~.nav-links{overflow-y:auto!important;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;max-height:calc(100vh - 84px)!important;max-height:calc(100dvh - 84px)!important;height:auto!important;padding-bottom:28px!important}
+  .mobile-book,.sb-mobile-book{min-height:0!important;height:auto!important;padding:16px 16px 0 16px!important;padding-bottom:env(safe-area-inset-bottom)!important;font-size:15px!important;line-height:1.2!important;box-sizing:border-box!important}
+}
+/* Book buttons stay green on tap, hover and focus */
+html body .nav-book:hover,html body .nav-book:focus,html body .nav-book:active,html body .nav-book:focus-visible,
+html body header #nav-toggle:checked~.nav-links a.nav-book:hover,html body header #nav-toggle:checked~.nav-links a.nav-book:focus,html body header #nav-toggle:checked~.nav-links a.nav-book:active,
+html body header #nav-toggle:checked~#site-nav a.nav-book:hover,html body header #nav-toggle:checked~#site-nav a.nav-book:focus,html body header #nav-toggle:checked~#site-nav a.nav-book:active,
+html body .mobile-book:hover,html body .mobile-book:focus,html body .mobile-book:active,
+html body .sb-mobile-book:hover,html body .sb-mobile-book:focus,html body .sb-mobile-book:active{background:#5E7A65!important;color:#FFFFFF!important;text-decoration:none!important}
+/* Mobile: photo pairs keep matching labels, buttons stay on one readable line, footer button sized for phones */
+@media (max-width:600px){
+  .cmp-tag{top:8px!important;left:8px!important;width:auto!important;height:auto!important;min-height:24px!important;padding:0 8px!important;font-size:11px!important;letter-spacing:.06em!important;white-space:nowrap!important}
+  .cmp-tag-r{left:auto!important;right:8px!important}
+  .pair figcaption{overflow-wrap:anywhere;line-height:1.3}
+  .btn,.svc-cta-btn,.svc-card-btn{max-width:100%!important;box-sizing:border-box!important;white-space:normal!important;text-align:center!important;justify-content:center!important;overflow-wrap:anywhere}
+  .footer .footer-book,.footer a.footer-book,a.footer-book{font-size:15px!important;padding:12px 22px!important;min-height:0!important;height:auto!important;width:auto!important;max-width:100%!important;display:inline-flex!important;line-height:1.2!important;border-radius:999px!important}
+}
+/* Katherine photo fan: keeps the swipe stack inside the phone width */
+@media (max-width:600px){
+  .kc-wrap{max-width:300px!important;margin:0 auto 32px!important}
+  .kc-wrap .kc-stack{overflow:visible}
+}
+/* Space for the fixed Book appointment bar so the last content clears it on phones and tablets */
+@media (max-width:900px){
+  body{padding-bottom:calc(40px + env(safe-area-inset-bottom))!important}
+}
+/* Mobile menu: the whole menu scrolls with one finger movement; the Services list grows with it */
+@media (max-width:900px){
+  header #nav-toggle:checked~#site-nav,header #nav-toggle:checked~.nav-links{max-height:calc(100vh - 80px)!important;max-height:calc(100dvh - 80px)!important;height:auto!important;overflow-y:auto!important;-webkit-overflow-scrolling:touch!important;overscroll-behavior:contain!important;padding-bottom:28px!important}
+  header #nav-toggle:checked~#site-nav .nav-drop[open]>.nav-drop-menu,header #nav-toggle:checked~.nav-links .nav-drop[open]>.nav-drop-menu{max-height:none!important;overflow:visible!important;padding:6px 0 10px!important}
+}
+/* Mobile menu, final: Services expands in normal flow so nothing overlaps; the whole menu scrolls on every phone */
+@media (max-width:900px){
+  html body header #nav-toggle:checked~#site-nav,html body header #nav-toggle:checked~.nav-links{display:flex!important;flex-direction:column!important;max-height:calc(100dvh - 80px)!important;height:auto!important;overflow-y:auto!important;-webkit-overflow-scrolling:touch!important;overscroll-behavior:contain!important;padding-bottom:28px!important}
+  html body header #nav-toggle:checked~#site-nav>*,html body header #nav-toggle:checked~.nav-links>*{flex:0 0 auto!important;flex-shrink:0!important}
+  html body header #nav-toggle:checked~#site-nav .nav-drop-wrap,html body header #nav-toggle:checked~.nav-links .nav-drop-wrap{display:block!important;position:relative!important;height:auto!important;min-height:0!important;max-height:none!important;overflow:visible!important;width:100%!important;background:#FFFFFF!important;margin:0!important}
+  html body header #nav-toggle:checked~#site-nav .nav-drop,html body header #nav-toggle:checked~.nav-links .nav-drop{display:block!important;position:static!important;height:auto!important;max-height:none!important;overflow:visible!important;width:100%!important;margin:0!important}
+  html body header #nav-toggle:checked~#site-nav .nav-drop>.nav-drop-menu,html body header #nav-toggle:checked~.nav-links .nav-drop>.nav-drop-menu{display:flex!important;flex-direction:column!important;position:static!important;height:auto!important;max-height:none!important;overflow:visible!important;width:100%!important;box-sizing:border-box!important;background:#FFFFFF!important;padding:4px 0 14px 0!important;margin:0!important;border:none!important;box-shadow:none!important}
+  html body header #nav-toggle:checked~#site-nav .nav-drop>.nav-drop-menu a,html body header #nav-toggle:checked~.nav-links .nav-drop>.nav-drop-menu a{background:#FFFFFF!important;height:auto!important;min-height:44px!important;padding:10px 16px 10px 36px!important;margin:0!important;display:flex!important;align-items:center!important;white-space:normal!important}
+  html body header #nav-toggle:checked~#site-nav .nav-drop>.nav-drop-menu a:hover,html body header #nav-toggle:checked~#site-nav .nav-drop>.nav-drop-menu a:focus-visible{background:#F3F6F2!important}
+}
+/* Mobile: arrow controls under the scrolling cards sit centered */
+@media (max-width:900px){
+  html body .row-nav,html body .svc-nav,html body .kc-ctrl,html body .pain-nav,html body .review-nav{display:flex!important;justify-content:center!important;align-items:center!important;text-align:center!important;margin-left:auto!important;margin-right:auto!important;width:100%!important;box-sizing:border-box!important;float:none!important}
+}
+/* Centered button groups and arrow controls on all screen sizes */
+html body .hero-actions,html body .btn-row,html body .actions,html body .svc-foot,html body .book-cta,html body .review-cta,html body .svc-cta,html body .row,html body .row-nav,html body .svc-nav,html body .kc-ctrl,html body .pain-nav,html body .reviews-foot{display:flex!important;flex-wrap:wrap!important;justify-content:center!important;align-items:center!important;text-align:center!important;margin-left:auto!important;margin-right:auto!important}
+html body .hero-actions>.btn,html body .btn-row>.btn,html body .actions>.btn,html body .svc-foot>.btn,html body .book-cta>.btn,html body .review-cta>.btn,html body .svc-cta>.btn,html body .row>.btn{margin-left:auto!important;margin-right:auto!important}
+/* Desktop header: the menu sits centered on the page on every page */
+@media (min-width:901px){
+  html body header .header-inner{position:relative!important}
+  html body header .header-inner>.nav-links{position:absolute!important;left:50%!important;top:50%!important;transform:translate(-50%,-50%)!important;margin:0!important;flex:none!important;justify-content:center!important;width:auto!important}
+}
+html.menu-open .mobile-book,html.menu-open .sb-mobile-book,body:has(#nav-toggle:checked) .mobile-book,body:has(#nav-toggle:checked) .sb-mobile-book{display:none!important}
+</style>
+<style id="pain-contrast">
+/* Pain cards: black headlines for contrast (WCAG), darker sage link text */
+.pain-card .pain-q,.pain-card:hover .pain-q,.pain-card:focus-visible .pain-q{color:#000000!important}
+.pain-card .pain-a{color:#4F6754!important}
+</style>
+<style id="kc-touch-fix">
+/* Photo swipe on phones: arrows sit above the photos, are easy to tap, and swiping the photos works too */
+.kc-ctrl{position:relative!important;z-index:20!important;display:flex!important;justify-content:center!important;align-items:center!important;gap:18px!important;margin-top:22px!important;touch-action:manipulation!important}
+.kc-btn{width:56px!important;height:56px!important;min-width:56px!important;min-height:56px!important;border-radius:50%!important;font-size:26px!important;-webkit-tap-highlight-color:transparent}
+.kc-stack{touch-action:pan-y!important}
+.kc-card{touch-action:pan-y!important}
+</style>
+<link rel="icon" type="image/png" sizes="512x512" href="https://belleallureaestheticsandwellness.com/favicon.png">
+<style id="hero-btns-center">
+/* Home hero buttons: centered on phones and tablets, left-aligned beside the text on computers */
+@media (max-width:900px){
+  html body .hero-btns{justify-content:center!important;align-items:center!important;text-align:center!important;width:100%!important}
+  html body .hero-btns>.btn{margin:0!important}
+}
+@media (max-width:900px){html body .kc-ctrl{margin-bottom:0!important}html body .kc-wrap{padding-bottom:110px!important}}
+</style>
+<style id="home-reviews-centered">
+/* Home reviews: the cards start in the centered column, the arrows sit centered under them, and the two buttons sit centered under the arrows. The hero stays left-aligned. */
+html body #reviews .review-row{padding-left:max(24px,calc(50% - 560px))!important;padding-right:24px!important;scroll-padding-left:max(24px,calc(50% - 560px))}
+html body #reviews .review-foot{display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;gap:22px!important;text-align:center!important;width:100%!important;margin:0 auto!important}
+html body #reviews .review-foot .rn-wrap{display:flex!important;justify-content:center!important;width:100%!important;margin:0!important}
+html body #reviews .review-foot .row-nav{justify-content:center!important;padding:0!important;margin:0 auto!important}
+html body #reviews .review-cta{display:flex!important;flex-wrap:wrap!important;justify-content:center!important;align-items:center!important;gap:16px 32px!important;width:100%!important;margin:0 auto!important;text-align:center!important}
+html body #reviews .review-cta>a{margin:0!important}
+html body #reviews .review-foot .rn-wrap{order:1!important}
+html body #reviews .review-foot .review-cta{order:2!important}
+</style>
+<style id="home-hero-buttons-left-centered">
+/* Home hero buttons sit centered within the left text column on every width */
+html body section.hero .hero-btns{display:flex!important;justify-content:center!important;align-items:center!important;text-align:center!important;width:100%!important}
+</style>
+<style id="home-hero-gutter">
+/* Home hero keeps side space on every width, so the text never touches the screen edge */
+html body section.hero.wrap{padding-left:clamp(24px,4vw,40px)!important;padding-right:clamp(24px,4vw,40px)!important}
+</style>
+<style id="footer-bottom-aligned">
+/* Footer bottom row: copyright, credential line and legal link sit on one centered line on desktop, and stack centered on phones */
+div.wrap[style*="border-top:1px solid #5E7A65"]{align-items:center!important}
+div.wrap[style*="border-top:1px solid #5E7A65"]>p{margin:0!important;line-height:1.5!important}
+@media (min-width:701px){
+  div.wrap[style*="border-top:1px solid #5E7A65"]{display:grid!important;grid-template-columns:1fr minmax(0,560px) 1fr!important;gap:16px 24px!important;justify-content:stretch!important}
+  div.wrap[style*="border-top:1px solid #5E7A65"]>p:first-child{text-align:left!important}
+  div.wrap[style*="border-top:1px solid #5E7A65"]>p:nth-child(2){text-align:center!important}
+  div.wrap[style*="border-top:1px solid #5E7A65"]>p:last-child{text-align:right!important}
+}
+@media (max-width:700px){
+  div.wrap[style*="border-top:1px solid #5E7A65"]{flex-direction:column!important;align-items:center!important;justify-content:center!important;text-align:center!important}
+}
+</style>
+<style id="follow-cta">
+/* Closing social call to action: soft blush card, gold hairline, centered buttons with icons */
+html body .follow-cta{background:#FBF7F1!important;padding:72px 20px 96px!important;text-align:center!important}
+html body .follow-card{max-width:760px!important;margin:0 auto!important;padding:56px 32px 44px!important;border-radius:32px!important;background:linear-gradient(160deg,#F8E1D1 0%,#FBF7F1 70%)!important;border:1.5px solid #E5B400!important;box-shadow:0 24px 48px rgba(79,103,84,.10)!important;box-sizing:border-box!important}
+html body .follow-eyebrow{margin:0 0 12px!important;font:600 13px/1 'Figtree',system-ui,sans-serif!important;letter-spacing:.2em!important;text-transform:uppercase!important;color:#4F6754!important}
+html body .follow-title{margin:0 auto!important;max-width:560px!important;font-family:'Cormorant Garamond',Georgia,serif!important;font-weight:600!important;font-size:44px!important;line-height:1.12!important;color:#3D3D3D!important}
+html body .follow-title em{font-style:italic!important;color:#5E7A65!important}
+html body .follow-sub{margin:18px auto 0!important;max-width:520px!important;color:#3D3D3D!important;font-size:17px!important;line-height:1.6!important}
+html body .follow-actions{display:flex!important;justify-content:center!important;align-items:center!important;flex-wrap:wrap!important;gap:14px!important;margin-top:32px!important}
+html body .follow-btn{display:inline-flex!important;align-items:center!important;justify-content:center!important;gap:10px!important;min-height:52px!important;padding:0 26px!important;border-radius:999px!important;font:600 16px/1 'Figtree',system-ui,sans-serif!important;text-decoration:none!important;margin:0!important;box-sizing:border-box!important;transition:transform .2s ease,background .2s ease}
+html body .follow-btn-ig{background:#5E7A65!important;color:#FFFFFF!important;border:1.5px solid #5E7A65!important}
+html body .follow-btn-fb{background:#FFFFFF!important;color:#4F6754!important;border:1.5px solid #5E7A65!important}
+html body .follow-btn:hover{transform:translateY(-2px)!important}
+html body .follow-btn-ig:hover{background:#4F6754!important}
+html body .follow-btn-fb:hover{background:#F3F6F2!important}
+html body .follow-handle{margin:26px 0 0!important;font:600 14px/1.4 'Figtree',system-ui,sans-serif!important;color:#4F6754!important;letter-spacing:.04em!important}
+@media (max-width:600px){
+  html body .follow-card{padding:44px 22px 36px!important;border-radius:26px!important}
+  html body .follow-title{font-size:36px!important}
+  html body .follow-actions{flex-direction:column!important;width:100%!important}
+  html body .follow-btn{width:100%!important;max-width:320px!important}
+}
+</style>
+<style id="home-svc-cta-centered">
+/* Home: the two buttons under the restrictions note sit centered together on every width */
+html body .svc-cta{display:flex!important;flex-wrap:wrap!important;justify-content:center!important;align-items:center!important;gap:16px 28px!important;width:100%!important;margin:28px auto 0!important;text-align:center!important}
+html body .svc-cta>.btn,html body .svc-cta>.svc-cta-link,html body .svc-cta>a{margin:0!important;margin-left:0!important;margin-right:0!important}
+</style>
+<style id="follow-ig-button-text">
+/* Instagram button: white text on the sage fill on every page, so the label stays readable */
+html body section#follow .follow-btn-ig,html body section#follow-social .follow-btn-ig{background:#5E7A65!important;color:#FFFFFF!important;border-color:#5E7A65!important}
+html body section#follow .follow-btn-ig *,html body section#follow-social .follow-btn-ig *{color:#FFFFFF!important;stroke:#FFFFFF!important}
+html body section#follow .follow-btn-ig:hover,html body section#follow-social .follow-btn-ig:hover{background:#4F6754!important;color:#FFFFFF!important}
+</style>
+<style id="social-corner-pop">
+/* Bottom-corner follow card. No close button. Hidden when the side navigation stops (FAQ) or the footer is in view. */
+html body .social-corner{display:none!important;position:fixed;right:20px;bottom:20px;width:260px;box-sizing:border-box;background:linear-gradient(180deg,#FFFFFF 0%,#F7F9F6 100%);border:1px solid #DCE5DB;border-radius:20px;box-shadow:0 18px 40px rgba(61,61,61,.16),0 2px 6px rgba(61,61,61,.06);padding:18px 18px 16px;z-index:45;font-family:inherit}
+html body .social-corner[hidden]{display:none!important}
+html body .social-corner .sc-head{display:flex!important;align-items:center!important;gap:8px!important;margin:0 0 6px!important}
+html body .social-corner .sc-dot{width:8px!important;height:8px!important;border-radius:50%!important;background:#5E7A65!important;flex:0 0 auto!important}
+html body .social-corner .sc-title{margin:0!important;font-size:12px!important;font-weight:700!important;letter-spacing:.12em!important;text-transform:uppercase!important;color:#4F6754!important;line-height:1.2!important}
+html body .social-corner .sc-text{margin:0 0 14px!important;font-size:13px!important;line-height:1.45!important;color:#5A5A5A!important;font-weight:400!important}
+html body .social-corner .sc-links{display:flex!important;gap:8px!important}
+html body .social-corner .sc-links a{flex:1 1 0!important;min-height:44px!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;gap:6px!important;padding:0 10px!important;border-radius:999px!important;font-size:14px!important;font-weight:600!important;line-height:1!important;text-decoration:none!important;background:#5E7A65!important;color:#FFFFFF!important;border:1.5px solid #5E7A65!important;box-sizing:border-box!important;transition:background .2s ease,color .2s ease}
+html body .social-corner .sc-links a:nth-child(2){background:#FFFFFF!important;color:#4F6754!important;border-color:#5E7A65!important}
+html body .social-corner .sc-links a:hover,html body .social-corner .sc-links a:focus-visible{background:#4F6754!important;color:#FFFFFF!important;border-color:#4F6754!important}
+html body .social-corner .sc-links a svg{flex:0 0 auto!important}
+@media (min-width:1101px) and (hover:hover) and (pointer:fine){html body .social-corner{display:block!important}html body .social-corner[hidden]{display:none!important}}
+</style>
+<style id="footer-columns-centered">
+/* Footer left aligned on phones and tablets (desktop grid unchanged) */
+@media (max-width:1100px){
+  footer.footer .footer-grid{text-align:left!important}
+  footer.footer .footer-grid nav{align-items:flex-start!important}footer.footer .footer-grid nav{width:100%!important;align-self:stretch!important}footer.footer .footer-grid>div,footer.footer .footer-grid>nav{width:100%!important;max-width:none!important}footer.footer .footer-grid nav>p:first-child,footer.footer .footer-grid>div:last-child>p:first-child{display:block!important;width:100%!important;box-sizing:border-box!important}
+  footer.footer .footer-grid img{margin-left:0!important;margin-right:auto!important}
+  footer.footer .footer-grid p,footer.footer .footer-grid div{text-align:left!important}
+  footer.footer div.wrap[style*="border-top:1px solid #5E7A65"]{display:flex!important;flex-direction:column!important;align-items:flex-start!important;justify-content:flex-start!important;text-align:left!important}
+  footer.footer div.wrap[style*="border-top:1px solid #5E7A65"]>p{text-align:left!important}
+}
+</style>
+<style id="home-hero-buttons-left">
+/* Home hero buttons align left with the hero text */
+html body section.hero .hero-btns{display:flex!important;justify-content:flex-start!important;align-items:center!important;text-align:left!important;width:auto!important}
+</style>
+<style id="btn-link-colors">
+/* Buttons keep their own text color and no underline on hover, focus and tap */
+a.btn:hover,a.btn:focus,a.btn:focus-visible,a.btn:active,a.btn:visited{text-decoration:none!important}
+a.btn:not(.btn-light):not(.btn-ghost):hover,a.btn:not(.btn-light):not(.btn-ghost):focus,a.btn:not(.btn-light):not(.btn-ghost):focus-visible,a.btn:not(.btn-light):not(.btn-ghost):active{color:#FFFFFF!important}
+a.btn-light:hover,a.btn-light:focus,a.btn-light:focus-visible,a.btn-light:active{color:#4F6754!important}
+a.btn-ghost:hover,a.btn-ghost:focus,a.btn-ghost:focus-visible,a.btn-ghost:active{color:#5E7A65!important}
+</style>
+<style id="bottom-bar-height">
+/* Mobile booking bar: full-width button, 30px plus the iPhone home-bar area */
+@media (max-width:900px){
+html body a.mobile-book,html body a.sb-mobile-book{display:flex!important;align-items:center!important;justify-content:center!important;box-sizing:border-box!important;left:0!important;right:0!important;bottom:0!important;width:100%!important;height:auto!important;min-height:calc(30px + env(safe-area-inset-bottom))!important;padding:14px 16px env(safe-area-inset-bottom)!important;font-size:15px!important;line-height:1!important;border-radius:0!important}
+}
+</style>
+<meta property="og:image" content="https://belleallureaestheticsandwellness.com/assets/social-preview.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Treatment room at Belle Allure Aesthetics and Wellness in Elkhart, Indiana, with a treatment chair and a view of the trees and water">
+<meta name="twitter:image" content="https://belleallureaestheticsandwellness.com/assets/social-preview.jpg">
+<meta name="twitter:image:alt" content="Treatment room at Belle Allure Aesthetics and Wellness in Elkhart, Indiana, with a treatment chair and a view of the trees and water">
+<style id="header-sms-icon">
+/* Text icon sits beside the phone icon in the header, same size and style */
+header .header-sms-icon{margin:0 8px 0 auto!important}
+header .header-tel-icon:not(.header-sms-icon){margin-left:0!important}
+</style>
+<link rel="stylesheet" href="/assets/css/site-search.css">
+<style id="header-mid-desktop">
+/* Mid-desktop header (901-1100px): nav sits in the flow between the logo and the right-hand actions, so it never runs into Book appointment */
+@media (min-width:901px) and (max-width:1100px){
+html body header .header-inner>.nav-links{position:static!important;transform:none!important;left:auto!important;top:auto!important;flex:1 1 auto!important;justify-content:center!important;gap:16px!important;margin:0 12px!important;min-width:0!important}
+html body header .header-inner .header-book{margin-left:0!important;margin-right:0!important;order:3!important}
+html body header .header-inner>.header-tel-icon,html body header .header-inner>.site-search-btn{order:2!important}
+}
+</style>
+</head>
+<body>
 
-```html
+
+<style>
+body{margin:0;background:#FBF7F1;color:#3D3D3D;font-family:'Figtree',system-ui,sans-serif;font-size:17px;line-height:1.6}
+a{color:#5E7A65;text-decoration:none}
+a:hover{color:#3D3D3D;text-decoration:underline}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;line-height:1.15;margin:0}
+p{margin:0}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.eyebrow{font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:#5E7A65}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 26px;border-radius:999px;font-weight:600;font-size:16px;box-sizing:border-box}
+.btn-ghost{border:1.5px solid #5E7A65;color:#5E7A65;background:transparent}
+.card{background:#FFFFFF;border:1px solid #E3E8E0;border-radius:18px;padding:32px;box-sizing:border-box}
+.hero{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:center;padding:88px 0 72px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+.nav-links{display:flex;gap:28px;align-items:center;font-weight:500}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px}
+.footer a{color:#FBF7F1;display:inline-flex;align-items:center;min-height:44px}
+.footer a:hover{color:#FFFFFF;text-decoration:underline}
+html{scroll-behavior:smooth}
+.marquee{overflow:hidden;white-space:nowrap}
+.marquee-track{display:inline-flex;gap:64px;padding-right:64px;font-weight:600;font-size:18px;animation:marquee 26s linear infinite}
+.marquee-track span{display:inline-block}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.marquee-track{animation:none}}
+summary{cursor:pointer;font-weight:600;font-size:18px;min-height:44px;display:flex;align-items:center}
+@media (max-width:900px){
+.hero{grid-template-columns:1fr;padding:56px 0 48px;gap:36px}
+.grid3{grid-template-columns:repeat(2,minmax(0,1fr))}
+.grid4{grid-template-columns:repeat(2,minmax(0,1fr))}
+.footer-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:600px){
+.grid3,.grid2,.grid4{grid-template-columns:1fr}
+.header-inner{flex-wrap:wrap;min-height:auto!important;padding-top:12px;padding-bottom:12px;row-gap:12px}
+
+.footer-grid{grid-template-columns:1fr}
+.hero-title{font-size:44px!important}
+.section-title{font-size:36px!important}
+.card{padding:28px}
+[style*="padding:112px 0"],[style*="padding:104px 0"]{padding-top:64px!important;padding-bottom:64px!important}
+[style*="padding-bottom:112px"]{padding-bottom:64px!important}
+[style*="margin-top:88px"]{margin-top:56px!important}
+[style*="padding:64px 24px"]{padding:48px 24px!important}
+.hero-title{line-height:1.1}
+}
+@media (max-width:380px){
+.hero-title{font-size:36px!important}
+.section-title{font-size:30px!important}
+}
+img{max-width:100%;height:auto}
+.svc-card{position:relative;transition:transform .35s ease,box-shadow .35s ease,border-color .35s ease}
+.svc-card:hover,.svc-card:focus-within{transform:translateY(-6px);box-shadow:0 18px 40px rgba(94,122,101,.18);border-color:#5E7A65}
+.svc-card::before,.svc-card::after{content:"";position:absolute;width:16px;height:16px;background:#E5B400;clip-path:polygon(50% 0,62% 38%,100% 50%,62% 62%,50% 100%,38% 62%,0 50%,38% 38%);opacity:0;pointer-events:none}
+.svc-card::before{top:16px;right:20px}
+.svc-card::after{bottom:20px;left:22px;width:10px;height:10px}
+.svc-card:hover::before,.svc-card:focus-within::before{opacity:1;animation:sparkle 1.6s ease-in-out infinite}
+.svc-card:hover::after,.svc-card:focus-within::after{opacity:1;animation:sparkle 1.6s ease-in-out .6s infinite}
+@keyframes sparkle{0%,100%{transform:scale(.4) rotate(0deg);opacity:.35}50%{transform:scale(1.15) rotate(45deg);opacity:1}}
+.brand-logo{transition:transform .4s ease,filter .4s ease}
+.brand-logo:hover{transform:scale(1.04) rotate(-1deg);filter:drop-shadow(0 0 8px rgba(229,180,0,.6))}
+@media (prefers-reduced-motion:reduce){.svc-card,.brand-logo{transition:none}.svc-card::before,.svc-card::after{animation:none!important}}
+.review-row{overflow-x:auto;padding:8px 4px 24px;scrollbar-width:thin}
+.review-track{display:flex;width:max-content;animation:reviewscroll 90s linear infinite}
+.review-set{display:flex;gap:20px;padding-right:20px}
+.review-card{flex:0 0 320px;box-sizing:border-box;display:flex;flex-direction:column;padding:24px}
+.review-text{display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+@keyframes reviewscroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (max-width:600px){.review-card{flex-basis:82%}}
+.rtog{position:absolute;opacity:0;width:1px;height:1px;pointer-events:none}
+.rmore{display:inline-block;margin-top:12px;font-weight:600;color:#5E7A65;cursor:pointer;min-height:44px;line-height:44px}
+.rmore:hover{text-decoration:underline}
+.rmore .less-t{display:none}
+.rtog:checked~.rmore .more-t{display:none}
+.rtog:checked~.rmore .less-t{display:inline}
+.rtog:checked~.review-text{-webkit-line-clamp:unset;display:block;overflow:visible}
+.skip{position:absolute;left:-9999px;top:8px;z-index:20;background:#FFFFFF;color:#3D3D3D;padding:12px 18px;border-radius:12px;font-weight:600}
+.skip:focus{left:16px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;opacity:0;pointer-events:none}
+.pause-btn{display:inline-flex;align-items:center;min-height:44px;margin-top:32px;padding:0 18px;border:1.5px solid #5E7A65;border-radius:999px;color:#5E7A65;font-weight:600;cursor:pointer}
+.pause-btn:hover{background:#F5DCCB}
+body:has(#pause-motion:focus-visible) .pause-btn,.rtog:focus-visible~.rmore{outline:3px solid #3D3D3D;outline-offset:3px}
+#pause-motion:checked~main .pause-btn{background:#F5DCCB}
+body:has(#pause-motion:checked) .marquee-track{animation-play-state:paused!important}
+.menu-btn{display:none}
+.hb-short{display:none}
+.nav-book{display:none}
+@media (max-width:760px){
+.header-inner{position:relative}
+.menu-btn{display:inline-flex;flex-direction:column;justify-content:center;align-items:center;gap:5px;min-width:52px;min-height:48px;padding:6px 10px;border-radius:12px;border:1.5px solid #5E7A65;cursor:pointer;color:#5E7A65;box-sizing:border-box}
+.menu-btn span{display:block;width:22px;height:2px;background:#5E7A65;border-radius:2px;transition:transform .25s ease,opacity .25s ease}
+.menu-btn b{font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;line-height:1}
+#nav-toggle:checked~.menu-btn span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+#nav-toggle:checked~.menu-btn span:nth-child(2){opacity:0}
+#nav-toggle:checked~.menu-btn span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+body:has(#nav-toggle:focus-visible) .menu-btn{outline:3px solid #3D3D3D;outline-offset:3px}
+.nav-links{display:none!important}
+#nav-toggle:checked~.nav-links{display:flex!important;flex-direction:column;align-items:stretch;gap:0;order:4;width:100%;overflow:visible;white-space:normal;border-top:1px solid #E3E8E0;padding:8px 0}
+#nav-toggle:checked~.nav-links a{min-height:52px;display:flex;align-items:center;font-size:18px;border-bottom:1px solid #E3E8E0}
+#nav-toggle:checked~.nav-links a:last-child{border-bottom:none}
+}
+.hero-art{width:100%;max-width:460px;margin:0 auto}
+@media (max-width:900px){.hero-art{max-width:380px}}
+@media (max-width:600px){.hero-art{max-width:100%}}
+/* Mobile header: compact booking button beside the menu, styled dropdown panel */
+@media (max-width:760px){
+.header-inner{justify-content:space-between;align-items:center;column-gap:12px}
+.header-inner>a:first-child{flex:0 1 auto;min-width:0}
+.hb-long{display:none}.hb-short{display:inline}
+.header-book{display:inline-flex!important;order:1;margin-left:auto;width:auto!important;max-width:none!important;flex:0 0 auto;min-height:44px!important;padding:0 16px!important;font-size:14px!important;white-space:nowrap;box-sizing:border-box}
+.menu-btn{order:2;min-height:44px;min-width:56px}
+#nav-toggle:checked~.nav-links{background:#FFFFFF;box-shadow:0 16px 28px rgba(61,61,61,.12);padding:6px 20px 18px;margin:0 -20px;width:calc(100% + 40px)}
+#nav-toggle:checked~.nav-links a{padding-left:4px;font-weight:600;color:#3D3D3D}
+#nav-toggle:checked~.nav-links a:hover{color:#4F6754}
+#nav-toggle:checked~.nav-links .nav-book{padding-left:0;color:#FFFFFF}
+}
+#nav-toggle:checked~.nav-links .nav-book{display:flex!important;background:#5E7A65;color:#FFFFFF;border-radius:999px;justify-content:center;margin-top:14px;min-height:52px;border-bottom:none;font-weight:600}
+#nav-toggle:checked~.nav-links .nav-book:hover{color:#FFFFFF;background:#3D3D3D;text-decoration:none}
+.scroll-follow{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);z-index:15;pointer-events:none}
+.scroll-cue{pointer-events:auto;display:inline-flex;align-items:center;justify-content:center;width:56px;height:56px;border-radius:50%;background:#5E7A65;box-shadow:0 10px 26px rgba(94,122,101,.35);animation:cueBounce 1.8s ease-in-out infinite,cueGone .3s linear 20s forwards}
+.scroll-cue:hover{background:#3D3D3D;text-decoration:none}
+.scroll-cue:focus-visible{outline:3px solid #3D3D3D;outline-offset:4px}
+@keyframes cueBounce{0%,100%{transform:translateY(0)}50%{transform:translateY(8px)}}
+@keyframes cueGone{to{opacity:0;visibility:hidden}}
+.cue-sparkles i{position:absolute;left:50%;top:50%;width:14px;height:14px;margin:-7px;background:#E5B400;clip-path:polygon(50% 0,62% 38%,100% 50%,62% 62%,50% 100%,38% 62%,0 50%,38% 38%);opacity:0;animation:cueBurst .9s ease-out 20s forwards}
+.cue-sparkles i:nth-child(1){--dx:-44px;--dy:-30px}
+.cue-sparkles i:nth-child(2){--dx:46px;--dy:-26px;width:10px;height:10px;animation-delay:20.1s}
+.cue-sparkles i:nth-child(3){--dx:-36px;--dy:34px;width:9px;height:9px;animation-delay:20.2s}
+.cue-sparkles i:nth-child(4){--dx:40px;--dy:30px;animation-delay:20.05s}
+.cue-sparkles i:nth-child(5){--dx:0px;--dy:-52px;width:8px;height:8px;animation-delay:20.15s}
+.scroll-follow{width:56px}
+.scroll-follow{transition:opacity .35s ease,visibility .35s}
+body.cue-hidden .scroll-follow{opacity:0;visibility:hidden}
+.cue-sparkles{position:absolute;inset:0;pointer-events:none}
+.cue-sparkles i{transform:translate(0,0) scale(.2)}
+@keyframes cueBurst{0%{opacity:0;transform:translate(0,0) scale(.2)}30%{opacity:1;transform:translate(calc(var(--dx)*.5),calc(var(--dy)*.5)) scale(1.2) rotate(45deg)}100%{opacity:0;transform:translate(var(--dx),var(--dy)) scale(.4) rotate(120deg)}}
+@media (prefers-reduced-motion:reduce){.scroll-cue{animation:cueGone .3s linear 20s forwards}.cue-sparkles i{animation:none;opacity:0}}
+.nav-links a{display:inline-flex;align-items:center;min-height:44px}
+section#reviews a:not(.btn),section#book a:not(.btn){display:inline-flex;align-items:center;min-height:44px}
+@media (max-width:600px){
+.footer-grid{gap:28px}
+.footer-grid nav a{min-height:44px}
+.hero{padding-top:40px}
+.marquee-track{font-size:16px;gap:40px;padding-right:40px}
+.wrap{padding-left:20px;padding-right:20px}
+.btn{width:100%;max-width:100%;box-sizing:border-box}
+.hero .btn,.hero-cta .btn{width:auto}
+}
+@media (max-width:600px){
+.wrap[style*="padding:"]{padding-left:20px!important;padding-right:20px!important}
+.wrap[style*="padding-top"],.wrap[style*="padding-bottom"]{padding-left:20px!important;padding-right:20px!important}
+}
+.nav-links a.nav-book{display:none}
+@media (max-width:760px){.nav-links a.nav-book{display:none}}
+#nav-toggle:checked~.nav-links a.nav-book{display:flex!important}
+#services .svc-card{display:flex;flex-direction:column}
+#services .svc-card>:last-child{margin-top:auto!important;padding-top:12px}
+.btn{position:relative;transition:transform .3s ease,box-shadow .3s ease,background-color .3s ease}
+.btn:hover,.btn:focus-visible{transform:translateY(-2px);box-shadow:0 0 0 4px rgba(229,180,0,.28),0 12px 28px rgba(94,122,101,.3)}
+.btn::before,.btn::after{content:"";position:absolute;width:12px;height:12px;background:#E5B400;clip-path:polygon(50% 0,62% 38%,100% 50%,62% 62%,50% 100%,38% 62%,0 50%,38% 38%);opacity:0;pointer-events:none}
+.btn::before{top:-6px;right:14px}
+.btn::after{bottom:-4px;left:18px;width:9px;height:9px}
+.btn:hover::before,.btn:focus-visible::before{opacity:1;animation:btnSparkle 1.2s ease-in-out infinite}
+.btn:hover::after,.btn:focus-visible::after{opacity:1;animation:btnSparkle 1.2s ease-in-out .5s infinite}
+@keyframes btnSparkle{0%,100%{transform:scale(.5) rotate(0)}50%{transform:scale(1.15) rotate(45deg)}}
+@media (prefers-reduced-motion:reduce){.btn,.btn::before,.btn::after{transition:none;animation:none!important}.btn:hover{transform:none}}
+html,body{cursor:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M12%202%20L13.6%2010.4%20L22%2012%20L13.6%2013.6%20L12%2022%20L10.4%2013.6%20L2%2012%20L10.4%2010.4%20Z%22%20fill%3D%22%23E5B400%22%20stroke%3D%22%233D3D3D%22%20stroke-width%3D%220.8%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E") 12 12,auto}
+a,button,label,summary,.btn,.scroll-cue,[role=img]{cursor:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M12%202%20L13.6%2010.4%20L22%2012%20L13.6%2013.6%20L12%2022%20L10.4%2013.6%20L2%2012%20L10.4%2010.4%20Z%22%20fill%3D%22%23E5B400%22%20stroke%3D%22%233D3D3D%22%20stroke-width%3D%220.8%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E") 12 12,pointer}
+.wrap[style*="padding"]{padding-left:24px!important;padding-right:24px!important}
+@media (max-width:600px){.wrap[style*="padding"]{padding-left:20px!important;padding-right:20px!important}}
+.footer-grid>*+*{padding-top:0}
+.footer-grid nav>p:first-child,.footer-grid>div:last-child>p:first-child{position:relative;padding-bottom:12px;margin-bottom:14px!important;font-size:18px;border-bottom:1px solid #E5B400}
+.footer-grid nav>p:first-child::after,.footer-grid>div:last-child>p:first-child::after{content:"";position:absolute;left:0;bottom:0;width:36px;height:3px;border-radius:2px;background:#E5B400}
+.footer-grid nav a,.footer-grid>div:last-child a{transition:color .2s ease,transform .2s ease;display:inline-block}
+.footer-grid nav a:hover{transform:translateX(4px);color:#E5B400!important;text-decoration:none}
+@media (max-width:600px){.footer-grid>*+*{margin-top:12px}}
+.review-track .review-card{width:320px;max-width:80vw;flex:0 0 auto;white-space:normal}
+.eyebrow,.btn-ghost,a[href*="google.com/search"]:not(.btn){color:#4F6754!important}
+.footer{background:#FFFFFF!important;color:#1F1F1F!important;border-top:1px solid #E3E8E0}
+.footer *{color:#1F1F1F!important}
+.footer-grid nav a:hover,.footer-grid>div:last-child a:hover{color:#4F6754!important}
+@media (min-width:901px){.footer-grid{grid-template-columns:repeat(4,minmax(0,1fr))!important}}
+.footer-grid nav>p:first-child,.footer-grid>div:last-child>p:first-child{border-bottom:2px solid #E5B400!important;padding-bottom:12px}
+.footer-grid nav>p:first-child::after,.footer-grid>div:last-child>p:first-child::after{display:none!important}
+.flip{display:block;position:relative;aspect-ratio:4/5;border-radius:24px;cursor:pointer}
+.flip-inner{position:absolute;inset:0;display:block}
+.flip-face{position:absolute;inset:0;display:block;border-radius:24px;overflow:hidden;border:2px solid #E5B400;box-sizing:border-box;transition:opacity .6s ease}
+.flip-back{opacity:0;background:#F8E1D1;padding:28px 28px;display:flex;flex-direction:column;justify-content:center;border-color:#3D3D3D}
+.flip-front{opacity:1}
+.flip-tog:checked~.flip-inner .flip-front{opacity:0}
+.flip-tog:checked~.flip-inner .flip-back{opacity:1}
+@media (hover:hover) and (pointer:fine){.flip:not(:has(.flip-tog:checked)):hover .flip-front{opacity:0}.flip:not(:has(.flip-tog:checked)):hover .flip-back{opacity:1}}
+.flip-tog:focus-visible~.flip-inner{outline:3px solid #3D3D3D;outline-offset:4px;border-radius:24px}
+.flip-item{display:block;color:#3D3D3D;font-size:17px;line-height:1.9;padding-left:22px;position:relative;overflow-wrap:anywhere}
+.flip-item::before{content:"";position:absolute;left:0;top:.7em;width:8px;height:8px;border-radius:50%;background:#E5B400}
+@media (prefers-reduced-motion:reduce){.flip-face{transition:none}}
+.footer-grid nav a{min-height:40px}
+.footer-grid{gap:32px!important}
+.review-row{position:relative;left:50%;transform:translateX(-50%);width:100vw;max-width:100vw;box-sizing:border-box}
+.review-set{padding-left:24px}
+.pain-row{overflow-x:auto;padding:8px 4px 24px;scrollbar-width:thin;position:relative;left:50%;transform:translateX(-50%);width:100vw;max-width:100vw;box-sizing:border-box}
+.pain-row:focus-visible{outline:3px solid #3D3D3D;outline-offset:4px}
+.pain-track{display:flex;width:max-content;animation:reviewscroll 60s linear infinite}
+.pain-set{display:flex;gap:20px;padding-left:24px;padding-right:20px}
+.pain-card{width:300px;flex:0 0 auto;background:#FFFFFF;border:1px solid #E3E8E0;transition:transform .35s ease,box-shadow .35s ease,border-color .35s ease;border-radius:24px;padding:28px;text-decoration:none;color:#3D3D3D;display:flex;flex-direction:column;gap:12px;box-shadow:0 8px 24px rgba(61,61,61,.08)}
+.pain-q{font-family:'Cormorant Garamond',Georgia,serif;font-size:26px;font-weight:600;line-height:1.2;color:#3D3D3D}
+.pain-a{font-weight:600;color:#4F6754}
+.pain-d{color:#555555;font-size:16px;line-height:1.5}
+.pain-card:hover,.pain-card:focus-visible{transform:translateY(-6px);box-shadow:0 18px 40px rgba(94,122,101,.18);border-color:#5E7A65}
+.pain-card:focus-visible{outline:3px solid #3D3D3D;outline-offset:3px}
+@media (prefers-reduced-motion:reduce){.pain-card{transition:none}.pain-card:hover,.pain-card:focus-visible{transform:none}}
+@media (max-width:600px){.pain-card{width:270px}}
+.review-track,.pain-track{animation:none!important}
+@media (max-width:600px){.hero-art{max-width:280px!important}.flip{width:100%;max-width:280px;margin:0 auto}.flip-back{padding:22px 20px}.flip-back .eyebrow{font-size:11px;margin-bottom:8px!important}.flip-item{font-size:15px;line-height:1.55;padding-left:18px}.flip-item::before{width:6px;height:6px}}
+.review-row,.pain-row{scrollbar-width:none;-ms-overflow-style:none}
+.review-row::-webkit-scrollbar,.pain-row::-webkit-scrollbar{display:none;width:0;height:0}
+/* Tablet optimization (601px to 900px) */
+@media (min-width:601px) and (max-width:900px){
+.hero-title{font-size:54px!important;line-height:1.12}
+.section-title{font-size:38px!important;line-height:1.15}
+.hero{padding:64px 0 56px}
+[style*="padding:112px"],[style*="padding:104px 0"]{padding-top:80px!important;padding-bottom:80px!important}
+[style*="padding:112px 0 40px"]{padding-top:80px!important;padding-bottom:40px!important}
+[style*="margin-top:88px"]{margin-top:64px!important}
+.grid3>:last-child:nth-child(odd),.grid4>:last-child:nth-child(odd){grid-column:1/-1}
+.grid3{gap:20px!important}
+#about .grid2{grid-template-columns:1fr!important;gap:40px!important}
+#about .flip{max-width:380px;width:100%;margin:0 auto}
+#about .grid2>div:last-child{max-width:680px}
+.wrap{padding-left:32px;padding-right:32px}
+}
+.guide-card{display:inline-flex;align-items:center;gap:12px;background:#FFFFFF;border:1.5px solid #E5B400;border-radius:999px;padding:6px 18px 6px 6px;max-width:100%;box-sizing:border-box}
+.guide-card img{width:48px;height:48px;border-radius:50%;flex:0 0 auto;object-fit:cover}
+.guide-name{font-family:'Cormorant Garamond',Georgia,serif;font-size:19px;font-weight:600;line-height:1.2;color:#3D3D3D}
+.guide-tag{margin-top:1px;font-size:13px;color:#5E7A65;line-height:1.3}
+@media (max-width:600px){.guide-card{gap:10px;padding:4px 14px 4px 4px}.guide-card img{width:40px;height:40px}.guide-name{font-size:17px}.guide-tag{font-size:12px}}
+/* FAQ: clear open/close indicator */
+#faq details>summary{list-style:none;justify-content:space-between;gap:16px;cursor:pointer}
+#faq details>summary::-webkit-details-marker{display:none}
+#faq details>summary::after{content:"+";flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;border:1.5px solid #5E7A65;color:#5E7A65;font-size:20px;font-weight:600;line-height:1;transition:transform .25s ease,background-color .25s ease}
+#faq details[open]>summary::after{content:"\2212";background:#5E7A65;color:#FFFFFF}
+#faq details>summary:hover::after{background:#F5DCCB;color:#3D3D3D}
+#faq details[open]>summary:hover::after{background:#4F6754;color:#FFFFFF}
+#faq details>summary:focus-visible{outline:3px solid #3D3D3D;outline-offset:4px;border-radius:6px}
+/* Mission section: tighter mobile spacing and vision card */
+@media (max-width:600px){
+#mission{padding-top:64px!important;padding-bottom:48px!important}
+#mission [style*="font-size:26px"]{font-size:22px!important;line-height:1.35!important}
+#mission [style*="padding:28px 30px"]{padding:22px 20px!important}
+#mission [style*="margin-top:12px;background:#F8E1D1"]{margin-top:28px!important}
+}
+/* Phone: center the photo card list and keep the call number on one line */
+@media (max-width:600px){
+.flip-back{text-align:center}
+.flip-back .flip-item{padding-left:0}
+.flip-back .flip-item::before{display:none}
+#about .svc-cta-link{font-size:15px!important;text-align:center;justify-content:center;white-space:nowrap}
+}
+@media (max-width:380px){#about .svc-cta-link{font-size:14px!important;letter-spacing:0!important;gap:6px;padding-left:16px!important;padding-right:16px!important;white-space:normal}}
+/* Tablet and phone: stat cards side by side */
+@media (max-width:900px){#about div:has(> .card){grid-template-columns:1fr 1fr!important}}
+/* Phone: About section sized for a phone */
+@media (max-width:600px){
+#about .wrap{padding:64px 20px!important}
+#about .section-title{font-size:34px!important}
+#about div:has(> .card){grid-template-columns:1fr 1fr!important;gap:12px!important}
+#about .card{padding:18px!important}
+#about .card p:first-child{font-size:36px!important}
+#about .card p:last-child{font-size:15px!important}
+#about .wrap>div>p{font-size:16px!important}
+}
+/* Photo card back: list centered at every width */
+.flip-back{text-align:center}
+.flip-back .flip-item{padding-left:0}
+.flip-back .flip-item::before{display:none}
+/* Photo card sits on the left edge, lined up with the text (phones and tablets) */
+@media (max-width:900px){
+#about .flip-wrap-pos{margin-left:auto!important;margin-right:auto!important}
+#about .flip{margin-left:auto!important;margin-right:auto!important}
+}
+@media (max-width:600px){#about .flip-wrap-pos{max-width:280px!important;margin-left:auto!important;margin-right:auto!important}#about .flip{margin-left:auto!important;margin-right:auto!important}}
+#about .flip-wrap-pos{width:100%!important}
+/* About layout: photo in the right column on desktop, stacked in the flow on tablets and phones */
+@media (max-width:900px){
+#about .wrap{display:flex!important;flex-direction:column}
+#about .wrap>div:first-child{display:contents}
+#about .flip-wrap-pos{order:1}
+#about .needs-box{order:2}
+}
+/* Review arrows share the link row on desktop; on phones they sit above the links, under the review cards */
+@media (min-width:601px){#reviews div:has(> .row-nav){flex-direction:row!important;align-items:center;justify-content:flex-start}}
+@media (min-width:601px){#reviews .row-nav{order:3;margin:0 0 0 auto!important;padding:0!important;justify-content:flex-end!important;width:auto}}
+@media (max-width:600px){#reviews .row-nav{order:-1;margin:0!important;padding:0!important;width:100%;justify-content:center!important}}
+/* Logo sizing: fixed per range so it never collapses or jumps */
+.header-inner>a:first-child{flex:0 0 auto!important}
+/* Stat cards: lift on hover and burst gold stars outward */
+.stat-card{position:relative;z-index:0;isolation:isolate;background:#FFFFFF!important;transition:transform .3s ease,box-shadow .3s ease}
+.stat-burst{position:absolute;left:50%;top:50%;width:0;height:0;pointer-events:none;z-index:-3}
+.stat-card::before{content:"";position:absolute;inset:0;border-radius:inherit;background:#FFFFFF;z-index:-2;pointer-events:none}
+.stat-burst i{position:absolute;left:-9px;top:-9px;width:18px;height:18px;background:#E5B400;clip-path:polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%);opacity:0}
+@media (hover:hover) and (pointer:fine){
+.stat-card:hover{transform:translateY(-4px);box-shadow:0 14px 28px rgba(94,122,101,.18)}
+.stat-card:hover .stat-burst i{animation:statBurst .8s ease-out forwards}
+.stat-card:hover .stat-burst i:nth-child(2n){animation-delay:.08s}
+}
+@keyframes statBurst{0%{opacity:0;transform:translate(0,0) scale(.2) rotate(0)}30%{opacity:1}70%{opacity:1}100%{opacity:0;transform:translate(var(--x),var(--y)) scale(1) rotate(160deg)}}
+@media (prefers-reduced-motion:reduce){.stat-card,.stat-card:hover{transform:none;transition:none}.stat-card:hover .stat-burst i{animation:none;opacity:0}}
+/* Services section sized for tablets and phones */
+@media (min-width:601px) and (max-width:900px){
+#services .svc-card{padding:24px!important}
+#services .svc-card h3{font-size:24px!important;line-height:1.2}
+#services .grid4{gap:18px}
+}
+@media (max-width:600px){
+#services .grid4{gap:14px}
+#services .svc-card{padding:22px 20px!important}
+#services .svc-card h3{font-size:24px!important;line-height:1.2}
+#services .svc-card p{font-size:16px}
+#services .svc-card>span[aria-hidden]{margin-bottom:14px!important;width:46px!important;height:46px!important}
+}
+/* Services: every card the same size in an equal grid */
+#services .grid4>.svc-card,#services .grid4>:last-child:nth-child(odd){grid-column:auto!important}
+/* Services grid: three columns on desktop (nine cards fill three rows), last card full width on tablets */
+@media (min-width:901px){#services .grid4{grid-template-columns:repeat(3,minmax(0,1fr))}}
+/* Round badge logo: square, sized per screen */
+.brand-logo{display:block;flex:none;width:56px!important;height:56px!important;max-width:none}
+@media (max-width:600px){.brand-logo{width:50px!important;height:50px!important}}
+@media (max-width:380px){.brand-logo{width:46px!important;height:46px!important}}
+/* Very small phones (380px and under): keep the header on one row */
+@media (max-width:380px){
+.header-inner{column-gap:8px!important;padding-left:16px!important;padding-right:16px!important}
+.header-book{padding:0 12px!important;font-size:13px!important;min-width:0!important}
+.menu-btn{min-width:52px!important;padding:4px 6px!important}
+#nav-toggle:checked~.nav-links{margin:0 -16px!important;width:calc(100% + 32px)!important;padding-left:16px!important;padding-right:16px!important}
+}
+/* Small tablets (601px to 760px): keep nav, logo, and Book button from touching */
+@media (min-width:601px) and (max-width:760px){
+.header-inner{column-gap:16px}
+.nav-links{gap:16px!important}
+.header-book{padding:0 16px!important;font-size:14px!important}
+.hb-long{display:none}
+.hb-short{display:inline}
+}
+/* Arrow links to the About section */
+.mission-link{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 4px;color:#4F6754}
+.mission-link span[aria-hidden]{display:inline-block;transition:transform .25s ease}
+.mission-link:hover{color:#3D3D3D;text-decoration:none}
+.mission-link:hover span[aria-hidden]{transform:translateX(4px)}
+.mission-link:focus-visible{outline:3px solid #3D3D3D;outline-offset:4px;border-radius:6px}
+@media (prefers-reduced-motion:reduce){.mission-link span[aria-hidden]{transition:none}}
+/* Services dropdown in navigation */
+.nav-drop{position:relative}
+.nav-drop>summary{list-style:none;display:inline-flex;align-items:center;gap:8px;min-height:44px;cursor:pointer;font-weight:500;color:#5E7A65}
+.nav-drop>summary::-webkit-details-marker{display:none}
+.nav-drop>summary::after{content:"";width:7px;height:7px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:translateY(-3px) rotate(45deg);transition:transform .2s ease}
+.nav-drop[open]>summary::after{transform:translateY(2px) rotate(225deg)}
+.nav-drop>summary:hover{color:#3D3D3D;text-decoration:none}
+.nav-drop>summary:focus-visible{outline:3px solid #3D3D3D;outline-offset:4px;border-radius:6px}
+.nav-drop-menu{position:absolute;top:100%;left:-14px;z-index:5;min-width:270px;margin-top:6px;padding:10px;background:#FFFFFF;border:1px solid #E3E8E0;border-radius:16px;box-shadow:0 16px 32px rgba(61,61,61,.12);display:flex;flex-direction:column;box-sizing:border-box}
+.nav-drop-menu::before{content:"";position:absolute;left:0;right:0;top:-12px;height:12px}
+.nav-drop-menu a{display:flex;align-items:center;min-height:42px;padding:6px 14px;border-radius:10px;color:#3D3D3D;font-weight:500;white-space:nowrap}
+.nav-drop-menu a:hover{background:#F3F6F2;color:#3D3D3D;text-decoration:none}
+.nav-drop-menu a:first-child{font-weight:700;color:#4F6754}
+@media (max-width:600px){
+#nav-toggle:checked~.nav-links .nav-drop{width:100%}
+#nav-toggle:checked~.nav-links .nav-drop>summary{width:100%;min-height:52px;font-size:18px;justify-content:space-between;border-bottom:1px solid #E3E8E0}
+#nav-toggle:checked~.nav-links .nav-drop-menu{position:static;margin:0;padding:0 0 6px 14px;box-shadow:none;border:none;background:#FFFFFF;min-width:0}
+#nav-toggle:checked~.nav-links .nav-drop-menu a{min-height:46px;font-size:16px;border-bottom:1px solid #F0F2EE;border-radius:0;white-space:normal;line-height:1.35}
+#nav-toggle:checked~.nav-links .nav-drop-menu{width:100%;box-sizing:border-box}
+}
+/* Phones: one booking button (the bottom bar), so hide header and menu Book buttons */
+@media (max-width:600px){
+.header-book{display:none!important}
+#nav-toggle:checked~.nav-links a.nav-book{display:none!important}
+}
+/* Mobile bottom bar: the whole bar is a green Book now button */
+.mobile-book{display:none}
+@media (max-width:600px){
+.mobile-book{display:flex!important;align-items:center;justify-content:center;position:fixed;left:0;right:0;bottom:0;z-index:20;min-height:calc(60px + env(safe-area-inset-bottom));padding:0 16px env(safe-area-inset-bottom);background:#5E7A65;color:#FFFFFF;font-size:18px;font-weight:700;letter-spacing:.02em;text-decoration:none;box-shadow:0 -6px 18px rgba(61,61,61,.15);box-sizing:border-box}
+.mobile-book:hover,.mobile-book:focus-visible{background:#3D3D3D;color:#FFFFFF;text-decoration:none}
+.mobile-book:focus-visible{outline:3px solid #E5B400;outline-offset:-3px}
+body{padding-bottom:calc(60px + env(safe-area-inset-bottom))}
+.scroll-follow{display:none!important}
+}
+/* Services: link goes to the section, chevron opens the list */
+.nav-drop-wrap{position:relative;display:inline-flex;align-items:center}
+.nav-svc-link{display:inline-flex;align-items:center;min-height:44px}
+.nav-drop{position:static}
+.nav-drop>summary{width:28px;height:44px;padding:0;justify-content:center;gap:0}
+.nav-drop>summary::after{width:8px;height:8px;margin-top:-4px;flex:0 0 auto}
+.nav-drop-menu{left:-12px}
+@media (max-width:600px){
+#nav-toggle:checked~.nav-links .nav-drop-wrap{display:flex;width:100%;justify-content:space-between;min-height:52px;border-bottom:1px solid #E3E8E0}
+#nav-toggle:checked~.nav-links .nav-svc-link{flex:1 1 auto;min-height:52px;font-size:18px;border-bottom:none}
+#nav-toggle:checked~.nav-links .nav-drop>summary{width:52px;height:52px;border-bottom:none;justify-content:center}
+#nav-toggle:checked~.nav-links .nav-drop{width:auto}
+#nav-toggle:checked~.nav-links .nav-drop-menu{margin:0 0 6px 0}
+}
+/* Internal links (same-page anchors) use sage green; dark on hover */
+a[href^="#"]:not(.btn):not(.skip):not(.scroll-cue){color:#5E7A65!important}
+a[href^="#"]:not(.btn):not(.skip):not(.scroll-cue):hover{color:#3D3D3D!important}
+.pain-card .pain-q,.pain-card .pain-a{color:#5E7A65!important}
+.pain-card:hover .pain-q,.pain-card:focus-visible .pain-q{color:#3D3D3D!important}
+.footer a[href^="#"]{color:#5E7A65!important}
+.footer a[href^="#"]:hover{color:#3D3D3D!important}
+/* Treatment page links */
+a[href^="services/"]{color:#5E7A65!important}
+a[href^="services/"]:hover{color:#3D3D3D!important}
+/* Services CTA row: button and call link share one height and line up */
+.svc-cta{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:16px;margin-top:48px}
+.svc-cta-btn,.svc-cta-link{height:52px;min-height:52px;box-sizing:border-box;margin:0;border-radius:999px;font-size:16px;font-weight:600}
+.svc-cta-btn{background:#5E7A65;color:#FFFFFF;padding:0 32px;min-width:200px}
+.svc-cta-link{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:0 26px;border:1.5px solid #5E7A65;color:#5E7A65!important;background:transparent}
+.svc-cta-link:hover{background:#F5DCCB;color:#3D3D3D!important}
+@media (max-width:600px){
+.svc-cta{flex-direction:column;align-items:stretch;max-width:340px;margin-left:auto;margin-right:auto}
+.svc-cta-btn,.svc-cta-link{width:100%;min-width:0}
+}
+/* Services navigation, matched to the services page design: small caret, full-width four-column panel on desktop */
+@media (min-width:901px){
+.nav-drop-wrap{position:relative}
+.nav-drop>summary{width:18px;height:26px;padding:0;margin-left:8px;justify-content:flex-start;color:#3D3D3D;min-height:0}
+.nav-drop>summary:hover{color:#E5B400}
+.nav-drop>summary::after{width:7px;height:7px;margin-top:-4px}
+.nav-drop-menu{position:absolute;top:100%;left:-14px;right:auto;width:max-content;min-width:270px;margin:6px 0 0;padding:10px;border:1px solid #E3E8E0;border-radius:16px;box-shadow:0 16px 32px rgba(61,61,61,.12);background:#FFFFFF;display:flex;flex-direction:column;gap:0;box-sizing:border-box}
+.nav-drop-menu::before{content:"";position:absolute;left:0;right:0;top:-12px;height:12px}
+.nav-drop-menu a{display:flex;align-items:center;min-height:46px;padding:0 14px;border-radius:10px;color:#3D3D3D!important;font-size:16px;font-weight:500;white-space:nowrap}
+.nav-drop-menu a:hover{background:#F3F6F2;color:#3D3D3D!important;text-decoration:none}
+.nav-drop-menu a:first-child{font-weight:600;color:#3D5A46!important}
+}
+@media (max-width:600px){
+.nav-drop-menu a::before{content:"";flex:0 0 6px;width:6px;height:6px;border-radius:50%;background:#E5B400;margin-right:12px}
+.nav-drop-menu a:first-child::before{display:none}
+.nav-drop-menu a{display:flex;align-items:center;padding-left:18px}
+}
+/* Services panel links stay dark (overrides the sage rule for same-page links) */
+#site-nav .nav-drop-menu a[href^="#"]:not(.btn):not(.skip):not(.scroll-cue){color:#3D3D3D!important}
+#site-nav .nav-drop-menu a[href^="#"]:not(.btn):not(.skip):not(.scroll-cue):hover{color:#3D3D3D!important;background:#F3F6F2}
+#site-nav .nav-drop-menu a:first-child{color:#3D5A46!important}
+/* Services caret size: larger and centered on the text line */
+@media (min-width:901px){
+.nav-drop>summary::after{width:5px;height:5px;border-right-width:2px;border-bottom-width:2px;margin-top:-4px}
+.nav-drop[open]>summary::after{margin-top:2px}
+}
+/* Mobile Services: link row with the arrow on the right, treatment list below */
+@media (max-width:600px){
+#nav-toggle:checked~.nav-links .nav-drop-wrap{display:block!important;position:relative;width:100%;border-bottom:1px solid #E3E8E0}
+#nav-toggle:checked~.nav-links .nav-svc-link{display:flex!important;width:100%;box-sizing:border-box;min-height:52px;font-size:18px;border-bottom:none}
+#nav-toggle:checked~.nav-links .nav-drop{display:block!important;width:100%;position:static}
+#nav-toggle:checked~.nav-links .nav-drop>summary{position:absolute;z-index:3;right:0;top:0;width:52px;height:52px;margin:0;padding:0;justify-content:center;border-bottom:none;min-height:52px}
+#nav-toggle:checked~.nav-links .nav-drop>summary::after{width:6px;height:6px;margin-top:-3px}
+#nav-toggle:checked~.nav-links .nav-drop[open]>summary::after{margin-top:3px}
+#nav-toggle:checked~.nav-links .nav-drop-menu{display:flex!important;flex-direction:column;width:100%;box-sizing:border-box;position:static;padding:0 0 10px 18px;margin:0;border:0;box-shadow:none;background:#FFFFFF;min-width:0}
+#nav-toggle:checked~.nav-links .nav-drop-menu a{width:100%;box-sizing:border-box;min-height:46px;font-size:16px;white-space:normal;line-height:1.35}
+}
+/* Phones: Services is a plain link to the Services section, no treatment list */
+@media (max-width:600px){
+#nav-toggle:checked~.nav-links .nav-drop{display:none!important}
+#nav-toggle:checked~.nav-links .nav-drop-wrap{display:block!important;border-bottom:none;width:100%}
+#nav-toggle:checked~.nav-links .nav-svc-link{display:flex!important;width:100%;min-height:52px;font-size:18px;border-bottom:1px solid #E3E8E0;box-sizing:border-box}
+}
+/* Phones: Services keeps its arrow; the treatment list has no "All services" item */
+@media (max-width:600px){
+#nav-toggle:checked~.nav-links .nav-drop{display:block!important}
+#nav-toggle:checked~.nav-links .nav-drop-wrap{display:block!important;position:relative;width:100%;border-bottom:1px solid #E3E8E0}
+#nav-toggle:checked~.nav-links .nav-svc-link{display:flex!important;width:100%;box-sizing:border-box;min-height:52px;font-size:18px;border-bottom:none}
+#nav-toggle:checked~.nav-links .nav-drop>summary{display:inline-flex!important;position:absolute;z-index:3;right:0;top:0;width:52px;height:52px;margin:0;padding:0;justify-content:center;border-bottom:none;min-height:52px}
+#nav-toggle:checked~.nav-links .nav-drop>summary::after{width:6px;height:6px;margin-top:-3px}
+#nav-toggle:checked~.nav-links .nav-drop[open]>summary::after{margin-top:3px}
+
+}
+@media (min-width:901px){#site-nav .nav-drop-menu a:first-child{font-weight:500!important;color:#3D3D3D!important}#site-nav .nav-drop-menu a:first-child::before{display:block!important}}
+@media (min-width:901px){#site-nav .nav-drop-menu a:hover,#site-nav .nav-drop-menu a:focus-visible{background:#F3F6F2!important;color:#3D3D3D!important}}
+/* Mobile spacing pass: consistent 20px gutters, tighter vertical rhythm, scaled display type */
+@media (max-width:600px){
+section{padding-top:64px!important;padding-bottom:64px!important}
+[style*="padding:112px"],[style*="padding:104px"],[style*="padding:88px"],[style*="padding:72px"]{padding-top:56px!important;padding-bottom:56px!important}
+[style*="padding:112px 32px"],[style*="padding:112px 24px"],[style*="padding:72px 24px"],[style*="padding:48px 24px"],[style*="padding:112px 0"],[style*="padding:104px 0"]{padding-left:20px!important;padding-right:20px!important}
+[style*="padding:48px 32px"]{padding:32px 20px!important}
+[style*="padding:36px 28px"]{padding:28px 20px!important}
+[style*="padding:28px 30px"]{padding:24px 20px!important}
+[style*="padding:24px 28px"]{padding:20px!important}
+[style*="padding:24px 26px"]{padding:20px 18px!important}
+[style*="padding:0 32px"]{padding-left:20px!important;padding-right:20px!important}
+[style*="font-size:48px"]{font-size:36px!important}
+[style*="font-size:44px"]{font-size:34px!important}
+[style*="font-size:28px"]{font-size:24px!important}
+}
+@media (max-width:600px){.marquee{padding-top:12px!important;padding-bottom:12px!important}.marquee-track{font-size:13px!important;gap:24px!important;padding-right:24px!important;letter-spacing:.01em}}
+@media (max-width:600px){section:has(.marquee){padding-top:0!important;padding-bottom:0!important}}
+@media (max-width:600px){.marquee{padding-top:8px!important;padding-bottom:8px!important}.marquee-track{font-size:12px!important;line-height:1.2}}
+@media (max-width:600px){div[style*="margin-top:32px;display:flex;gap:14px"]{justify-content:center!important;text-align:center}div[style*="margin-top:32px;display:flex;gap:14px"]>a{text-align:center}}
+.marquee-track{font-size:19px!important}
+@media (max-width:600px){.marquee-track{font-size:19px!important;letter-spacing:0}}
+/* Header phone: icon beside the menu up to 1100px, phone number beside Book appointment above it */
+.header-tel-icon{display:none}
+.header-phone{display:none}
+.menu-btn{order:3!important}
+@media (min-width:1101px){
+.header-phone{display:inline-flex;align-items:center;margin-right:16px;font-size:16px;font-weight:600;color:#4F6754!important;text-decoration:none;white-space:nowrap}
+.header-phone:hover{color:#3D5A46!important;text-decoration:underline}
+}
+@media (max-width:1100px){
+.header-tel-icon{display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;order:2;width:44px;height:44px;margin-left:auto;margin-right:10px;border:1.5px solid #5E7A65;border-radius:999px;color:#5E7A65;box-sizing:border-box}
+.header-tel-icon:hover,.header-tel-icon:focus-visible{background:#F3F6F2}
+.header-tel-icon:focus-visible{outline:3px solid #3D3D3D;outline-offset:3px}
+}
+@media (max-width:400px){.header-tel-icon{margin-right:8px}}
+@media (max-width:1100px){.header-tel-icon,.menu-btn{border-radius:999px!important}.menu-btn{min-height:44px;height:44px;width:56px;min-width:56px;padding:0}}
+/* Menu icon: plain three-line icon with no box or label, matching the simple chevron style */
+@media (max-width:760px){
+.menu-btn{border:none!important;background:transparent!important;border-radius:0!important;width:44px!important;min-width:44px!important;height:44px!important;padding:0!important;gap:6px!important}
+.menu-btn b{display:none}
+.menu-btn span{width:22px;height:2px}
+#nav-toggle:checked~.menu-btn span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+#nav-toggle:checked~.menu-btn span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+}
+/* Mobile menu: service list opens inline inside the same menu, no box inside a box */
+@media (max-width:760px){
+#nav-toggle:checked~.nav-links .nav-drop-menu{display:flex;flex-direction:column;width:100%;margin:0;padding:0 0 10px 0;background:transparent;border:none;box-shadow:none}
+#nav-toggle:checked~.nav-links .nav-drop-menu a{min-height:44px;font-size:16px;font-weight:500;color:#4F6754;border-bottom:none;padding:8px 0 8px 14px;display:flex;align-items:center}
+#nav-toggle:checked~.nav-links .nav-drop-menu a:first-child{font-weight:500;color:#4F6754}
+#nav-toggle:checked~.nav-links .nav-drop-wrap{border-bottom:1px solid #E3E8E0}
+#nav-toggle:checked~.nav-links .nav-drop[open]>.nav-drop-menu{border-top:none}
+}
+/* Mobile menu panel: drops onto its own full-width row under the logo, booking, phone, and menu row */
+@media (max-width:760px){
+.header-inner{flex-wrap:wrap;row-gap:0}
+#nav-toggle:checked~.nav-links{position:relative;left:0;right:0}
+#nav-toggle:checked~.nav-links .nav-drop-wrap{display:flex;align-items:center;width:100%;border-bottom:1px solid #E3E8E0}
+#nav-toggle:checked~.nav-links .nav-svc-link{flex:1 1 auto;min-height:52px;display:flex;align-items:center;font-size:18px;font-weight:600;color:#3D3D3D}
+#nav-toggle:checked~.nav-links .nav-drop{display:block;width:auto;flex:0 0 auto}
+#nav-toggle:checked~.nav-links .nav-drop>summary{width:52px;min-height:52px;justify-content:center;border-bottom:none}
+#nav-toggle:checked~.nav-links .nav-drop>summary::after{transform:rotate(45deg);margin-top:-4px}
+#nav-toggle:checked~.nav-links .nav-drop[open]>summary::after{transform:rotate(225deg);margin-top:4px}
+}
+@media (min-width:601px) and (max-width:1100px){.header-book{margin-right:14px!important}.header-tel-icon{margin-left:0!important}}
+/* Star sparkle: review and hero stars twinkle with a warm gold glow, staggered so they never blink in unison */
+@keyframes starTwinkle{0%,100%{text-shadow:0 0 3px rgba(229,180,0,.25);opacity:.8}50%{text-shadow:0 0 10px rgba(229,180,0,.85),0 0 2px #FFF6C2;opacity:1}}
+.review-card>span[role="img"],p>span[role="img"][aria-label="5 out of 5 stars"]{display:inline-block;animation:starTwinkle 2.4s ease-in-out infinite}
+.review-card:nth-child(2n)>span[role="img"]{animation-delay:.6s}
+.review-card:nth-child(3n)>span[role="img"]{animation-delay:1.2s}
+@media (prefers-reduced-motion:reduce){.review-card>span[role="img"],p>span[role="img"][aria-label="5 out of 5 stars"]{animation:none}}
+.header-cta{display:contents}
+@media (min-width:1101px){.header-cta{display:flex;align-items:center;gap:18px;flex:0 0 auto;margin-left:auto}.header-phone{margin-right:0!important}}
+@media (max-width:600px){#nav-toggle:checked~.nav-links a.nav-book{display:flex!important;justify-content:center;background:#5E7A65!important;color:#FFFFFF!important;border-radius:999px;margin:14px 0 4px;min-height:52px;border-bottom:none;font-weight:600}#nav-toggle:checked~.nav-links a.nav-book:hover{background:#3D3D3D!important;color:#FFFFFF!important}}
+@media (min-width:601px) and (max-width:1100px){.header-tel-icon{margin-left:0!important}.header-book{margin-left:auto!important;margin-right:0}.header-inner>.nav-links{margin-right:28px}}
+@media (min-width:601px){.header-inner>.nav-links{flex:1 1 auto;justify-content:center;margin-left:16px;margin-right:16px}}
+@media (min-width:601px) and (max-width:1100px){.header-inner>.nav-links{margin-right:16px}}
+@media (min-width:901px){.header-inner{position:relative}.header-inner>.nav-links{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);flex:none;margin:0!important;justify-content:center}}
+@media (min-width:601px) and (max-width:1100px){.header-book{flex:0 0 auto!important;min-width:max-content!important;white-space:nowrap!important;padding:0 16px!important}}
+@media (min-width:601px) and (max-width:760px){.header-book{padding:0 12px!important;font-size:14px!important}.header-inner{column-gap:10px}.header-tel-icon{margin-right:0}}
+@media (min-width:901px){#site-nav .nav-drop>summary::after{width:4px;height:4px;border-right-width:1.5px;border-bottom-width:1.5px;margin-top:-3px}#site-nav .nav-drop[open]>summary::after{margin-top:1px}}
+@media (max-width:900px){#site-nav .nav-drop>summary::after{width:6px;height:6px;border-right-width:1.5px;border-bottom-width:1.5px}}
+@media (max-width:900px){#site-nav .nav-drop>summary::after,#site-nav .nav-drop-wrap .nav-drop>summary::after{width:4px!important;height:4px!important;border-right-width:1.5px!important;border-bottom-width:1.5px!important;margin-top:-2px}}
+#nav-toggle:checked~.nav-links .nav-drop>summary::after{width:4px!important;height:4px!important;border-right-width:1.5px!important;border-bottom-width:1.5px!important}
+#site-nav .nav-drop>summary::after{margin-top:-6px!important;transform:rotate(45deg)!important;vertical-align:middle}
+#site-nav .nav-drop[open]>summary::after{transform:rotate(225deg)!important}
+#site-nav .nav-drop-wrap{align-items:center}
+#site-nav .nav-drop>summary{align-self:center}
+.row-nav{display:flex;justify-content:center;gap:16px;margin:8px 0 4px}
+.rn-btn{width:52px;height:52px;border-radius:50%;border:2px solid #5E7A65;background:#FFFFFF;color:#5E7A65;font-size:28px;line-height:1;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;padding:0;transition:background .2s ease,color .2s ease}
+.rn-btn:hover,.rn-btn:focus-visible{background:#5E7A65;color:#FFFFFF}
+.rn-btn:focus-visible{outline:3px solid #3D3D3D;outline-offset:3px}
+section:has(> .row-nav){display:flex;flex-direction:column}
+.row-nav{order:1;justify-content:flex-end;padding:0 20px;margin:12px 0 0;gap:12px}
+@media (max-width:600px){.row-nav{justify-content:center!important}}
+div:has(> .review-row)>div[style*="margin-top:32px;display:flex;gap:14px"]{order:2}
+div:has(> .row-nav){display:flex;flex-direction:column}
+/* Service filter tabs */
+.svc-filter{display:flex;flex-wrap:wrap;gap:10px}
+.svc-tab{min-height:44px;padding:0 20px;border-radius:999px;border:1.5px solid #5E7A65;background:#FFFFFF;color:#5E7A65;font:600 15px/1 'Figtree',system-ui,sans-serif;cursor:pointer;transition:background .2s ease,color .2s ease}
+.svc-tab:hover{background:#F5DCCB;color:#3D3D3D}
+.svc-tab[aria-pressed="true"]{background:#5E7A65;color:#FFFFFF}
+.svc-tab:focus-visible{outline:3px solid #3D3D3D;outline-offset:3px}
+.svc-card[hidden]{display:none!important}
+/* Accessibility: navigation and footer link text is black for clear contrast; hover keeps an underline */
+header a:not(.btn):not(.nav-book),header .nav-svc-link,header .header-phone,header a[href^="#"]:not(.btn):not(.skip):not(.scroll-cue),.footer a[href^="#"]:not(.btn):not(.skip):not(.scroll-cue),.footer a[href^="services/"]:not(.btn),.footer a[href^="#"],.footer a[href^="services/"],.footer a[href^="http"],.footer a[href^="tel"],.nav-links a,.nav-svc-link,.nav-drop>summary,.nav-drop-menu a,.header-phone,.nav-links a:hover,.nav-svc-link:hover,.nav-drop-menu a:hover,.header-phone:hover,#nav-toggle:checked~.nav-links a,#nav-toggle:checked~.nav-links .nav-drop-menu a,#nav-toggle:checked~.nav-links .nav-svc-link{color:#000000!important}
+.nav-links a:hover,.nav-svc-link:hover,.header-phone:hover,.nav-drop-menu a:hover{text-decoration:underline!important}
+.footer a,.footer *,.footer-grid nav a,.footer-grid>div:last-child a,.footer-grid nav a:hover,.footer-grid>div:last-child a:hover,.footer a:hover{color:#000000!important}
+.footer a:hover,.footer-grid nav a:hover{text-decoration:underline!important}
+.nav-book,.nav-book:hover,#nav-toggle:checked~.nav-links a.nav-book,#nav-toggle:checked~.nav-links a.nav-book:hover{color:#FFFFFF!important}
+/* Header depth and logo presence: soft shadow under the header; logo file stays as supplied, with a light lift so it reads clearly */
+header{box-shadow:0 1px 3px rgba(61,61,61,.10)!important;position:sticky!important;z-index:20!important}
+.header-inner>a:first-child img{filter:none!important;height:56px!important;width:auto!important}
+@media (min-width:601px){.header-inner>a:first-child img{height:64px!important;width:auto!important}}
+@media (max-width:600px){.header-inner>a:first-child img{height:52px!important;width:auto!important}}
+/* Footer booking button keeps white text on green */
+.footer a.footer-book,.footer a.footer-book:hover{color:#FFFFFF!important;text-decoration:none;display:inline-flex;align-items:center;min-height:48px;padding:0 26px;border-radius:999px}
+.footer-grid>div:first-child>p a:not(.footer-book){display:inline;min-height:0;line-height:inherit}
+/* Katherine photo stack: layered photos that fan through on click, with a Back button to reverse */
+.kc-stack{position:relative;aspect-ratio:4/5;width:100%}
+.kc-card{position:absolute;inset:0;margin:0;border-radius:24px;overflow:hidden;border:2px solid #E5B400;box-shadow:0 14px 30px rgba(61,61,61,.16);transition:transform .6s cubic-bezier(.2,.8,.2,1),opacity .6s ease;cursor:pointer;background:#FFFFFF}
+.kc-card img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+.kc-card[data-slot="0"]{z-index:3;transform:none}
+.kc-card[data-slot="1"]{z-index:2;transform:translate(22px,14px) rotate(5deg) scale(.95)}
+.kc-card[data-slot="2"]{z-index:1;transform:translate(-22px,22px) rotate(-5deg) scale(.9)}
+.kc-card[data-slot="3"]{z-index:0;transform:translate(0,30px) scale(.85);opacity:0;pointer-events:none}
+.kc-card:focus-visible{outline:3px solid #3D3D3D;outline-offset:4px}
+.kc-ctrl{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:20px}
+.kc-btn{width:52px;height:52px;min-height:52px;padding:0;border-radius:50%;border:2px solid #5E7A65;background:#FFFFFF;color:#5E7A65;font-size:28px;line-height:1;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;transition:background .2s ease,color .2s ease}
+.kc-btn:hover,.kc-btn:focus-visible{background:#5E7A65;color:#FFFFFF}
+.kc-btn:focus-visible{outline:3px solid #3D3D3D;outline-offset:3px}
+.kc-btn:disabled{opacity:.4;cursor:default}
+.kc-count{font-size:14px;color:#555555;font-weight:600}
+@media (prefers-reduced-motion:reduce){.kc-card{transition:none}}
+/* Katherine photos by screen size: phones keep the layered stack; tablets show all three photos top, middle, bottom; computers show a larger stack */
+@media (min-width:601px) and (max-width:900px){
+  .kc-wrap{width:100%!important;max-width:560px!important;margin-bottom:40px!important}
+  .kc-stack{aspect-ratio:auto!important;display:flex!important;flex-direction:column;gap:28px}
+  .kc-card{position:relative!important;inset:auto!important;transform:none!important;opacity:1!important;pointer-events:auto!important;width:64%;aspect-ratio:4/5;height:auto;transition:none!important;box-shadow:0 14px 30px rgba(61,61,61,.16)}
+  .kc-card[data-slot="3"]{display:block!important}
+  .kc-card:nth-child(1){align-self:flex-start}
+  .kc-card:nth-child(2){align-self:center}
+  .kc-card:nth-child(3){align-self:flex-end}
+  .kc-ctrl{display:none!important}
+}
+@media (min-width:901px){
+  .kc-wrap{width:100%!important;max-width:520px!important}
+  .kc-btn{min-height:52px;font-size:16px}
+  .kc-count{font-size:15px}
+}
+@media (min-width:1101px){
+  .kc-wrap{width:100%!important;max-width:600px!important}
+}
+/* Mobile: photo stack sized for phones, controls easy to tap */
+@media (max-width:600px){.kc-wrap{max-width:280px!important;margin-bottom:24px!important}.kc-btn{width:52px;height:52px;min-height:52px}}
+/* Services notes: same left and right edges as the service cards at every width */
+.svc-note{text-align:left}
+.svc-note p{max-width:none!important;margin-left:0!important;margin-right:0!important;line-height:1.6}
+@media (max-width:600px){.svc-note p{font-size:15px}}
+/* Review arrows: centered in the space below the review cards at every width */
+#reviews .rn-wrap{flex-direction:row!important;justify-content:center!important;align-items:center!important;margin-top:28px!important;padding:0!important;width:100%}
+#reviews .rn-wrap .row-nav{order:0!important;margin:0 auto!important;padding:0!important;justify-content:center!important;width:auto!important;gap:16px!important}
+/* Phone optimization: tighten inline-styled spacing and headings that the desktop layout sets inline */
+html,body{overflow-x:clip}
+@media (max-width:600px){
+[style*="padding:112px"],[style*="padding:104px"],[style*="padding:88px"],[style*="padding:72px"]{padding-top:56px!important;padding-bottom:56px!important}
+[style*="padding:112px 0 40px"]{padding-top:56px!important;padding-bottom:32px!important}
+h2[style*="font-size"]{font-size:34px!important;line-height:1.15!important;overflow-wrap:anywhere}
+.section-title{font-size:34px!important;overflow-wrap:anywhere}
+.stat-card p[style*="font-size:44px"]{font-size:36px!important}
+.needs-box p[style*="font-size:28px"],.needs-box p[style*="font-size:26px"]{font-size:22px!important}
+[style*="font-size:26px"]{font-size:22px!important}
+[style*="font-size:28px"][style*="margin-top"]{font-size:24px!important}
+.card,.svc-card{max-width:100%;box-sizing:border-box}
+.btn,.svc-cta-link{max-width:100%;white-space:normal;text-align:center}
+}
+@media (max-width:380px){
+h2[style*="font-size"]{font-size:30px!important}
+}
+/* Tablet About: text and the three staggered Katherine photos sit side by side, not one above the other */
+@media (min-width:601px) and (max-width:900px){
+  #about .wrap{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;align-items:start!important;gap:32px!important}
+  #about .wrap>div:first-child{display:block!important}
+  #about .kc-wrap{width:100%!important;max-width:none!important;margin:0!important}
+  #about .kc-card{width:62%}
+  #about .kc-card:nth-child(1){align-self:flex-start}
+  #about .kc-card:nth-child(3){align-self:flex-end}
+}
+/* Tablet photo cards: lift on hover and burst gold stars, like the stat cards */
+@media (min-width:601px) and (max-width:900px){
+  #about .kc-card{overflow:visible!important;transition:transform .35s ease,box-shadow .35s ease!important;position:relative}
+  #about .kc-card img{border-radius:22px;width:100%;height:100%;display:block}
+  #about .kc-burst{z-index:3}
+  #about .kc-card:hover{transform:translateY(-6px)!important;box-shadow:0 18px 40px rgba(94,122,101,.22)!important}
+  #about .kc-card:hover .stat-burst i{animation:statBurst .8s ease-out forwards}
+  #about .kc-card:hover .stat-burst i:nth-child(2n){animation-delay:.08s}
+  #about .kc-card .stat-burst i{width:18px;height:18px;left:-9px;top:-9px}
+}
+@media (prefers-reduced-motion:reduce){#about .kc-card,#about .kc-card:hover{transform:none!important;transition:none!important}#about .kc-card:hover .stat-burst i{animation:none;opacity:0}}
+/* Tablet photos: bigger gold star burst above the photo, and the whole stack wiggles while the cursor is over it */
+@keyframes kcWiggle{from{rotate:-2.5deg}to{rotate:2.5deg}}
+@media (min-width:601px) and (max-width:900px){
+  #about .kc-card{isolation:isolate}
+#about .kc-burst{z-index:-1!important}
+  #about .kc-card .stat-burst i{width:26px!important;height:26px!important;left:-13px!important;top:-13px!important;animation-duration:1s!important}
+  #about .kc-card:hover{animation:kcOne 1.5s ease-in-out infinite}
+  
+  
+}
+@media (prefers-reduced-motion:reduce){#about .kc-stack:hover .kc-card{animation:none}}
+
+/* Photo stack sized for phones */
+@media (max-width:600px){
+  .kc-wrap{max-width:none!important;width:100%!important;margin-bottom:32px!important}
+  .kc-card{width:84%!important}
+  .kc-stack{gap:24px!important}
+}
+
+/* Phone: About sections left-aligned with even spacing, photo stack centered */
+@media (max-width:600px){
+  #about .wrap{align-items:stretch!important;gap:32px!important;padding:64px 20px!important}
+  #about .wrap>div:first-child{display:block!important}
+  #about .kc-card{align-self:center!important}
+  #about .kc-wrap{margin:0 auto 32px!important}
+}
+
+/* Phone: layered photo stack centered in the column */
+@media (max-width:600px){
+  .kc-card{position:absolute!important;left:0!important;right:0!important;top:0!important;margin-left:auto!important;margin-right:auto!important;width:82%!important;height:auto!important}
+}
+
+@keyframes kcOne{0%{rotate:0deg}6%{rotate:-3deg}12%{rotate:3deg}18%{rotate:-2deg}24%{rotate:0deg}100%{rotate:0deg}}
+@media (min-width:601px) and (max-width:900px){
+  #about .kc-card:hover .stat-burst i{animation:statBurst .9s ease-out forwards!important}
+}
+
+/* Mission photo */
+.mission-photo{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:24px;display:block;box-shadow:0 14px 30px rgba(61,61,61,.14)}
+@media (max-width:900px){ #mission{padding:88px 20px 56px!important} #mission .mission-photo{aspect-ratio:16/10} }
+@media (max-width:600px){ #mission{padding:64px 20px 40px!important} #mission .mission-photo{aspect-ratio:4/5;border-radius:18px} }
+
+/* Mission: calm centered layout, optimized per breakpoint */
+.mission-photo{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:24px;display:block;border:2px solid #E5B400;box-shadow:0 14px 30px rgba(61,61,61,.14)}
+.kc-card{border:2px solid #E5B400!important}
+@media (max-width:900px){
+  #mission{padding:88px 20px 56px!important}
+  #mission .mission-photo{aspect-ratio:4/3}
+  #mission .mission-title{font-size:40px!important}
+  #mission .mission-values{grid-template-columns:1fr 1fr 1fr!important;gap:14px!important}
+  #mission .mission-values article{padding:20px!important;flex-direction:column!important;gap:10px!important}
+}
+@media (max-width:600px){
+  #mission{padding:64px 20px 40px!important}
+  #mission .mission-title{font-size:32px!important}
+  #mission .mission-lede{font-size:16px!important}
+  #mission .mission-photo{aspect-ratio:4/5;border-radius:18px}
+  #mission .mission-values{grid-template-columns:1fr!important}
+}
+
+/* Phone: keep the treatment chair in frame on the left */
+@media (max-width:600px){ #mission .mission-photo{object-position:12% center!important} }
+
+/* Desktop Services dropdown: invisible bridge keeps it open while the pointer crosses the gap */
+@media (hover:hover) and (pointer:fine) and (min-width:761px){
+  .nav-drop-menu{position:absolute;}
+  .nav-drop-menu::before{content:"";position:absolute;left:0;right:0;top:-16px;height:16px}
+}
+
+/* Services-to-About box: full width under the photos on tablet and phone */
+.needs-box-wide{display:none}
+@media (max-width:900px){
+  #about .needs-box:not(.needs-box-wide){display:none!important}
+  #about .needs-box-wide{display:block!important;grid-column:1 / -1;width:100%;box-sizing:border-box;margin-top:8px!important}
+  #about .needs-box-wide .svc-cta-link{width:100%;box-sizing:border-box}
+}
+
+/* Services: equal-height cards with links on one line, notes aligned to card text */
+#services .svc-card{display:flex;flex-direction:column}
+#services .svc-card[hidden]{display:none!important}
+#services .svc-card > a:last-child{margin-top:auto!important;padding-top:12px}
+#services .svc-note{padding:0 20px!important}
+@media (min-width:601px){ #services .svc-note{padding:0 24px!important} }
+@media (min-width:901px){ #services .svc-note{padding:0 32px!important} }
+
+.mission-cta-row .btn{flex:1 1 200px}
+@media (min-width:761px){ .mission-cta-row .btn{white-space:nowrap;padding:0 22px} }
+.header-inner .nav-links a[aria-current="page"]{color:#4F6754!important;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:8px}
+@media (min-width:901px){#site-nav{align-items:center!important}#site-nav .nav-drop-wrap{display:inline-flex!important;align-items:center!important;position:relative!important}#site-nav .nav-svc-link{display:inline-flex!important;align-items:center!important;min-height:44px!important;line-height:1.2!important;padding:0!important}#site-nav .nav-drop>summary{display:inline-flex!important;align-items:center!important;justify-content:center!important;width:30px!important;height:44px!important;min-height:44px!important;margin:0!important;padding:0!important;position:static!important}}
+@media (min-width:901px){#site-nav .nav-drop>summary::after{content:""!important;display:block!important;width:6px!important;height:6px!important;border-right:2px solid #3D3D3D!important;border-bottom:2px solid #3D3D3D!important;transform:rotate(45deg)!important;margin-top:-5px!important;vertical-align:middle!important;position:static!important}#site-nav .nav-drop[open]>summary::after{transform:rotate(225deg)!important;margin-top:3px!important}}
+@media (max-width:900px){header .menu-btn{display:inline-flex!important}header .nav-links{display:none!important}header #nav-toggle:checked~.nav-links{display:flex!important}header .header-tel-icon{display:inline-flex!important}}
+@media (min-width:901px){header .menu-btn{display:none!important}header .nav-links{display:flex!important}}
+body main a.pain-card,body main a.pain-card *{text-decoration:none!important}body main a.pain-card:hover .pain-a,body main a.pain-card:focus-visible .pain-a{text-decoration:underline!important}@media (max-width:900px){html body header #nav-toggle:checked~.nav-links .nav-drop-wrap{display:flex!important;align-items:center!important;justify-content:space-between!important;width:100%!important;position:relative!important}html body header #nav-toggle:checked~.nav-links .nav-drop-wrap>.nav-svc-link{flex:1 1 auto!important;width:auto!important;min-width:0!important;display:flex!important;align-items:center!important}html body header #nav-toggle:checked~.nav-links .nav-drop-wrap>details.nav-drop{position:static!important;display:inline-flex!important;flex:0 0 52px!important;width:52px!important;margin:0!important}html body header #nav-toggle:checked~.nav-links .nav-drop>summary{position:static!important;width:52px!important;height:52px!important;min-height:52px!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;margin:0!important;padding:0!important}html body header #nav-toggle:checked~.nav-links .nav-drop>summary::after{content:""!important;display:block!important;width:8px!important;height:8px!important;border-right:2px solid #3D3D3D!important;border-bottom:2px solid #3D3D3D!important;border-top:0!important;border-left:0!important;transform:rotate(45deg)!important;margin-top:-4px!important;vertical-align:middle!important}html body header #nav-toggle:checked~.nav-links .nav-drop[open]>summary::after{transform:rotate(225deg)!important;margin-top:4px!important}}
+@media (max-width:900px){html body header #nav-toggle:checked~.nav-links{width:100%!important;max-width:100%!important;margin:0!important;padding-left:0!important;padding-right:0!important;box-sizing:border-box!important;left:0!important;right:0!important}html body header .nav-links .nav-drop>summary::after,html body header #site-nav .nav-drop>summary::after{content:""!important;display:block!important;width:8px!important;height:8px!important;border-right:2px solid #3D3D3D!important;border-bottom:2px solid #3D3D3D!important;border-top:0!important;border-left:0!important;transform:rotate(45deg)!important;margin-top:-4px!important}html body header .nav-drop[open]>summary::after{transform:rotate(225deg)!important;margin-top:4px!important}}
+@media (max-width:900px){html body header #nav-toggle~#site-nav .nav-drop-wrap .nav-drop>summary::after{content:""!important;display:block!important;width:8px!important;height:8px!important;border-right:2px solid #3D3D3D!important;border-bottom:2px solid #3D3D3D!important;border-top:0!important;border-left:0!important;transform:rotate(45deg)!important;margin-top:-4px!important}html body header #nav-toggle~#site-nav .nav-drop-wrap .nav-drop[open]>summary::after{transform:rotate(225deg)!important;margin-top:4px!important}html body header #nav-toggle:checked~#site-nav{transform:none!important;left:0!important;margin-left:0!important;width:100%!important;max-width:100%!important;padding-left:0!important;padding-right:0!important}}
+</style>
+
+
+<div style="background:#FBF7F1">
   <header style="border-bottom:1px solid #E3E8E0;background:#FFFFFF;position:sticky;top:0;z-index:2">
-    <a class="skip" href="/#top">Skip to main content</a>
+    <a class="skip" href="#top">Skip to main content</a>
     <input type="checkbox" id="pause-motion" class="sr-only" aria-label="Pause scrolling animations">
     <div class="wrap header-inner" style="display:flex;justify-content:space-between;align-items:center;min-height:80px">
-      <a href="/#top" aria-label="Belle Allure Aesthetics and Wellness, home">
-        <img class="brand-logo" src="/assets/img/belle-allure-logo-288.webp" width="288" height="288" alt="Belle Allure Aesthetics and Wellness wordmark logo" style="height:56px;width:auto;display:block">
-      </a>
+      <a href="https://belleallureaestheticsandwellness.com/" aria-label="Belle Allure Aesthetics and Wellness, home"><img class="brand-logo" src="/assets/img/belle-allure-logo-288.webp" width="288" height="288" alt="Belle Allure Aesthetics and Wellness logo" style="height:72px;width:auto;display:block"></a>
       <input type="checkbox" id="nav-toggle" class="sr-only" aria-label="Show menu">
-<a class="header-tel-icon" href="tel:+15747351528" aria-label="Call Belle Allure at 574-735-1528"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></a>
+<a class="header-tel-icon header-sms-icon" href="sms:+15747351528" aria-label="Text Belle Allure at 574-735-1528"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></a><a class="header-tel-icon" href="tel:+15747351528" aria-label="Call Belle Allure at 574-735-1528"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></a>
       <button class="site-search-btn" type="button" aria-label="Search the site" aria-haspopup="dialog" aria-controls="ss-results"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 20l-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
 <label for="nav-toggle" class="menu-btn"><span></span><span></span><span></span><b>Menu</b></label>
       <nav class="nav-links" id="site-nav" aria-label="Primary">
         <div class="nav-drop-wrap">
-        <a class="nav-svc-link" href="/#services">Services</a>
+        <a class="nav-svc-link" href="https://belleallureaestheticsandwellness.com/services">Services</a>
         <details class="nav-drop">
           <summary aria-label="Show all treatments"></summary>
           <div class="nav-drop-menu">
-            <a href="/services/wrinkle-treatments">Wrinkle treatments</a>
-            <a href="/services/dermal-fillers">Dermal fillers</a>
-            <a href="/services/prf-therapy">PRF therapy</a>
-            <a href="/services/prf-facial-microneedling">PRF facial microneedling</a>
-            <a href="/services/prf-under-eye-repair">PRF under eye repair</a>
-            <a href="/services/tmj-therapy">TMJ therapy</a>
-            <a href="/services/headache-treatment">Headache treatment</a>
-            <a href="/services/hyperhidrosis">Hyperhidrosis treatment</a>
-            <a href="/services/hair-restoration">Hair restoration</a>
-            <a href="/services/iv-therapy">IV therapy</a>
-            <a href="/services/wellness-injections">Wellness injections and weight medications</a>
+            <a href="https://belleallureaestheticsandwellness.com/services/wrinkles-treatment">Wrinkle treatments</a>
+            <a href="https://belleallureaestheticsandwellness.com/services/fillers">Dermal fillers</a>
+            <a href="https://belleallureaestheticsandwellness.com/services/prf-therapy">PRF therapy</a>
+            <a href="https://belleallureaestheticsandwellness.com/services/microneedling">PRF facial microneedling</a>
+            <a href="https://belleallureaestheticsandwellness.com/services/prf-under-eye-repair">PRF under eye repair</a>
+            <a href="https://belleallureaestheticsandwellness.com/services/tmj-therapy">TMJ therapy</a>
+            <a href="https://belleallureaestheticsandwellness.com/services/headache-treatment">Headache treatment</a>
+            <a href="https://belleallureaestheticsandwellness.com/services/hyperhidrosis-treatment">Hyperhidrosis treatment</a>
+            <a href="https://belleallureaestheticsandwellness.com/services/hair-restoration">Hair restoration</a>
+            <a href="https://belleallureaestheticsandwellness.com/services/iv-therapy">IV therapy</a>
+            <a href="https://belleallureaestheticsandwellness.com/services/weight-loss-treatment">Wellness injections and weight medications</a>
+            <a href="https://belleallureaestheticsandwellness.com/services/acne-medication">Acne medication</a>
           </div>
         </details>
         </div>
-        <a href="/#reviews">Reviews</a>
-        <a href="/#faq">FAQ</a>
-        <a href="/#about">About</a>
+        <a href="https://belleallureaestheticsandwellness.com/reviews#reviews">Reviews</a><a href="https://belleallureaestheticsandwellness.com/reviews#before-and-after">Results</a>
+        <a href="https://belleallureaestheticsandwellness.com/faq">FAQ</a>
+        <a href="https://belleallureaestheticsandwellness.com/about">About</a>
         <a class="nav-book" href="https://belleallurefacialaesthetics.myaestheticrecord.com/online-booking/book-appointment">Book appointment</a>
       </nav>
       <div class="header-cta"><a class="header-phone" href="tel:+15747351528">574-735-1528</a>
       <a class="btn header-book" href="https://belleallurefacialaesthetics.myaestheticrecord.com/online-booking/book-appointment" style="background:#5E7A65;color:#FFFFFF;min-height:44px;padding:0 20px;font-size:15px">Book appointment</a></div>
     </div>
   </header>
-```
