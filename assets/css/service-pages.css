@@ -1732,3 +1732,8 @@ body:has(#pause-motion:checked) .sp-marquee .marquee-track{animation-play-state:
 }
 /* Accessibility: primary buttons keep pure white text on sage (AA contrast); eyebrows use sage-dark for text contrast on cream; skip link text readable on focus */
 .skip{color:#3D3D3D!important}
+
+.sp-strip-wrap{flex-wrap:wrap;justify-content:center;row-gap:8px;column-gap:16px}
+.sp-strip-wrap .sp-strip{flex:0 0 100%;order:1}
+.sp-strip-wrap .sp-prev{order:2}
+.sp-strip-wrap .sp-next{order:3}
