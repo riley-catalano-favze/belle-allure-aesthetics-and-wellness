@@ -186,7 +186,9 @@ new MutationObserver(function(ms){ms.forEach(function(m){sync(m.target);});}).ob
     var vh=window.innerHeight;
     var pastHero=hero?hero.getBoundingClientRect().bottom<=120:true;
     var pastImportant=impSec?impSec.getBoundingClientRect().bottom<vh*0.5:false;
-    nav.classList.toggle('is-on',pastHero&&!pastImportant);
+    var on=pastHero&&!pastImportant;
+    nav.classList.toggle('is-on',on);
+    document.body.classList.toggle('sp-side-on',on);
   }
   function req(){ if(!ticking){ ticking=true; requestAnimationFrame(update); } }
   window.addEventListener('scroll',req,{passive:true});
