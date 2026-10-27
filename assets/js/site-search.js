@@ -163,7 +163,7 @@
     var qt = tokens(q);
     items.forEach(function (e, i) {
       var a = el('a', 'ss-result');
-      a.href = e.url + (e.anchor ? '#' + e.anchor : '');
+      a.href = cleanHref(e.url) + (e.anchor ? '#' + e.anchor : '');
       a.id = 'ss-opt-' + i;
       a.setAttribute('role', 'option');
       a.setAttribute('aria-selected', 'false');
@@ -196,6 +196,12 @@
     activeIndex = i;
     input.setAttribute('aria-activedescendant', opts[i].id);
     if (scroll) opts[i].scrollIntoView({ block: 'nearest' });
+  }
+
+  function cleanHref(u) {
+    var h = location.hostname;
+    if (location.protocol === 'file:' || h === 'localhost' || h === '127.0.0.1') return u;
+    return u === '/index.html' ? '/' : u.replace(/\.html$/, '');
   }
 
   function prettyUrl(u) {
