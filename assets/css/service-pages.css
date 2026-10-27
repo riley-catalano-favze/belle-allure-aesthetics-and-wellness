@@ -1714,3 +1714,9 @@ body:has(#pause-motion:checked) .sp-marquee .marquee-track{animation-play-state:
 .sp-card-link{margin-top:auto;padding-top:18px;font-weight:600;color:#4F6754;font-size:15px;min-height:44px;display:inline-flex;align-items:center}
 .sp-card-link::after{content:"";position:absolute;inset:0;border-radius:18px}
 .sp-card-link:focus-visible{outline:3px solid #5E7A65;outline-offset:2px}
+
+/* Scroll cue: centered over the hero, above the mobile booking bar, stays visible for every reader */
+.scroll-cue{animation:cueBounce 1.8s ease-in-out infinite!important}
+@media (prefers-reduced-motion:reduce){.scroll-cue{animation:none!important}}
+@media (max-width:1100px){.scroll-follow{bottom:calc(74px + env(safe-area-inset-bottom))}}
+@media (max-width:900px){.scroll-follow{display:block!important}}

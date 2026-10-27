@@ -4,7 +4,7 @@
 ;
 (function(){var t=document.getElementById('nav-svc'),d=document.querySelector('.nav-drop');if(!t||!d)return;document.addEventListener('click',function(e){if(t.checked&&!d.contains(e.target))t.checked=false});document.addEventListener('keydown',function(e){if(e.key==='Escape')t.checked=false});})();
 ;
-(function(){var h=document.querySelector('.sb-hero');if(!h||!('IntersectionObserver' in window))return;var io=new IntersectionObserver(function(es){es.forEach(function(e){document.body.classList.toggle('cue-past',!e.isIntersecting)})},{rootMargin:'0px 0px -40% 0px',threshold:0});io.observe(h);})();
+(function(){var h=document.querySelector('.sb-hero')||document.querySelector('.sp-hero');if(!h||!('IntersectionObserver' in window))return;var io=new IntersectionObserver(function(es){es.forEach(function(e){document.body.classList.toggle('cue-past',!e.isIntersecting)})},{rootMargin:'0px 0px -40% 0px',threshold:0});io.observe(h);})();
 ;
 (function(){var g=document.querySelector('.sb-services'),b=document.querySelector('.sb-rail-toggle');if(!g||!b)return;function set(off,save){g.classList.toggle('rail-off',off);b.setAttribute('aria-expanded',String(!off));b.setAttribute('aria-label',off?'Show treatment list':'Hide treatment list');if(save){try{localStorage.setItem('ba-rail',off?'off':'on')}catch(e){}}}try{set(localStorage.getItem('ba-rail')==='off',false)}catch(e){}b.addEventListener('click',function(){set(!g.classList.contains('rail-off'),true)})})();
 ;
