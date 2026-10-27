@@ -1720,3 +1720,13 @@ body:has(#pause-motion:checked) .sp-marquee .marquee-track{animation-play-state:
 @media (prefers-reduced-motion:reduce){.scroll-cue{animation:none!important}}
 @media (max-width:1100px){.scroll-follow{bottom:calc(74px + env(safe-area-inset-bottom))}}
 @media (max-width:900px){.scroll-follow{display:block!important}}
+
+/* One content column after the hero: every section aligns with the side navigation */
+@media (min-width:1101px){
+  body.sp-side-on .sp-main > *:not(.sp-hero):not(.sp-trust-bar){padding-left:248px!important;padding-right:24px!important}
+  body.sp-side-on .sp-main > *:not(.sp-hero):not(.sp-trust-bar) > .sp-wrap,
+  body.sp-side-on .sp-main > *:not(.sp-hero):not(.sp-trust-bar) > .wrap{max-width:none!important;width:auto!important;margin-left:0!important;margin-right:0!important}
+}
+@media (min-width:1101px){
+  body.sp-side-on .sp-main > .follow-cta > .follow-card{max-width:none!important;width:100%!important;margin-left:0!important;margin-right:0!important;box-sizing:border-box}
+}
