@@ -1737,3 +1737,18 @@ body:has(#pause-motion:checked) .sp-marquee .marquee-track{animation-play-state:
 .sp-strip-wrap .sp-strip{flex:0 0 100%;order:1}
 .sp-strip-wrap .sp-prev{order:2}
 .sp-strip-wrap .sp-next{order:3}
+
+/* Compact follow-social section */
+html body .follow-cta{padding:40px 20px 48px!important}
+html body .follow-card{max-width:540px!important;padding:32px 24px 28px!important;border-radius:22px!important;box-shadow:0 12px 28px rgba(79,103,84,.08)!important}
+html body .follow-eyebrow{margin:0 0 8px!important;font-size:11px!important}
+html body .follow-title{font-size:28px!important;max-width:400px!important}
+html body .follow-sub{font-size:14px!important;margin:12px auto 0!important;max-width:400px!important;line-height:1.5!important}
+html body .follow-actions{margin-top:20px!important;gap:10px!important}
+html body .follow-btn{min-height:40px!important;padding:0 20px!important;font-size:14px!important;gap:8px!important}
+html body .follow-btn svg{width:16px!important;height:16px!important}
+@media(max-width:600px){
+  html body .follow-card{padding:24px 18px 22px!important;border-radius:18px!important}
+  html body .follow-title{font-size:24px!important}
+  html body .follow-btn{min-height:38px!important;max-width:260px!important}
+}
