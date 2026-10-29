@@ -1,0 +1,173 @@
+/* Shared site header. Edit here; every page uses this file. */
+@media (min-width:901px){header .menu-btn{display:none!important}
+header .nav-links{display:flex!important}}
+/* Current page in the menu: no peach anywhere, plain white background, bold label */
+header .nav-links a[aria-current="page"]{background:#FFFFFF!important;color:#3D3D3D!important;font-weight:700!important;text-decoration:none!important;box-shadow:none!important}
+@media (max-width:900px){header #nav-toggle:checked~#site-nav .nav-svc-link[aria-current="page"]{display:flex!important;align-items:center!important;width:100%!important;height:auto!important;min-height:52px!important;margin:0!important;padding:0 60px 0 4px!important;border-radius:0!important;background:#FFFFFF!important;color:#3D3D3D!important;font-weight:700!important;text-decoration:none!important}
+header #nav-toggle:checked~#site-nav .nav-drop-wrap{background:#FFFFFF!important}}
+/* Book buttons stay green on tap, hover and focus */
+html body .nav-book:hover,html body .nav-book:focus,html body .nav-book:active,html body .nav-book:focus-visible,
+html body header #nav-toggle:checked~.nav-links a.nav-book:hover,html body header #nav-toggle:checked~.nav-links a.nav-book:focus,html body header #nav-toggle:checked~.nav-links a.nav-book:active,
+html body header #nav-toggle:checked~#site-nav a.nav-book:hover,html body header #nav-toggle:checked~#site-nav a.nav-book:focus,html body header #nav-toggle:checked~#site-nav a.nav-book:active,
+html body .mobile-book:hover,html body .mobile-book:focus,html body .mobile-book:active,
+html body .sb-mobile-book:hover,html body .sb-mobile-book:focus,html body .sb-mobile-book:active{background:#5E7A65!important;color:#FFFFFF!important;text-decoration:none!important}
+/* Desktop header: the menu sits centered on the page on every page */
+@media (min-width:901px){
+  html body header .header-inner{position:relative!important}
+  html body header .header-inner>.nav-links{position:absolute!important;left:50%!important;top:50%!important;transform:translate(-50%,-50%)!important;margin:0!important;flex:none!important;justify-content:center!important;width:auto!important}
+}
+html.menu-open .mobile-book,html.menu-open .sb-mobile-book,body:has(#nav-toggle:checked) .mobile-book,body:has(#nav-toggle:checked) .sb-mobile-book{display:none!important}
+/* Text icon sits beside the phone icon in the header, same size and style */
+header .header-sms-icon{margin:0 8px 0 auto!important}
+header .header-tel-icon:not(.header-sms-icon){margin-left:0!important}
+/* Mid-desktop header (901-1100px): nav sits in the flow between the logo and the right-hand actions, so it never runs into Book appointment */
+@media (min-width:901px) and (max-width:1100px){
+html body header .header-inner>.nav-links{position:static!important;transform:none!important;left:auto!important;top:auto!important;flex:1 1 auto!important;justify-content:center!important;gap:16px!important;margin:0 12px!important;min-width:0!important}
+html body header .header-inner .header-book{margin-left:0!important;margin-right:0!important;order:3!important}
+html body header .header-inner>.header-tel-icon,html body header .header-inner>.site-search-btn{order:2!important}
+}
+.nav-links{display:flex;gap:28px;align-items:center;font-weight:500}
+@media (max-width:600px){.header-inner{flex-wrap:wrap;min-height:auto!important;padding-top:12px;padding-bottom:12px;row-gap:12px}}
+.menu-btn{display:none}
+.nav-book{display:none}
+@media (max-width:760px){.header-inner{position:relative}
+.menu-btn{display:inline-flex;flex-direction:column;justify-content:center;align-items:center;gap:5px;min-width:52px;min-height:48px;padding:6px 10px;border-radius:12px;border:1.5px solid #5E7A65;cursor:pointer;color:#5E7A65;box-sizing:border-box}
+.menu-btn span{display:block;width:22px;height:2px;background:#5E7A65;border-radius:2px;transition:transform .25s ease,opacity .25s ease}
+.menu-btn b{font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:700;line-height:1}
+#nav-toggle:checked~.menu-btn span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+#nav-toggle:checked~.menu-btn span:nth-child(2){opacity:0}
+#nav-toggle:checked~.menu-btn span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+body:has(#nav-toggle:focus-visible) .menu-btn{outline:3px solid #3D3D3D;outline-offset:3px}
+.nav-links{display:none!important}
+#nav-toggle:checked~.nav-links{display:flex!important;flex-direction:column;align-items:stretch;gap:0;order:4;width:100%;overflow:visible;white-space:normal;border-top:1px solid #E3E8E0;padding:8px 0}
+#nav-toggle:checked~.nav-links a{min-height:52px;display:flex;align-items:center;font-size:18px;border-bottom:1px solid #E3E8E0}
+#nav-toggle:checked~.nav-links a:last-child{border-bottom:none}}
+/* Mobile header: compact booking button beside the menu, styled dropdown panel */
+@media (max-width:760px){
+.header-inner{justify-content:space-between;align-items:center;column-gap:12px}
+.header-inner>a:first-child{flex:0 1 auto;min-width:0}
+.hb-long{display:none}.hb-short{display:inline}
+.header-book{display:inline-flex!important;order:1;margin-left:auto;width:auto!important;max-width:none!important;flex:0 0 auto;min-height:44px!important;padding:0 16px!important;font-size:14px!important;white-space:nowrap;box-sizing:border-box}
+.menu-btn{order:2;min-height:44px;min-width:56px}
+#nav-toggle:checked~.nav-links{background:#FFFFFF;box-shadow:0 16px 28px rgba(61,61,61,.12);padding:6px 20px 18px;margin:0 -20px;width:calc(100% + 40px)}
+#nav-toggle:checked~.nav-links a{padding-left:4px;font-weight:600;color:#3D3D3D}
+#nav-toggle:checked~.nav-links a:hover{color:#4F6754}
+#nav-toggle:checked~.nav-links .nav-book{padding-left:0;color:#FFFFFF}
+}
+#nav-toggle:checked~.nav-links .nav-book{display:flex!important;background:#5E7A65;color:#FFFFFF;border-radius:999px;justify-content:center;margin-top:14px;min-height:52px;border-bottom:none;font-weight:600}
+#nav-toggle:checked~.nav-links .nav-book:hover{color:#FFFFFF;background:#3D3D3D;text-decoration:none}
+.nav-links a{display:inline-flex;align-items:center;min-height:44px}
+.nav-links a.nav-book{display:none}
+@media (max-width:760px){.nav-links a.nav-book{display:none}}
+#nav-toggle:checked~.nav-links a.nav-book{display:flex!important}
+/* Logo sizing: fixed per range so it never collapses or jumps */
+.header-inner>a:first-child{flex:0 0 auto!important}
+/* Very small phones (380px and under): keep the header on one row */
+@media (max-width:380px){
+.header-inner{column-gap:8px!important;padding-left:16px!important;padding-right:16px!important}
+.header-book{padding:0 12px!important;font-size:13px!important;min-width:0!important}
+.menu-btn{min-width:52px!important;padding:4px 6px!important}
+#nav-toggle:checked~.nav-links{margin:0 -16px!important;width:calc(100% + 32px)!important;padding-left:16px!important;padding-right:16px!important}
+}
+@media (max-width:600px){#nav-toggle:checked~.nav-links .nav-drop{width:100%}
+#nav-toggle:checked~.nav-links .nav-drop>summary{width:100%;min-height:52px;font-size:18px;justify-content:space-between;border-bottom:1px solid #E3E8E0}
+#nav-toggle:checked~.nav-links .nav-drop-menu{position:static;margin:0;padding:0 0 6px 14px;box-shadow:none;border:none;background:#FFFFFF;min-width:0}
+#nav-toggle:checked~.nav-links .nav-drop-menu a{min-height:46px;font-size:16px;border-bottom:1px solid #F0F2EE;border-radius:0;white-space:normal;line-height:1.35}
+#nav-toggle:checked~.nav-links .nav-drop-menu{width:100%;box-sizing:border-box}}
+/* Phones: one booking button (the bottom bar), so hide header and menu Book buttons */
+@media (max-width:600px){
+.header-book{display:none!important}
+#nav-toggle:checked~.nav-links a.nav-book{display:none!important}
+}
+.nav-svc-link{display:inline-flex;align-items:center;min-height:44px}
+@media (max-width:600px){#nav-toggle:checked~.nav-links .nav-drop-wrap{display:flex;width:100%;justify-content:space-between;min-height:52px;border-bottom:1px solid #E3E8E0}
+#nav-toggle:checked~.nav-links .nav-svc-link{flex:1 1 auto;min-height:52px;font-size:18px;border-bottom:none}
+#nav-toggle:checked~.nav-links .nav-drop>summary{width:52px;height:52px;border-bottom:none;justify-content:center}
+#nav-toggle:checked~.nav-links .nav-drop{width:auto}
+#nav-toggle:checked~.nav-links .nav-drop-menu{margin:0 0 6px 0}}
+/* Services panel links stay dark (overrides the sage rule for same-page links) */
+#site-nav .nav-drop-menu a[href^="#"]:not(.btn):not(.skip):not(.scroll-cue){color:#3D3D3D!important}
+#site-nav .nav-drop-menu a[href^="#"]:not(.btn):not(.skip):not(.scroll-cue):hover{color:#3D3D3D!important;background:#F3F6F2}
+#site-nav .nav-drop-menu a:first-child{color:#3D5A46!important}
+@media (min-width:901px){#site-nav .nav-drop-menu a:first-child{font-weight:500!important;color:#3D3D3D!important}
+#site-nav .nav-drop-menu a:first-child::before{display:block!important}}
+@media (min-width:901px){#site-nav .nav-drop-menu a:hover,#site-nav .nav-drop-menu a:focus-visible{background:#F3F6F2!important;color:#3D3D3D!important}}
+/* Header phone: icon beside the menu up to 1100px, phone number beside Book appointment above it */
+.header-tel-icon{display:none}
+.header-phone{display:none}
+.menu-btn{order:3!important}
+@media (min-width:1101px){.header-phone{display:inline-flex;align-items:center;margin-right:16px;font-size:16px;font-weight:600;color:#4F6754!important;text-decoration:none;white-space:nowrap}
+.header-phone:hover{color:#3D5A46!important;text-decoration:underline}}
+@media (max-width:1100px){.header-tel-icon{display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;order:2;width:44px;height:44px;margin-left:auto;margin-right:10px;border:0;border-radius:0;color:#5E7A65;box-sizing:border-box}
+.header-tel-icon:hover,.header-tel-icon:focus-visible{background:#F3F6F2}
+.header-tel-icon:focus-visible{outline:3px solid #3D3D3D;outline-offset:3px}}
+@media (max-width:400px){.header-tel-icon{margin-right:8px}}
+@media (max-width:1100px){.header-tel-icon,.menu-btn{border-radius:999px!important}
+.menu-btn{min-height:44px;height:44px;width:56px;min-width:56px;padding:0}}
+@media (min-width:601px) and (max-width:1100px){.header-book{margin-right:14px!important}
+.header-tel-icon{margin-left:0!important}}
+.header-cta{display:contents}
+@media (min-width:1101px){.header-cta{display:flex;align-items:center;gap:18px;flex:0 0 auto;margin-left:auto}
+.header-phone{margin-right:0!important}}
+@media (max-width:600px){#nav-toggle:checked~.nav-links a.nav-book{display:flex!important;justify-content:center;background:#5E7A65!important;color:#FFFFFF!important;border-radius:999px;margin:14px 0 4px;min-height:52px;border-bottom:none;font-weight:600}
+#nav-toggle:checked~.nav-links a.nav-book:hover{background:#3D3D3D!important;color:#FFFFFF!important}}
+@media (min-width:601px) and (max-width:1100px){.header-tel-icon{margin-left:0!important}
+.header-book{margin-left:auto!important;margin-right:0}
+.header-inner>.nav-links{margin-right:28px}}
+@media (min-width:601px){.header-inner>.nav-links{flex:1 1 auto;justify-content:center;margin-left:16px;margin-right:16px}}
+@media (min-width:601px) and (max-width:1100px){.header-inner>.nav-links{margin-right:16px}}
+@media (min-width:901px){.header-inner{position:relative}
+.header-inner>.nav-links{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);flex:none;margin:0!important;justify-content:center}}
+@media (min-width:601px) and (max-width:1100px){.header-book{flex:0 0 auto!important;min-width:max-content!important;white-space:nowrap!important;padding:0 16px!important}}
+@media (min-width:601px) and (max-width:760px){.header-book{padding:0 12px!important;font-size:14px!important}
+.header-inner{column-gap:10px}
+.header-tel-icon{margin-right:0}}
+@media (min-width:901px){#site-nav .nav-drop>summary::after{width:4px;height:4px;border-right-width:1.5px;border-bottom-width:1.5px;margin-top:-3px}
+#site-nav .nav-drop[open]>summary::after{margin-top:1px}}
+@media (max-width:900px){#site-nav .nav-drop>summary::after{width:6px;height:6px;border-right-width:1.5px;border-bottom-width:1.5px}}
+@media (max-width:900px){#site-nav .nav-drop>summary::after,#site-nav .nav-drop-wrap .nav-drop>summary::after{width:4px!important;height:4px!important;border-right-width:1.5px!important;border-bottom-width:1.5px!important;margin-top:-2px}}
+#nav-toggle:checked~.nav-links .nav-drop>summary::after{width:4px!important;height:4px!important;border-right-width:1.5px!important;border-bottom-width:1.5px!important}
+#site-nav .nav-drop>summary::after{margin-top:-6px!important;transform:rotate(45deg)!important;vertical-align:middle}
+#site-nav .nav-drop[open]>summary::after{transform:rotate(225deg)!important}
+#site-nav .nav-drop-wrap{align-items:center}
+#site-nav .nav-drop>summary{align-self:center}
+/* Accessibility: navigation and footer link text is black for clear contrast; hover keeps an underline */
+header a:not(.btn):not(.nav-book),header .nav-svc-link,header .header-phone,header a[href^="#"]:not(.btn):not(.skip):not(.scroll-cue),.footer a[href^="#"]:not(.btn):not(.skip):not(.scroll-cue),.footer a[href^="services/"]:not(.btn),.footer a[href^="#"],.footer a[href^="services/"],.footer a[href^="http"],.footer a[href^="tel"],.nav-links a,.nav-svc-link,.nav-drop>summary,.nav-drop-menu a,.header-phone,.nav-links a:hover,.nav-svc-link:hover,.nav-drop-menu a:hover,.header-phone:hover,#nav-toggle:checked~.nav-links a,#nav-toggle:checked~.nav-links .nav-drop-menu a,#nav-toggle:checked~.nav-links .nav-svc-link{color:#000000!important}
+.nav-links a:hover,.nav-svc-link:hover,.header-phone:hover,.nav-drop-menu a:hover{text-decoration:underline!important}
+.nav-book,.nav-book:hover,#nav-toggle:checked~.nav-links a.nav-book,#nav-toggle:checked~.nav-links a.nav-book:hover{color:#FFFFFF!important}
+/* Header depth and logo presence: soft shadow under the header; logo file stays as supplied, with a light lift so it reads clearly */
+header{box-shadow:0 1px 3px rgba(61,61,61,.10)!important;position:sticky!important;z-index:20!important}
+.header-inner>a:first-child img{filter:none!important;height:56px!important;width:auto!important}
+@media (min-width:601px){.header-inner>a:first-child img{height:64px!important;width:auto!important}}
+@media (max-width:600px){.header-inner>a:first-child img{height:52px!important;width:auto!important}}
+.header-inner .nav-links a[aria-current="page"]{color:#4F6754!important;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:8px}
+@media (min-width:901px){#site-nav{align-items:center!important}
+#site-nav .nav-drop-wrap{display:inline-flex!important;align-items:center!important;position:relative!important}
+#site-nav .nav-svc-link{display:inline-flex!important;align-items:center!important;min-height:44px!important;line-height:1.2!important;padding:0!important}
+#site-nav .nav-drop>summary{display:inline-flex!important;align-items:center!important;justify-content:center!important;width:30px!important;height:44px!important;min-height:44px!important;margin:0!important;padding:0!important;position:static!important}}
+@media (min-width:901px){#site-nav .nav-drop>summary::after{content:""!important;display:block!important;width:6px!important;height:6px!important;border-right:2px solid #3D3D3D!important;border-bottom:2px solid #3D3D3D!important;transform:rotate(45deg)!important;margin-top:-5px!important;vertical-align:middle!important;position:static!important}
+#site-nav .nav-drop[open]>summary::after{transform:rotate(225deg)!important;margin-top:3px!important}}
+@media (max-width:900px){header .menu-btn{display:inline-flex!important}
+header .nav-links{display:none!important}
+header #nav-toggle:checked~.nav-links{display:flex!important}
+header .header-tel-icon{display:inline-flex!important}}
+@media (min-width:901px){header .menu-btn{display:none!important}
+header .nav-links{display:flex!important}}
+@media (max-width:900px){html body header #nav-toggle:checked~.nav-links .nav-drop-wrap{display:flex!important;align-items:center!important;justify-content:space-between!important;width:100%!important;position:relative!important}
+html body header #nav-toggle:checked~.nav-links .nav-drop-wrap>.nav-svc-link{flex:1 1 auto!important;width:auto!important;min-width:0!important;display:flex!important;align-items:center!important}
+html body header #nav-toggle:checked~.nav-links .nav-drop-wrap>details.nav-drop{position:static!important;display:inline-flex!important;flex:0 0 52px!important;width:52px!important;margin:0!important}
+html body header #nav-toggle:checked~.nav-links .nav-drop>summary{position:static!important;width:52px!important;height:52px!important;min-height:52px!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;margin:0!important;padding:0!important}
+html body header #nav-toggle:checked~.nav-links .nav-drop>summary::after{content:""!important;display:block!important;width:8px!important;height:8px!important;border-right:2px solid #3D3D3D!important;border-bottom:2px solid #3D3D3D!important;border-top:0!important;border-left:0!important;transform:rotate(45deg)!important;margin-top:-4px!important;vertical-align:middle!important}
+html body header #nav-toggle:checked~.nav-links .nav-drop[open]>summary::after{transform:rotate(225deg)!important;margin-top:4px!important}}
+@media (max-width:900px){html body header #nav-toggle:checked~.nav-links{width:100%!important;max-width:100%!important;margin:0!important;padding-left:0!important;padding-right:0!important;box-sizing:border-box!important;left:0!important;right:0!important}
+html body header .nav-links .nav-drop>summary::after,html body header #site-nav .nav-drop>summary::after{content:""!important;display:block!important;width:8px!important;height:8px!important;border-right:2px solid #3D3D3D!important;border-bottom:2px solid #3D3D3D!important;border-top:0!important;border-left:0!important;transform:rotate(45deg)!important;margin-top:-4px!important}
+html body header .nav-drop[open]>summary::after{transform:rotate(225deg)!important;margin-top:4px!important}}
+@media (max-width:900px){html body header #nav-toggle~#site-nav .nav-drop-wrap .nav-drop>summary::after{content:""!important;display:block!important;width:8px!important;height:8px!important;border-right:2px solid #3D3D3D!important;border-bottom:2px solid #3D3D3D!important;border-top:0!important;border-left:0!important;transform:rotate(45deg)!important;margin-top:-4px!important}
+html body header #nav-toggle~#site-nav .nav-drop-wrap .nav-drop[open]>summary::after{transform:rotate(225deg)!important;margin-top:4px!important}
+html body header #nav-toggle:checked~#site-nav{transform:none!important;left:0!important;margin-left:0!important;width:100%!important;max-width:100%!important;padding-left:0!important;padding-right:0!important}}
+header .header-tel-icon,header .header-sms-icon,header a.header-tel-icon.header-sms-icon{margin-left:4px!important;margin-right:4px!important;margin-top:0!important;margin-bottom:0!important}
+header .site-search-btn{width:44px!important;margin-left:4px!important;margin-right:4px!important}
+header a.header-tel-icon.header-tel-icon.header-tel-icon,header a.header-sms-icon.header-sms-icon.header-sms-icon{color:#5E7A65!important}
+header a.header-tel-icon.header-tel-icon svg,header a.header-sms-icon.header-sms-icon svg{color:#5E7A65!important;stroke:currentColor!important}
+/* Chat and phone icons: no box behind them, matching the search icon */
+header a.header-tel-icon,header a.header-sms-icon{background:transparent!important;border:0!important;border-radius:0!important}
