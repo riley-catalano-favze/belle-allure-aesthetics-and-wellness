@@ -1752,3 +1752,6 @@ html body .follow-btn svg{width:16px!important;height:16px!important}
   html body .follow-title{font-size:24px!important}
   html body .follow-btn{min-height:38px!important;max-width:260px!important}
 }
+
+/* Side menu: only show it while the reader is in the body of the page (JS adds is-on) */
+.svc-side-nav:not(.is-on){display:none!important}
