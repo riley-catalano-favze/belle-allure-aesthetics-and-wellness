@@ -22,3 +22,8 @@
 .faq-cta{margin-top:28px}
 @media (max-width:600px){.faq-title{font-size:36px}.faq-guide-card{gap:10px;padding:4px 14px 4px 4px}.faq-guide-card img{width:40px;height:40px}.faq-guide-name{font-size:17px}.faq-guide-tag{font-size:12px}}
 @media (max-width:380px){.faq-title{font-size:30px}}
+/* Side gutters so the FAQ text and + icons never touch the screen edge */
+section.sp-block > .faq-wrap{width:100%;box-sizing:border-box;margin:0 auto;padding:0 24px}
+section.wrap > .faq-wrap{width:100%;box-sizing:border-box;margin:0 auto;padding:0}
+@media (max-width:600px){section.sp-block > .faq-wrap{padding:0 20px}}
+@media (max-width:600px){.faq-list summary{font-size:17px}}
