@@ -62,7 +62,7 @@ html.ss-open{overflow:hidden}
 @media (max-width:900px){
 html body header .header-inner{column-gap:0!important}
 html body header .header-inner>.header-sms-icon{margin-left:auto!important;margin-right:0!important}
-html body header .header-inner>.header-tel-icon:not(.header-sms-icon){margin-left:12px!important;margin-right:0!important}
+html body header .header-inner>.header-tel-icon:not(.header-sms-icon){margin-left:6px!important;margin-right:6px!important}
 html body header .header-inner>.site-search-btn{width:44px!important;margin:0 4px!important;position:relative!important}
 html body header .header-inner>.site-search-btn::before{content:"";position:absolute;top:0;bottom:0;left:-11px;right:-11px}
 html body header .header-inner>.menu-btn{margin:0 -11px 0 0!important}
