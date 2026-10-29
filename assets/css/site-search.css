@@ -67,3 +67,5 @@ html body header .header-inner>.site-search-btn{width:44px!important;margin:0 4p
 html body header .header-inner>.site-search-btn::before{content:"";position:absolute;top:0;bottom:0;left:-11px;right:-11px}
 html body header .header-inner>.menu-btn{margin:0 -11px 0 0!important}
 }
+html body header .header-inner>a.header-tel-icon,html body header .header-inner>a.header-sms-icon{margin:0 6px!important}
+html body header .header-inner>.site-search-btn{margin:0 6px!important}
