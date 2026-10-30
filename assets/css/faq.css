@@ -27,3 +27,19 @@ section.sp-block > .faq-wrap{width:100%;box-sizing:border-box;margin:0 auto;padd
 section.wrap > .faq-wrap{width:100%;box-sizing:border-box;margin:0 auto;padding:0}
 @media (max-width:600px){section.sp-block > .faq-wrap{padding:0 20px}}
 @media (max-width:600px){.faq-list summary{font-size:17px}}
+
+/* Phone layout for the FAQ */
+@media (max-width:600px){
+  #faq{padding-top:56px!important;padding-bottom:110px!important}
+  .faq-wrap{max-width:none}
+  .faq-title{font-size:30px;margin-top:10px}
+  .faq-intro{font-size:16px;margin-top:12px}
+  .faq-guide{margin-top:28px}
+  .faq-list{margin-top:28px}
+  .faq-list details{padding:4px 0}
+  .faq-list summary{min-height:60px;padding:14px 0;font-size:17px;line-height:1.35;gap:14px}
+  .faq-list summary::after{width:36px;height:36px;font-size:22px}
+  .faq-list details>p{font-size:16px;line-height:1.6;margin:0 0 18px}
+  .faq-cta{margin-top:24px}
+  .faq-cta .sp-btn,.faq-cta a.btn{display:flex;width:100%;box-sizing:border-box;justify-content:center;min-height:52px;align-items:center}
+}
