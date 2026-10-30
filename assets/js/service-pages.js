@@ -104,31 +104,7 @@ new MutationObserver(function(ms){ms.forEach(function(m){sync(m.target);});}).ob
 })();
 ;
 
-/* One Services dropdown for every width: pointer hover opens it on desktop; a tap or click toggles it on phone and tablet */
-(function(){
-  var desk = window.matchMedia('(min-width:901px) and (hover:hover) and (pointer:fine)');
-  var timer = null;
-  document.querySelectorAll('.nav-drop-wrap').forEach(function(w){
-    var d = w.querySelector('.nav-drop');
-    var s = d && d.querySelector('summary');
-    var link = w.querySelector('.nav-svc-link');
-    if (!d || !s) return;
-    s.addEventListener('click', function(e){ e.preventDefault(); if (!desk.matches) d.open = !d.open; });
-    if (link) link.addEventListener('click', function(e){
-      if (desk.matches) return;
-      e.preventDefault();
-      d.open = !d.open;
-    });
-    w.addEventListener('pointerenter', function(e){
-      if (!desk.matches || (e.pointerType && e.pointerType !== 'mouse')) return;
-      clearTimeout(timer); d.open = true;
-    });
-    w.addEventListener('pointerleave', function(e){
-      if (!desk.matches || (e.pointerType && e.pointerType !== 'mouse')) return;
-      timer = setTimeout(function(){ d.open = false; }, 180);
-    });
-  });
-})();
+
 
 ;
 (function(){var t=document.getElementById('nav-toggle');if(!t)return;function s(){document.documentElement.classList.toggle('menu-open',t.checked);}t.addEventListener('change',s);s();})();

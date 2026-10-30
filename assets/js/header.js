@@ -28,7 +28,6 @@
     var link = w.querySelector('.nav-svc-link');
     if (!d || !s) return;
     s.addEventListener('click', function(e){ e.preventDefault(); if (!desk.matches) d.open = !d.open; });
-    if (link) link.addEventListener('click', function(e){ if (desk.matches) return; e.preventDefault(); d.open = !d.open; });
     w.addEventListener('pointerenter', function(e){ if (!desk.matches || (e.pointerType && e.pointerType !== 'mouse')) return; clearTimeout(timer); d.open = true; });
     w.addEventListener('pointerleave', function(e){ if (!desk.matches || (e.pointerType && e.pointerType !== 'mouse')) return; timer = setTimeout(function(){ d.open = false; }, 180); });
   });
