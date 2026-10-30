@@ -43,3 +43,8 @@ section.wrap > .faq-wrap{width:100%;box-sizing:border-box;margin:0 auto;padding:
   .faq-cta{margin-top:24px}
   .faq-cta .sp-btn,.faq-cta a.btn{display:flex;width:100%;box-sizing:border-box;justify-content:center;min-height:52px;align-items:center}
 }
+
+/* Phone gutter for FAQ sections that do not already pad their content */
+@media (max-width:600px){
+  #faq:not(.wrap):not(.sp-block) > .faq-wrap{padding-left:20px;padding-right:20px;box-sizing:border-box}
+}
