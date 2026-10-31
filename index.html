@@ -1029,6 +1029,15 @@ body main a.pain-card,body main a.pain-card *{text-decoration:none!important}bod
 }</script>
 <!-- business-schema:end -->
 <link rel="stylesheet" href="/assets/css/faq.css">
+<style id="hero-photo-glow">
+/* Home hero photo: soft warm glow that gently breathes. Box-shadow (not a pseudo-element) so the photo's own overflow:hidden does not clip it. */
+.hero-art{box-shadow:0 0 0 2px rgba(229,180,0,.55),0 0 44px 14px rgba(229,180,0,.45),0 0 120px 44px rgba(94,122,101,.30);animation:heroPhotoGlow 4.5s ease-in-out infinite}
+@keyframes heroPhotoGlow{
+  0%,100%{box-shadow:0 0 0 2px rgba(229,180,0,.45),0 0 32px 10px rgba(229,180,0,.34),0 0 100px 36px rgba(94,122,101,.22)}
+  50%{box-shadow:0 0 0 2px rgba(229,180,0,.70),0 0 60px 20px rgba(229,180,0,.60),0 0 150px 56px rgba(94,122,101,.40)}
+}
+@media (prefers-reduced-motion: reduce){.hero-art{animation:none}}
+</style>
 </head>
 <body>
 
