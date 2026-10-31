@@ -1035,6 +1035,12 @@ body main a.pain-card,body main a.pain-card *{text-decoration:none!important}bod
 .hero-art:hover,.hero-art:focus-within,.hero-art:active{transform:translateY(-8px) scale(1.02);box-shadow:0 0 0 2px rgba(229,180,0,.75),0 0 46px 14px rgba(229,180,0,.50),0 0 130px 46px rgba(94,122,101,.32)}
 @media (prefers-reduced-motion: reduce){.hero-art,.hero-art:hover,.hero-art:focus-within,.hero-art:active{transition:none;transform:none}}
 </style>
+<style id="mission-photo-glow">
+/* Our mission photo: keeps its gold border at rest. On hover or tap it lifts and glows, matching the hero photo. */
+.mission-photo{transition:transform .45s cubic-bezier(.2,.7,.2,1),box-shadow .45s ease}
+.mission-photo:hover,.mission-photo:active{transform:translateY(-8px) scale(1.02);box-shadow:0 0 0 2px rgba(229,180,0,.75),0 0 46px 14px rgba(229,180,0,.50),0 0 130px 46px rgba(94,122,101,.32)}
+@media (prefers-reduced-motion: reduce){.mission-photo,.mission-photo:hover,.mission-photo:active{transition:none;transform:none}}
+</style>
 </head>
 <body>
 
