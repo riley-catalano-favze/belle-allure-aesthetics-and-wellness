@@ -2006,23 +2006,7 @@ new MutationObserver(function(ms){ms.forEach(function(m){sync(m.target);});}).ob
   padding: 28px 24px 20px;
   margin-bottom: 4px;
 }
-.ba-arch::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border: 1.5px solid rgba(79,103,84,0.18);
-  border-radius: 120px 120px 8px 8px;
-  pointer-events: none;
-}
-.ba-arch::after {
-  content: '';
-  position: absolute;
-  top: -5px; left: 50%;
-  transform: translateX(-50%) rotate(45deg);
-  width: 8px; height: 8px;
-  background: #C9A000;
-  opacity: 0.6;
-}
+.ba-arch::before, .ba-arch::after { display: none; }
 .ba-eyebrow {
   font: 600 10px/1 'Figtree', system-ui, sans-serif;
   letter-spacing: 0.26em;
