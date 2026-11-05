@@ -83,7 +83,7 @@ function buildHeader(activeSlug) {
   </header>`;
 }
 
-// Shared footer HTML -- matches blog/index.html exactly
+// Shared footer HTML -- copied verbatim from blog/index.html
 const FOOTER_HTML = `  <footer class="footer" style="background:#3D3D3D;color:#FBF7F1">
     <div class="wrap footer-grid" style="padding:48px 24px 32px">
       <div>
@@ -100,34 +100,46 @@ const FOOTER_HTML = `  <footer class="footer" style="background:#3D3D3D;color:#F
         <p style="font-weight:600;margin-top:12px;margin-bottom:6px"><a href="https://belleallureaestheticsandwellness.com/services" style="color:#FBF7F1">Facial rejuvenation</a></p>
         <a href="https://belleallureaestheticsandwellness.com/services/wrinkles-treatment">Wrinkle treatments</a>
         <a href="https://belleallureaestheticsandwellness.com/services/fillers">Dermal fillers, lip and cheek filler</a>
-        <a href="https://belleallureaestheticsandwellness.com/services/prf-therapy">PRF therapy</a>
-        <a href="https://belleallureaestheticsandwellness.com/services/prf-facial-microneedling">PRF facial microneedling</a>
+        <p style="font-weight:600;margin-top:12px;margin-bottom:6px"><a href="https://belleallureaestheticsandwellness.com/skin-regeneration-clinic-elkhart" style="color:#FBF7F1">Skin regeneration</a></p>
+        <a href="https://belleallureaestheticsandwellness.com/services/microneedling">PRF facial microneedling</a>
         <a href="https://belleallureaestheticsandwellness.com/services/prf-under-eye-repair">PRF under eye repair</a>
-        <p style="font-weight:600;margin-top:12px;margin-bottom:6px"><a href="https://belleallureaestheticsandwellness.com/services" style="color:#FBF7F1">Medical aesthetics</a></p>
+        <a href="https://belleallureaestheticsandwellness.com/services/prf-therapy">PRF therapy</a>
+        <a href="https://belleallureaestheticsandwellness.com/services/hair-restoration">Hair restoration</a>
+        <a href="https://belleallureaestheticsandwellness.com/services/acne-medication">Acne medication</a>
+        <p style="font-weight:600;margin-top:12px;margin-bottom:6px"><a href="https://belleallureaestheticsandwellness.com/relief-clinic" style="color:#FBF7F1">Relief</a></p>
         <a href="https://belleallureaestheticsandwellness.com/services/tmj-therapy">TMJ therapy</a>
         <a href="https://belleallureaestheticsandwellness.com/services/headache-treatment">Headache treatment</a>
         <a href="https://belleallureaestheticsandwellness.com/services/hyperhidrosis-treatment">Hyperhidrosis treatment</a>
-        <a href="https://belleallureaestheticsandwellness.com/services/hair-restoration">Hair restoration</a>
-        <a href="https://belleallureaestheticsandwellness.com/services/acne-medication">Acne medication</a>
       </nav>
-      <nav aria-label="Useful links" style="display:flex;flex-direction:column">
-        <p style="font-weight:600;margin-bottom:8px">Useful links</p>
-        <a href="https://belleallureaestheticsandwellness.com/reviews">Reviews</a>
-        <a href="https://belleallureaestheticsandwellness.com/reviews#before-and-after">Before and after</a>
+      <nav aria-label="Explore" style="display:flex;flex-direction:column">
+        <p style="font-weight:600;margin-bottom:8px">Explore</p>
+        <a href="https://belleallureaestheticsandwellness.com/services">Services</a>
+        <a href="https://belleallureaestheticsandwellness.com/reviews#reviews">Reviews</a><a href="https://belleallureaestheticsandwellness.com/reviews#before-and-after">Results</a>
         <a href="https://belleallureaestheticsandwellness.com/faq">FAQ</a>
-        <a href="https://belleallureaestheticsandwellness.com/about">About Katherine Clark, RN</a>
+        <a href="https://belleallureaestheticsandwellness.com/about">About</a>
         <a href="/blog/">Resources</a>
         <a href="https://belleallureaestheticsandwellness.com/contact">Contact</a>
-        <a href="https://belleallureaestheticsandwellness.com/location">Location</a>
+<a href="https://belleallureaestheticsandwellness.com/location">Location</a>
+<a href="https://belleallureaestheticsandwellness.com/refer-a-friend">Refer a friend</a>
+        <a href="https://www.facebook.com/p/Belle-Allure-Aesthetics-and-Wellness-61578410480099/" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.instagram.com/katiebelleallureaesthetics/" target="_blank" rel="noopener">Instagram</a>
       </nav>
-      <nav aria-label="Book and connect" style="display:flex;flex-direction:column">
-        <p style="font-weight:600;margin-bottom:8px">Book and connect</p>
-        <a href="https://belleallurefacialaesthetics.myaestheticrecord.com/online-booking/book-appointment">Book appointment</a>
-        <a href="https://www.facebook.com/p/Belle-Allure-Aesthetics-and-Wellness-61578410480099/">Facebook</a>
-        <a href="https://www.instagram.com/katiebelleallureaesthetics/">Instagram</a>
-        <p style="margin-top:16px;line-height:1.5"><a href="tel:+15747351528" style="color:#FBF7F1;font-weight:600">574-735-1528</a></p>
-        <p style="line-height:1.5">320 West Bristol Street<br>Elkhart, IN 46514</p>
-      </nav>
+      <div>
+        <p style="font-weight:600;margin-bottom:8px">Visit us</p>
+        <p style="margin-top:14px;font-weight:600">Address</p>
+        <p style="color:#F8E1D1;margin-top:4px"><a href="https://www.google.com/maps/search/?api=1&amp;query=320+West+Bristol+Street+Elkhart+IN" style="color:#FBF7F1">320 West Bristol Street<br>Elkhart, IN 46514</a></p>
+        <p style="margin-top:14px;font-weight:600">Hours</p>
+        <div style="margin-top:6px;color:#F8E1D1">
+          <p>Mon to Wed: 8:30 AM to 5:00 PM</p>
+          <p>Thu: 8:30 AM to 3:00 PM</p>
+          <p>Fri: 10:00 AM to 2:00 PM</p>
+          <p>Select Saturdays</p>
+          <p>Sun: Closed</p>
+          <p style="margin-top:8px;font-weight:600;color:#FBF7F1">Closed on all holidays</p>
+        </div>
+        <p style="margin-top:14px;font-weight:600">Phone</p>
+        <p style="margin-top:4px;color:#F8E1D1"><a href="tel:+15747351528" style="color:#FBF7F1">574-735-1528</a></p>
+      </div>
     </div>
 
     <div class="wrap" style="border-top:1px solid #5E7A65;padding:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:14px;color:#F8E1D1">
