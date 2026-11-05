@@ -11,18 +11,18 @@ html body header #nav-toggle:checked~.nav-links a.nav-book:hover,html body heade
 html body header #nav-toggle:checked~#site-nav a.nav-book:hover,html body header #nav-toggle:checked~#site-nav a.nav-book:focus,html body header #nav-toggle:checked~#site-nav a.nav-book:active,
 html body .mobile-book:hover,html body .mobile-book:focus,html body .mobile-book:active,
 html body .sb-mobile-book:hover,html body .sb-mobile-book:focus,html body .sb-mobile-book:active{background:#5E7A65!important;color:#FFFFFF!important;text-decoration:none!important}
-/* Desktop header: the menu sits centered on the page on every page */
+/* Desktop header: nav sits in the flow, centered between logo and right-side CTA */
 @media (min-width:901px){
   html body header .header-inner{position:relative!important}
-  html body header .header-inner>.nav-links{position:absolute!important;left:50%!important;top:50%!important;transform:translate(-50%,-50%)!important;margin:0!important;flex:none!important;justify-content:center!important;width:auto!important}
+  html body header .header-inner>.nav-links{position:static!important;transform:none!important;left:auto!important;top:auto!important;flex:1 1 0!important;justify-content:center!important;margin:0 20px!important;min-width:0!important;width:auto!important;max-width:none!important}
 }
 html.menu-open .mobile-book,html.menu-open .sb-mobile-book,body:has(#nav-toggle:checked) .mobile-book,body:has(#nav-toggle:checked) .sb-mobile-book{display:none!important}
 /* Text icon sits beside the phone icon in the header, same size and style */
 header .header-sms-icon{margin:0 8px 0 auto!important}
 header .header-tel-icon:not(.header-sms-icon){margin-left:0!important}
-/* Mid-desktop header (901-1100px): nav sits in the flow between the logo and the right-hand actions, so it never runs into Book appointment */
+/* Mid-desktop header (901-1100px): phone icon shows instead of phone number */
 @media (min-width:901px) and (max-width:1100px){
-html body header .header-inner>.nav-links{position:static!important;transform:none!important;left:auto!important;top:auto!important;flex:1 1 auto!important;justify-content:center!important;gap:16px!important;margin:0 12px!important;min-width:0!important}
+html body header .header-inner>.nav-links{gap:16px!important;margin:0 12px!important}
 html body header .header-inner .header-book{margin-left:0!important;margin-right:0!important;order:3!important}
 html body header .header-inner>.header-tel-icon,html body header .header-inner>.site-search-btn{order:2!important}
 }
@@ -114,10 +114,10 @@ body:has(#nav-toggle:focus-visible) .menu-btn{outline:3px solid #3D3D3D;outline-
 @media (min-width:601px) and (max-width:1100px){.header-tel-icon{margin-left:0!important}
 .header-book{margin-left:auto!important;margin-right:0}
 .header-inner>.nav-links{margin-right:28px}}
-@media (min-width:601px){.header-inner>.nav-links{flex:1 1 auto;justify-content:center;margin-left:16px;margin-right:16px}}
+@media (min-width:601px){.header-inner>.nav-links{flex:1 1 0;justify-content:center;margin-left:16px;margin-right:16px}}
 @media (min-width:601px) and (max-width:1100px){.header-inner>.nav-links{margin-right:16px}}
 @media (min-width:901px){.header-inner{position:relative}
-.header-inner>.nav-links{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);flex:none;margin:0!important;justify-content:center;max-width:calc(100% - 480px)}}
+.header-inner>.nav-links{position:static;transform:none;left:auto;top:auto;flex:1 1 0;margin:0 20px!important;justify-content:center;max-width:none}}
 @media (min-width:601px) and (max-width:1100px){.header-book{flex:0 0 auto!important;min-width:max-content!important;white-space:nowrap!important;padding:0 16px!important}}
 @media (min-width:601px) and (max-width:760px){.header-book{padding:0 12px!important;font-size:14px!important}
 .header-inner{column-gap:10px}
