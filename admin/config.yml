@@ -2,7 +2,7 @@ backend:
   name: github
   repo: riley-catalano-favze/belle-allure-aesthetics-and-wellness
   branch: main
-  base_url: https://belle-allure-cms-auth.riley-catalano-favze.workers.dev
+  base_url: https://belle-allure-cms-auth.riley-dbc.workers.dev
 
 # Media uploads go into assets/uploads/ and are referenced from there
 media_folder: assets/uploads
