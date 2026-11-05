@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/header.css">
+<link rel="stylesheet" href="/assets/css/site-search.css">
 <style id="wcag-fixes">
 a[href^="#"]:not(.btn),[style*="#5E7A65"]:not(.btn):not(.footer-book),.eyebrow,.lbl,.meta,.svc-cta-link,.mini-cta,.lg a{color:#4F6754!important}
 .lg a,a.bl-home{text-decoration-line:underline;text-underline-offset:3px}
@@ -87,6 +88,42 @@ header #nav-toggle:checked~#site-nav{overflow:visible!important;max-height:none!
 /* Section headings are <header> elements too; they must not stick to the top like the site header */
 header.split-head{position:static!important;top:auto!important;z-index:auto!important;background:transparent!important;border:0!important;box-shadow:none!important;min-height:0!important;display:block!important;padding:0!important}
 </style>
+<style id="bl-home-link">.bl-home{color:inherit;text-decoration:none}.bl-home:hover{text-decoration:underline}</style>
+<style id="wcag-fixes-2">
+body main a:not(.btn):not(.skip):not(.scroll-cue):not(.sb-cta):not(.cta-go):not(.cta-eyebrow):not(.mobile-book):not(.on-dark):not(.svc-cta-link){color:#4F6754!important;text-decoration:underline;text-underline-offset:3px}
+body .svc-cta-link,body main .svc-cta-link{color:#3F5A47!important;text-decoration:underline;text-underline-offset:3px}
+body main .sb-cta,body main a.sb-cta{color:#FFFFFF!important;text-decoration:none!important}
+body main .lg-contact .on-dark,body main .lg-contact a.on-dark{color:#FFFFFF!important;text-decoration:underline;text-underline-offset:3px}
+body main .lg-contact a.btn-light{color:#4F6754!important;text-decoration:none!important}
+a.bl-home{text-decoration:underline!important;text-underline-offset:3px}
+.cta-eyebrow,.cta-go{color:#FFFFFF!important}
+</style>
+<style id="footer-bottom-aligned">
+/* Footer bottom row: copyright, credential line and legal link sit on one centered line on desktop, and stack centered on phones */
+div.wrap[style*="border-top:1px solid #5E7A65"]{align-items:center!important}
+div.wrap[style*="border-top:1px solid #5E7A65"]>p{margin:0!important;line-height:1.5!important}@media (min-width:701px){div.wrap[style*="border-top:1px solid #5E7A65"]{display:grid!important;grid-template-columns:1fr minmax(0,560px) 1fr!important;gap:16px 24px!important;justify-content:stretch!important}
+div.wrap[style*="border-top:1px solid #5E7A65"]>p:first-child{text-align:left!important}
+div.wrap[style*="border-top:1px solid #5E7A65"]>p:nth-child(2){text-align:center!important}
+div.wrap[style*="border-top:1px solid #5E7A65"]>p:last-child{text-align:right!important}}@media (max-width:700px){div.wrap[style*="border-top:1px solid #5E7A65"]{flex-direction:column!important;align-items:center!important;justify-content:center!important;text-align:center!important}}
+</style>
+<style id="footer-columns-centered">
+/* Footer left aligned on phones and tablets (desktop grid unchanged) */
+@media (max-width:1100px){
+  footer.footer .footer-grid{text-align:left!important}
+  footer.footer .footer-grid nav{align-items:flex-start!important}footer.footer .footer-grid nav{width:100%!important;align-self:stretch!important}footer.footer .footer-grid>div,footer.footer .footer-grid>nav{width:100%!important;max-width:none!important}footer.footer .footer-grid nav>p:first-child,footer.footer .footer-grid>div:last-child>p:first-child{display:block!important;width:100%!important;box-sizing:border-box!important}
+  footer.footer .footer-grid img{margin-left:0!important;margin-right:auto!important}
+  footer.footer .footer-grid p,footer.footer .footer-grid div{text-align:left!important}
+  footer.footer div.wrap[style*="border-top:1px solid #5E7A65"]{display:flex!important;flex-direction:column!important;align-items:flex-start!important;justify-content:flex-start!important;text-align:left!important}
+  footer.footer div.wrap[style*="border-top:1px solid #5E7A65"]>p{text-align:left!important}
+}
+</style>
+<style id="btn-link-colors">
+/* Buttons keep their own text color and no underline on hover, focus and tap */
+a.btn:hover,a.btn:focus,a.btn:focus-visible,a.btn:active,a.btn:visited{text-decoration:none!important}
+a.btn:not(.btn-light):not(.btn-ghost):hover,a.btn:not(.btn-light):not(.btn-ghost):focus,a.btn:not(.btn-light):not(.btn-ghost):focus-visible,a.btn:not(.btn-light):not(.btn-ghost):active{color:#FFFFFF!important}
+a.btn-light:hover,a.btn-light:focus,a.btn-light:focus-visible,a.btn-light:active{color:#4F6754!important}
+a.btn-ghost:hover,a.btn-ghost:focus,a.btn-ghost:focus-visible,a.btn-ghost:active{color:#5E7A65!important}
+</style>
 <style>
 body{margin:0;background:#FBF7F1;color:#3D3D3D;font-family:'Figtree',system-ui,sans-serif;font-size:17px;line-height:1.6}
 a{color:#5E7A65;text-decoration:none}
@@ -103,6 +140,10 @@ p{margin:0}
 .footer a:hover{color:#FFFFFF;text-decoration:underline}
 html{scroll-behavior:smooth}
 summary{cursor:pointer;font-weight:600;font-size:18px;min-height:44px;display:flex;align-items:center}
+img{max-width:100%;height:auto}
+.skip{position:absolute;left:-9999px;top:8px;z-index:20;background:#FFFFFF;color:#3D3D3D;padding:12px 18px;border-radius:12px;font-weight:600}
+.skip:focus{left:16px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;opacity:0;pointer-events:none}
 @media (max-width:900px){.footer-grid{grid-template-columns:1fr 1fr}}
 @media (max-width:600px){.footer-grid{grid-template-columns:1fr}
 .card{padding:28px}
@@ -111,7 +152,6 @@ summary{cursor:pointer;font-weight:600;font-size:18px;min-height:44px;display:fl
 [style*="margin-top:88px"]{margin-top:56px!important}
 [style*="padding:64px 24px"]{padding:48px 24px!important}}
 /* Blog page */
-.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 .blog-hero{padding:60px 24px 40px;text-align:center;max-width:700px;margin:0 auto}
 .blog-hero h1{font-size:clamp(36px,5vw,52px);font-weight:700;line-height:1.1;margin-top:12px}
 .blog-grid{max-width:1100px;margin:0 auto;padding:40px 24px 80px;display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:32px}
