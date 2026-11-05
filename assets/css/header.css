@@ -26,7 +26,7 @@ html body header .header-inner>.nav-links{position:static!important;transform:no
 html body header .header-inner .header-book{margin-left:0!important;margin-right:0!important;order:3!important}
 html body header .header-inner>.header-tel-icon,html body header .header-inner>.site-search-btn{order:2!important}
 }
-.nav-links{display:flex;gap:28px;align-items:center;font-weight:500}
+.nav-links{display:flex;gap:20px;align-items:center;font-weight:500}
 @media (max-width:600px){.header-inner{flex-wrap:wrap;min-height:auto!important;padding-top:12px;padding-bottom:12px;row-gap:12px}}
 .menu-btn{display:none}
 .nav-book{display:none}
@@ -96,7 +96,7 @@ body:has(#nav-toggle:focus-visible) .menu-btn{outline:3px solid #3D3D3D;outline-
 .header-tel-icon{display:none}
 .header-phone{display:none}
 .menu-btn{order:3!important}
-@media (min-width:1101px){.header-phone{display:inline-flex;align-items:center;margin-right:16px;font-size:16px;font-weight:600;color:#4F6754!important;text-decoration:none;white-space:nowrap}
+@media (min-width:1301px){.header-phone{display:inline-flex;align-items:center;margin-right:16px;font-size:15px;font-weight:600;color:#4F6754!important;text-decoration:none;white-space:nowrap}
 .header-phone:hover{color:#3D5A46!important;text-decoration:underline}}
 @media (max-width:1100px){.header-tel-icon{display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;order:2;width:44px;height:44px;margin-left:auto;margin-right:10px;border:0;border-radius:0;color:#5E7A65;box-sizing:border-box}
 .header-tel-icon:hover,.header-tel-icon:focus-visible{background:#F3F6F2}
@@ -107,7 +107,7 @@ body:has(#nav-toggle:focus-visible) .menu-btn{outline:3px solid #3D3D3D;outline-
 @media (min-width:601px) and (max-width:1100px){.header-book{margin-right:14px!important}
 .header-tel-icon{margin-left:0!important}}
 .header-cta{display:contents}
-@media (min-width:1101px){.header-cta{display:flex;align-items:center;gap:18px;flex:0 0 auto;margin-left:auto}
+@media (min-width:1101px){.header-cta{display:flex;align-items:center;gap:14px;flex:0 0 auto;margin-left:auto}
 .header-phone{margin-right:0!important}}
 @media (max-width:600px){#nav-toggle:checked~.nav-links a.nav-book{display:flex!important;justify-content:center;background:#5E7A65!important;color:#FFFFFF!important;border-radius:999px;margin:14px 0 4px;min-height:52px;border-bottom:none;font-weight:600}
 #nav-toggle:checked~.nav-links a.nav-book:hover{background:#3D3D3D!important;color:#FFFFFF!important}}
@@ -117,7 +117,7 @@ body:has(#nav-toggle:focus-visible) .menu-btn{outline:3px solid #3D3D3D;outline-
 @media (min-width:601px){.header-inner>.nav-links{flex:1 1 auto;justify-content:center;margin-left:16px;margin-right:16px}}
 @media (min-width:601px) and (max-width:1100px){.header-inner>.nav-links{margin-right:16px}}
 @media (min-width:901px){.header-inner{position:relative}
-.header-inner>.nav-links{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);flex:none;margin:0!important;justify-content:center}}
+.header-inner>.nav-links{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);flex:none;margin:0!important;justify-content:center;max-width:calc(100% - 480px)}}
 @media (min-width:601px) and (max-width:1100px){.header-book{flex:0 0 auto!important;min-width:max-content!important;white-space:nowrap!important;padding:0 16px!important}}
 @media (min-width:601px) and (max-width:760px){.header-book{padding:0 12px!important;font-size:14px!important}
 .header-inner{column-gap:10px}
