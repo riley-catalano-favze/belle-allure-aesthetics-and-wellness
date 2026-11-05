@@ -1,0 +1,8 @@
+/* Shared footer: dark background with light text and links on every page.
+   Selectors are deliberately specific so they win over older footer and header rules. */
+body footer.footer.footer{background:#3D3D3D!important;color:#FBF7F1!important;border-top:0!important}
+body footer.footer.footer *{color:#FBF7F1!important}
+body footer.footer.footer a{text-decoration:none}
+body footer.footer.footer a:hover{color:#F8E1D1!important;text-decoration:underline!important}
+body footer.footer.footer a.footer-book,body footer.footer.footer a.btn{color:#FFFFFF!important}
+body footer.footer.footer a.footer-book:hover,body footer.footer.footer a.btn:hover{color:#FFFFFF!important;text-decoration:none!important}
