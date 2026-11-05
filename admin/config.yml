@@ -1,0 +1,73 @@
+backend:
+  name: github
+  repo: riley-catalano-favze/belle-allure-aesthetics-and-wellness
+  branch: main
+  base_url: https://belle-allure-cms-auth.riley-catalano-favze.workers.dev
+
+# Media uploads go into assets/uploads/ and are referenced from there
+media_folder: assets/uploads
+public_folder: /assets/uploads
+
+# Who can log in - only Katherine's GitHub account
+# (She will need a GitHub account; you can invite her as a collaborator)
+
+collections:
+
+  # ── Blog Posts ──────────────────────────────────────────────────────────────
+  - name: blog
+    label: Blog Posts
+    label_singular: Blog Post
+    folder: blog
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    extension: md
+    format: frontmatter
+    editor:
+      preview: false
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Publish Date, name: date, widget: datetime, format: "YYYY-MM-DD", date_format: "MMMM D, YYYY", time_format: false }
+      - { label: Featured Image, name: image, widget: image, required: false, hint: "Upload a photo for this post" }
+      - { label: Image Alt Text, name: image_alt, widget: string, required: false }
+      - { label: Excerpt, name: excerpt, widget: text, hint: "One or two sentences shown in the blog listing (keep it short and inviting)" }
+      - { label: Body, name: body, widget: markdown }
+
+  # ── Photo Gallery ────────────────────────────────────────────────────────────
+  - name: gallery
+    label: Photo Gallery
+    label_singular: Photo
+    folder: _data/gallery
+    create: true
+    extension: yml
+    format: yml
+    editor:
+      preview: false
+    fields:
+      - { label: Photo, name: image, widget: image }
+      - { label: Caption, name: caption, widget: string, required: false }
+      - { label: Category, name: category, widget: select, options: ["Before & After", "Clinic", "Team", "Results"], default: "Results" }
+
+  # ── Site Settings ────────────────────────────────────────────────────────────
+  - name: settings
+    label: Site Settings
+    files:
+      - label: Business Info
+        name: business
+        file: _data/business.yml
+        fields:
+          - { label: Phone Number, name: phone, widget: string, hint: "Example: 574-735-1528" }
+          - { label: Address, name: address, widget: string, hint: "Example: 320 West Bristol Street, Elkhart, IN 46514" }
+          - { label: Google Maps Link, name: maps_url, widget: string }
+          - { label: Instagram URL, name: instagram, widget: string }
+          - { label: Facebook URL, name: facebook, widget: string }
+          - { label: Booking URL, name: booking_url, widget: string, hint: "The link your Book Now button uses" }
+          - { label: Google Review Count, name: review_count, widget: number, hint: "Total number of Google reviews" }
+
+      - label: Homepage Hero
+        name: homepage_hero
+        file: _data/homepage_hero.yml
+        fields:
+          - { label: Headline, name: headline, widget: string }
+          - { label: Subheadline, name: subheadline, widget: string, required: false }
+          - { label: CTA Button Text, name: cta_text, widget: string }
+          - { label: CTA Button URL, name: cta_url, widget: string }

@@ -1,0 +1,24 @@
+{
+  "name": "belle-allure-aesthetics-and-wellness",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:blog": "node scripts/build-blog.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/riley-catalano-favze/belle-allure-aesthetics-and-wellness.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/riley-catalano-favze/belle-allure-aesthetics-and-wellness/issues"
+  },
+  "homepage": "https://github.com/riley-catalano-favze/belle-allure-aesthetics-and-wellness#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.8"
+  }
+}
