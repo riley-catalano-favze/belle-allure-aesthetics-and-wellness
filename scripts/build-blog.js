@@ -27,6 +27,8 @@ function parseFrontmatter(raw) {
 
 // Very small markdown -> HTML converter (headings, bold, italic, paragraphs, links)
 function mdToHtml(md) {
+  // Bullet lists: consecutive lines starting with '- ' become a <ul>
+  md = md.replace(/((?:^- .+(?:\n|$))+)/gm, block => '<ul>' + block.trim().split('\n').map(l => '<li>' + l.replace(/^- /, '') + '</li>').join('') + '</ul>\n\n');
   return md
     .replace(/^### (.+)$/gm, '<h3>$1</h3>')
     .replace(/^## (.+)$/gm, '<h2>$1</h2>')
@@ -37,7 +39,9 @@ function mdToHtml(md) {
     .replace(/\n{2,}/g, '</p><p>')
     .replace(/^(?!<[h|u|o])/, '<p>')
     .replace(/$(?![>])/, '</p>')
-    .replace(/<p><\/p>/g, '');
+    .replace(/<p><\/p>/g, '')
+    .replace(/<p>\s*<ul>/g, '<ul>')
+    .replace(/<\/ul>\s*<\/p>/g, '</ul>');
 }
 
 // Shared header HTML -- matches blog/index.html exactly
