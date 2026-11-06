@@ -356,6 +356,8 @@ files.forEach(filename => {
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${data.title} | Belle Allure Aesthetics and Wellness</title>
+<link rel="icon" type="image/png" sizes="512x512" href="https://belleallureaestheticsandwellness.com/favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://belleallureaestheticsandwellness.com/apple-touch-icon.png">
 <meta name="description" content="${(data.excerpt || '').replace(/"/g, '&quot;')}">
 <link rel="canonical" href="${postUrl}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -388,6 +390,7 @@ ${HEAD_STYLES}
 .post-cta p{color:#3D3D3D;margin-bottom:20px;font-size:17px;line-height:1.6}
 .post-cta .btn{background:#5E7A65;color:#FFFFFF;text-decoration:none}
 </style>
+<link rel="stylesheet" href="/assets/css/footer.css">
 </head>
 <body>
 ${buildHeader(slug)}
